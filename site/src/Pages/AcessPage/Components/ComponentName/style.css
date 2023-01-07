@@ -1,10 +1,10 @@
-/*Apenas zerando margens e padding*/
+/* Apenas zerando margens e padding */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/*Definindo variáveis*/
+/* Definindo variáveis */
 :root{
     font-size: 16px;
     --preto: black;
@@ -16,682 +16,642 @@
     --alturaCorpo: 1537px;
 }
   
-  /*Estilos do header*/
-    /*Decide qual header usar*/
-    @media screen and (max-width: 1000px){
-      .headerMenor{
-        display: block;
-      }
-      .headerInicial{
-        display: none;
-      }
-    }
-    @media screen and (min-width: 1060px){
-      .headerMenor{
-        display: none;
-      }
-      .headerInicial{
-        display: block;
-      }
-    }
+/* Estilos do header */
+/* Decide qual header usar */
+@media screen and (max-width: 1000px){
+  .headerMenor{
+    display: block;
+  }
+  .headerInicial{
+    display: none;
+  }
+}
 
-    /*Colapsa a barra em algumas distâncias*/
-    @media screen and (max-width: 1100px){
-      .headerInicial nav ul li:nth-child(1){
-        display: none;
-      }
-    }
-    /*Configura o header da pagina inicial*/
-    header{
-      width: calc(100vw - 15px);
-      height: var(--alutraHeader);
+@media screen and (min-width: 1060px){
+  .headerMenor{
+    display: none;
+  }
+  .headerInicial{
+    display: block;
+  }
+}
+/* Colapsa a barra em algumas distâncias */
+@media screen and (max-width: 1100px){
+  .headerInicial nav ul li:nth-child(1){
+    display: none;
+  }
+}
+
+/* Configura o header da pagina inicial */
+header{
+  width: calc(100vw - 15px);
+  height: var(--alutraHeader);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000118; 
+  background: linear-gradient(0deg, #000118 0%, #000121 100%);
+  background: -webkit-linear-gradient(0deg, #000118, #000121);
+  color: white;
+  font-weight: var(--fonteNormal);
+  font-size: 1.3rem;
+  z-index: 100;
+}
+
+/* Menu lateral do header menor */
+.menuLateral{
+  width: 120px;
+  height: 20px;
+  background-color: rgba(40, 0, 20, 0.8);
+}
+
+/* Arruma a altura da navbar */
+nav{
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 8 * var(--margem));
+  margin: 0 calc(4*var(--margem));
+}
+
+/* Arruma o posicionamento do logo */
+.logo{
+  font-size: 2rem;
+  width: 200px;
+  overflow: visible;
+}
+
+/* Display em flexbox para os botões da página inicial */
+header nav ul{
+  list-style: none;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-items: center;
+  float: right;
+  gap: calc(2*var(--margem));
+}
   
-      position: fixed;
-      top: 0;
-      left: 0;
+/* Estiliza todos os botões com exceção do botão de acesso */
+header nav ul li:not(header ul li:last-of-type){
+  vertical-align: center;
+  transition: 0.3s;
+  text-decoration: underline rgba(255,255,255,0);
+  text-underline-offset: 6px;
+}
+
+header nav ul li:not(header ul li:last-of-type):hover{
+  text-decoration: underline rgba(255,255,255,1);
+  font-weight: var(--fonteNegrito);
+  cursor: pointer;
+}
+
+/* Estiliza o botão de acesso */
+header nav ul li button{
+  height: 45px;
+  width: 120px;
   
-      background: #000118; 
-      background: linear-gradient(0deg, #000118 0%, #000121 100%);
-      background: -webkit-linear-gradient(0deg, #000118, #000121);
+  color: white;
+  font-weight: var(--fonteNormal);
+  font-family: Montserrat !important;
+  font-size: 1.3rem !important;
+  background-color: rgba(0,0,0,0);
+  border: white solid 1px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
 
-      color: white;
-      font-weight: var(--fonteNormal);
-      font-size: 1.3rem;
-      z-index: 100;
-    }
+header nav ul li button:hover{
+  font-weight: var(--fonteNegrito);
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+/* Fim dos estilos do header */
 
-    /*Menu lateral do header menor*/
-    .menuLateral{
-      width: 120px;
-      height: 20px;
-      background-color: rgba(40, 0, 20, 0.8);
-    }
+/*TODO Quebrar aqui*/
+
+/* Começo dos estilos do corpo da pagina */
+/* Configura o fundo do corpo */
+.corpo{
+  background: #101010;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #101010, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #101010, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
-    /*Arruma a altura da navbar*/
-    nav{
-      height: inherit;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      width: calc(100% - 8 * var(--margem));
-      margin: 0 calc(4*var(--margem));
-    }
-  
-    /*Arruma o posicionamento do logo*/
-    .logo{
-      font-size: 2rem;
-      width: 200px;
-      overflow: visible;
-    }
-  
-    /*Display em flexbox para os botões da página inicial*/
-    header nav ul{
-      list-style: none;
-      height: inherit;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: right;
-      align-items: center;
-      float: right;
-      gap: calc(2*var(--margem));
-    }
-    
-    /*Estiliza todos os botões com exceção do botão de acesso*/
-    header nav ul li:not(header ul li:last-of-type){
-      vertical-align: center;
-      transition: 0.3s;
-      text-decoration: underline rgba(255,255,255,0);
-      text-underline-offset: 6px;
-    }
-  
-    header nav ul li:not(header ul li:last-of-type):hover{
-      text-decoration: underline rgba(255,255,255,1);
-      font-weight: var(--fonteNegrito);
-      cursor: pointer;
-    }
-  
-    /*Estiliza o botão de acesso*/
-    header nav ul li button{
-      height: 45px;
-      width: 120px;
-      
-      color: white;
-      font-weight: var(--fonteNormal);
-      font-family: Montserrat !important;
-      font-size: 1.3rem !important;
-  
-      background-color: rgba(0,0,0,0);
-      border: white solid 1px;
-      border-radius: 5px;
-  
-      transition: 0.5s;
-    }
-  
-    header nav ul li button:hover{
-      font-weight: var(--fonteNegrito);
-      background-color: white;
-      color: black;
-      cursor: pointer;
-    }
-  /*Fim dos estilos do header*/
-  /*Começo dos estilos do corpo da pagina*/
-    /*Configura o fundo do corpo*/
-    .corpo{
-        background: #101010;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to top, #101010, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to top, #101010, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
-        width: calc(100vw - 15px);
-        box-sizing: border-box;
-        margin-top: var(--alutraHeader);
-        padding-top: calc(4*var(--margem));
-        display: block;
-
-        color: white;
-    }
-
-    /*Configura o título da seção*/
-    .titulo{
-        text-align: center;
-        font-weight: var(--fonteNegrito);
-        font-size: 3rem;
-        margin-bottom: calc(2*var(--margem));
-    }
-
-    /*Alinha os títulos de suseções*/
-    .corpo h2{
-      text-align: center;
-      text-decoration: underline orangered 1px;
-      text-underline-offset: 4px;
-      font-weight: var(--fonteNegrito);
-      margin-bottom: calc(2*var(--margem));
-    }
-
-    /*Arruma as seções*/
-    .corpo section{
-      margin: auto;
-      display: block;
-      padding: 50px calc(4*var(--margem));
-    }
-
-    /*Arruma as cores do background*/
-    .corpo section:nth-child(3){
-      background-color: rgba(0,0,0,0.8);
-    }
-
-    .corpo section:nth-child(4){
-      background-color: rgba(5,5,5,0.8);
-    }
-
-    .corpo section:nth-child(5){
-      background-color: rgba(10,10,10,0.8);
-    }
-
-    /*Arruma o carrossel*/
-    .carrossel{
-      width: 500px;
-      height: 200px;
-      background-color: rgba(40, 0, 20, 0.5);
-    }
-
-    /*Display flex para as seções*/
-    .flex{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: left;
-      gap: calc(2*var(--margem));
-      width: 430px;
-    }
-
-    /*Formtando texto dos artigos*/
-    .corpo section:not(:last-of-type) article{
-      text-align: justify;
-    }
-
-    /*Flex de posição para a citação*/
-    .flex2{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: calc(2*var(--margem));
-    }
-
-    /*Formatando a citação*/
-    .citacao{
-      float: right;  
-      text-align: right;
-      clear: right;
-    }
-
-    /*Itálico*/
-    .italico{
-      font-style: italic;
-    }
-
-    /*Seção de metodologias*/
-    .metodologia{
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: center;
-      align-items: center;
-      gap: calc(2*var(--margem));
-    }
-
-    /*arruma os boxes*/
-    .metodologia li{
-      border: solid orangered 1px;
-      padding: var(--margem);
-      width: 65%;
-      max-width: 700px;
-    }
-
-    .metodologia li:hover{
-      cursor: pointer;
-      font-weight: var(--fonteNegrito);
-    }
-
-  /*Fim dos estilos do corpo da pagina*/
-  /*Estilos do footer*/
-    /*Arruma o básico do footer*/
-    footer{
-        background-color: var(--preto);
-        color: white;
-        padding: calc(4*var(--margem));
-        width: calc(100vw - 15px);
-        display: block;
-    }
-
-    /*Flexbox no footer*/
-    footer .ulFooter{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: top;
-        list-style: none;
-    }
-
-    /*Ajustando os itens da flexbox*/
-    footer .ulFooter li{
-        width: calc(100%/3);
-    }
-
-    /*Listas internas*/
-    footer .ulFooter li ul{
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: calc(2*var(--margem));
-    }
-
-    /*Distância entre elementos*/
-    footer .ulFooter li ul li{
-        padding: calc(var(--margem) / 2) 0;
-        font-weight: var(--fonteNormal);
-        transition: 0s;
-    }
-
-    footer .ulFooter li ul li:first-of-type{
-      text-decoration: underline orangered 1px;
-      text-underline-offset: 2px;
-    }
-
-    footer .ulFooter li ul li:not(:first-of-type):hover{
-        font-weight: var(--fonteNegrito);
-        cursor: pointer;
-    }
-  /*Fim dos estilos do footer*/
-  /*Animação das estrelas do fundo*/
-  .estrelas{
-    list-style: none;
-  }
-
-  .estrelas li{
-    position: absolute;
-    top: 1700px;
-    height: 1px;
-    width: 1px;
-    border-radius: 0.5px;
-    background-color: rgba(255,255,255,1);
-  }
-
-  .estrelas li:nth-child(1){
-    left: 5vw;
-    animation: 26s subidaDireita infinite, 1.8s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -20s;
-  }
-
-  .estrelas li:nth-child(2){
-    left: 10vw;
-    animation: 25.5s subidaEsquerda infinite, 4s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -24s;
-  }
-
-  .estrelas li:nth-child(3){
-    left: 14vw;
-    animation: 27.2s subidaDireita infinite, 2s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -10s;
-  }
-
-  .estrelas li:nth-child(4){
-    left: 17vw;
-    animation: 28.9s subidaEsquerda infinite, 5s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-  }
-
-  .estrelas li:nth-child(5){
-    left: 22vw;
-    animation: 30s subidaDireita infinite, 5s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -7s;
-  }
-
-  .estrelas li:nth-child(6){
-    left: 26vw;
-    animation: 29.3s subidaEsquerda infinite, 3s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -15s;
-  }
-
-  .estrelas li:nth-child(7){
-    left: 29vw;
-    animation: 26.7s subidaDireita infinite, 3s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -18s;
-  }
-
-  .estrelas li:nth-child(8){
-    left: 33vw;
-    animation: 25.8s subidaEsquerda infinite, 2s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -3s;
-  }
-
-  .estrelas li:nth-child(9){
-    left: 37vw;
-    animation: 28.8s subidaDireita infinite, 2.5s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -12s;
-  }
-
-  .estrelas li:nth-child(10){
-    left: 42vw;
-    animation: 29.4s subidaEsquerda infinite, 3.9s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -23s;
-  }
-
-  .estrelas li:nth-child(11){
-    left: 48vw;
-    animation: 27.3s subidaDireita infinite, 5.2s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -9s;
-  }
-
-  .estrelas li:nth-child(12){
-    left: 57vw;
-    animation: 25.2s subidaEsquerda infinite, 3.3s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -5s;
-  }
-
-  .estrelas li:nth-child(13){
-    left: 65vw;
-    animation: 26.8s subidaDireita infinite, 3.4s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -18s;
-  }
-
-  .estrelas li:nth-child(14){
-    left: 70vw;
-    animation: 28.7s subidaEsquerda infinite, 2.3s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -14s;
-  }
-
-  .estrelas li:nth-child(15){
-    left: 76vw;
-    animation: 24.9s subidaDireita infinite, 2.2s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -21s;
-  }
-
-  .estrelas li:nth-child(16){
-    left: 92vw;
-    animation: 26.6s subidaEsquerda infinite, 2.5s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -15s;
-  }
-
-  .estrelas li:nth-child(17){
-    left: 95vw;
-    animation: 25.4s subidaEsquerda infinite, 4.2s brilho infinite;
-    animation-timing-function: linear;
-    animation-delay: -21s;
-  }
-
-  .estrelas li:nth-child(18){
-    left: 3vw;
-    animation: 17.8s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -2s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(19){
-    left: 8vw;
-    animation: 17.8s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -2s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(20){
-    left: 14vw;
-    animation: 15.8s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -2s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(21){
-    left: 19vw;
-    animation: 17.3s subidaDireita infinite, 5.2s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -9s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(22){
-    left: 24vw;
-    animation: 15.2s subidaEsquerda infinite, 3.3s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -5s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(23){
-    left: 27vw;
-    animation: 16.8s subidaDireita infinite, 3.4s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -18s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(24){
-    left: 33vw;
-    animation: 18.7s subidaEsquerda infinite, 2.3s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -14s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(25){
-    left: 38vw;
-    animation: 14.9s subidaDireita infinite, 2.2s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -21s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(26){
-    left: 42vw;
-    animation: 16.6s subidaEsquerda infinite, 2.5s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -15s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(27){
-    left: 45vw;
-    animation: 15.4s subidaDireita infinite, 4.2s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -21s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(28){
-    left: 48vw;
-    animation: 12.3s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -2.5s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(29){
-    left: 53vw;
-    animation: 17.8s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -5.3s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(30){
-    left: 58vw;
-    animation: 13.4s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -2.8s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(31){
-    left: 63vw;
-    animation: 12.7s subidaDireita infinite, 5.2s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -9s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(32){
-    left: 66vw;
-    animation: 14.3s subidaEsquerda infinite, 3.3s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -5s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(33){
-    left: 70vw;
-    animation: 15.7s subidaDireita infinite, 3.4s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -18s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(34){
-    left: 73vw;
-    animation: 18.2s subidaEsquerda infinite, 2.3s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -14s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(35){
-    left: 78vw;
-    animation: 17.6s subidaDireita infinite, 2.2s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -21s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(36){
-    left: 84vw;
-    animation: 15.2s subidaEsquerda infinite, 2.5s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -15s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(37){
-    left: 92vw;
-    animation: 14.3s subidaDireita infinite, 4.2s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -21s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(38){
-    left: 95vw;
-    animation: 19.2s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -2s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(39){
-    left: 46vw;
-    animation: 13.8s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -2s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  .estrelas li:nth-child(40){
-    left: 36vw;
-    animation: 12.8s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
-    animation-timing-function: linear;
-    animation-delay: -2s;
-    width: 0.5px;
-    height: 0.5px;
-    border-radius: 0.25px;
-  }
-
-  @keyframes subidaDireita{
-    0% {transform: translate(0, 0); }
-    100%{transform: translate(50px, -1700px);}
-  }
-
-  @keyframes subidaEsquerda{
-    0% {transform: translate(0, 0); }
-    100%{transform: translate(-50px, -1700px);}
-  }
-
-  @keyframes brilho{
-    0% {box-shadow: 0 0 1px 0.5px rgba(255,255,255,1);}
-    50% {box-shadow: 0 0 1px 1.5px rgba(255,255,255,1);}
-    100% {box-shadow: 0 0 1px 0.5px rgba(255,255,255,1);}
-  }
-
-  @keyframes brilhoPequeno{
-    0% {box-shadow: 0 0 0.2px 0.2px rgba(255,255,255,1);}
-    50% {box-shadow: 0 0 0.2px 0.5px rgba(255,255,255,1);}
-    100% {box-shadow: 0 0 0.2px 0.2px rgba(255,255,255,1);}
-  }
-
+  width: calc(100vw - 15px);
+  box-sizing: border-box;
+  margin-top: var(--alutraHeader);
+  padding-top: calc(4*var(--margem));
+  display: block;
+  color: white;
+}
+
+/* Configura o título da seção */
+.titulo{
+  text-align: center;
+  font-weight: var(--fonteNegrito);
+  font-size: 3rem;
+  margin-bottom: calc(2*var(--margem));
+}
+
+/* Alinha os títulos de suseções */
+.corpo h2{
+  text-align: center;
+  text-decoration: underline orangered 1px;
+  text-underline-offset: 4px;
+  font-weight: var(--fonteNegrito);
+  margin-bottom: calc(2*var(--margem));
+}
+
+/* Arruma as seções */
+.corpo section{
+  margin: auto;
+  display: block;
+  padding: 50px calc(4*var(--margem));
+}
+
+/* Arruma as cores do background */
+.corpo section:nth-child(3){
+  background-color: rgba(0,0,0,0.8);
+}
+
+.corpo section:nth-child(4){
+  background-color: rgba(5,5,5,0.8);
+}
+
+.corpo section:nth-child(5){
+  background-color: rgba(10,10,10,0.8);
+}
+
+/* Arruma o carrossel */
+.carrossel{
+  width: 500px;
+  height: 200px;
+  background-color: rgba(40, 0, 20, 0.5);
+}
+
+/* Display flex para as seções */
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: calc(2*var(--margem));
+  width: 430px;
+}
+
+/* Formtando texto dos artigos */
+.corpo section:not(:last-of-type) article{
+  text-align: justify;
+}
+
+/* Flex de posição para a citação */
+.flex2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: calc(2*var(--margem));
+}
+
+/* Formatando a citação */
+.citacao{
+  float: right;  
+  text-align: right;
+  clear: right;
+}
+
+/* Itálico */
+.italico{
+  font-style: italic;
+}
+/* Seção de metodologias */
+.metodologia{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: calc(2*var(--margem));
+}
+/* arruma os boxes */
+.metodologia li{
+  border: solid orangered 1px;
+  padding: var(--margem);
+  width: 65%;
+  max-width: 700px;
+}
+.metodologia li:hover{
+  cursor: pointer;
+  font-weight: var(--fonteNegrito);
+}
+/* Fim dos estilos do corpo da pagina */
+
+/* Inserir quebra aqui também */
+
+/* Estilos do footer */
+
+/* Arruma o básico do footer */
+footer{
+    background-color: var(--preto);
+    color: white;
+    padding: calc(4*var(--margem));
+    width: calc(100vw - 15px);
+    display: block;
+}
+
+/* Flexbox no footer */
+footer .ulFooter{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: top;
+  list-style: none;
+}
+
+/* Ajustando os itens da flexbox */
+footer .ulFooter li{
+    width: calc(100%/3);
+}
+
+/* Listas internas */
+footer .ulFooter li ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(2*var(--margem));
+}
+
+/* Distância entre elementos */
+footer .ulFooter li ul li{
+  padding: calc(var(--margem) / 2) 0;
+  font-weight: var(--fonteNormal);
+  transition: 0s;
+}
+
+footer .ulFooter li ul li:first-of-type{
+  text-decoration: underline orangered 1px;
+  text-underline-offset: 2px;
+}
+
+footer .ulFooter li ul li:not(:first-of-type):hover{
+    font-weight: var(--fonteNegrito);
+    cursor: pointer;
+}
+/* Fim dos estilos do footer */
+
+/* TODO inserir quebra aqui */
+
+/* Animação das estrelas do fundo */
+.estrelas{
+  list-style: none;
+}
+
+.estrelas li{
+  position: absolute;
+  top: 1700px;
+  height: 1px;
+  width: 1px;
+  border-radius: 0.5px;
+  background-color: rgba(255,255,255,1);
+}
+.estrelas li:nth-child(1){
+  left: 5vw;
+  animation: 26s subidaDireita infinite, 1.8s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -20s;
+}
+.estrelas li:nth-child(2){
+  left: 10vw;
+  animation: 25.5s subidaEsquerda infinite, 4s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -24s;
+}
+.estrelas li:nth-child(3){
+  left: 14vw;
+  animation: 27.2s subidaDireita infinite, 2s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -10s;
+}
+.estrelas li:nth-child(4){
+  left: 17vw;
+  animation: 28.9s subidaEsquerda infinite, 5s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+}
+.estrelas li:nth-child(5){
+  left: 22vw;
+  animation: 30s subidaDireita infinite, 5s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -7s;
+}
+.estrelas li:nth-child(6){
+  left: 26vw;
+  animation: 29.3s subidaEsquerda infinite, 3s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -15s;
+}
+.estrelas li:nth-child(7){
+  left: 29vw;
+  animation: 26.7s subidaDireita infinite, 3s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -18s;
+}
+.estrelas li:nth-child(8){
+  left: 33vw;
+  animation: 25.8s subidaEsquerda infinite, 2s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -3s;
+}
+.estrelas li:nth-child(9){
+  left: 37vw;
+  animation: 28.8s subidaDireita infinite, 2.5s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -12s;
+}
+.estrelas li:nth-child(10){
+  left: 42vw;
+  animation: 29.4s subidaEsquerda infinite, 3.9s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -23s;
+}
+.estrelas li:nth-child(11){
+  left: 48vw;
+  animation: 27.3s subidaDireita infinite, 5.2s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -9s;
+}
+.estrelas li:nth-child(12){
+  left: 57vw;
+  animation: 25.2s subidaEsquerda infinite, 3.3s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -5s;
+}
+.estrelas li:nth-child(13){
+  left: 65vw;
+  animation: 26.8s subidaDireita infinite, 3.4s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -18s;
+}
+.estrelas li:nth-child(14){
+  left: 70vw;
+  animation: 28.7s subidaEsquerda infinite, 2.3s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -14s;
+}
+.estrelas li:nth-child(15){
+  left: 76vw;
+  animation: 24.9s subidaDireita infinite, 2.2s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -21s;
+}
+.estrelas li:nth-child(16){
+  left: 92vw;
+  animation: 26.6s subidaEsquerda infinite, 2.5s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -15s;
+}
+.estrelas li:nth-child(17){
+  left: 95vw;
+  animation: 25.4s subidaEsquerda infinite, 4.2s brilho infinite;
+  animation-timing-function: linear;
+  animation-delay: -21s;
+}
+.estrelas li:nth-child(18){
+  left: 3vw;
+  animation: 17.8s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -2s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(19){
+  left: 8vw;
+  animation: 17.8s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -2s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(20){
+  left: 14vw;
+  animation: 15.8s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -2s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(21){
+  left: 19vw;
+  animation: 17.3s subidaDireita infinite, 5.2s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -9s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(22){
+  left: 24vw;
+  animation: 15.2s subidaEsquerda infinite, 3.3s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -5s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(23){
+  left: 27vw;
+  animation: 16.8s subidaDireita infinite, 3.4s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -18s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(24){
+  left: 33vw;
+  animation: 18.7s subidaEsquerda infinite, 2.3s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -14s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(25){
+  left: 38vw;
+  animation: 14.9s subidaDireita infinite, 2.2s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -21s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(26){
+  left: 42vw;
+  animation: 16.6s subidaEsquerda infinite, 2.5s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -15s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(27){
+  left: 45vw;
+  animation: 15.4s subidaDireita infinite, 4.2s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -21s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(28){
+  left: 48vw;
+  animation: 12.3s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -2.5s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(29){
+  left: 53vw;
+  animation: 17.8s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -5.3s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(30){
+  left: 58vw;
+  animation: 13.4s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -2.8s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(31){
+  left: 63vw;
+  animation: 12.7s subidaDireita infinite, 5.2s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -9s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(32){
+  left: 66vw;
+  animation: 14.3s subidaEsquerda infinite, 3.3s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -5s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(33){
+  left: 70vw;
+  animation: 15.7s subidaDireita infinite, 3.4s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -18s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(34){
+  left: 73vw;
+  animation: 18.2s subidaEsquerda infinite, 2.3s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -14s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(35){
+  left: 78vw;
+  animation: 17.6s subidaDireita infinite, 2.2s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -21s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(36){
+  left: 84vw;
+  animation: 15.2s subidaEsquerda infinite, 2.5s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -15s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(37){
+  left: 92vw;
+  animation: 14.3s subidaDireita infinite, 4.2s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -21s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(38){
+  left: 95vw;
+  animation: 19.2s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -2s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(39){
+  left: 46vw;
+  animation: 13.8s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -2s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+.estrelas li:nth-child(40){
+  left: 36vw;
+  animation: 12.8s subidaEsquerda infinite, 2.1s brilhoPequeno infinite;
+  animation-timing-function: linear;
+  animation-delay: -2s;
+  width: 0.5px;
+  height: 0.5px;
+  border-radius: 0.25px;
+}
+
+@keyframes subidaDireita{
+  0% {transform: translate(0, 0); }
+  100%{transform: translate(50px, -1700px);}
+}
+
+@keyframes subidaEsquerda{
+  0% {transform: translate(0, 0); }
+  100%{transform: translate(-50px, -1700px);}
+}
+
+@keyframes brilho{
+  0% {box-shadow: 0 0 1px 0.5px rgba(255,255,255,1);}
+  50% {box-shadow: 0 0 1px 1.5px rgba(255,255,255,1);}
+  100% {box-shadow: 0 0 1px 0.5px rgba(255,255,255,1);}
+}
+
+@keyframes brilhoPequeno{
+  0% {box-shadow: 0 0 0.2px 0.2px rgba(255,255,255,1);}
+  50% {box-shadow: 0 0 0.2px 0.5px rgba(255,255,255,1);}
+  100% {box-shadow: 0 0 0.2px 0.2px rgba(255,255,255,1);}
+}
