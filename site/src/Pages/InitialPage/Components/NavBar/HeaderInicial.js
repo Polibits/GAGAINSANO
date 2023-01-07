@@ -1,6 +1,6 @@
 import React from 'react';
-import './Components/ComponentName/styleHeaders.css';
-import logo from "./Assets/Logo.png";
+import './NavBar.css';
+import logo from "../../Assets/Logo.png";
 
 class HeaderInicial extends React.Component{
     constructor(props){
