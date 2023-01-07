@@ -4,10 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* Definindo variáveis */
 :root{
     font-size: 16px;
-    --preto: black;
+    --preto: #000000;
     --margem: 10px;
     --alutraHeader: 80px;
     --fonteNormal: 500;
@@ -79,7 +80,7 @@ nav{
 /* Arruma o posicionamento do logo */
 .logo{
   font-size: 2rem;
-  width: 200px;
+  width: 240px;
   overflow: visible;
 }
 

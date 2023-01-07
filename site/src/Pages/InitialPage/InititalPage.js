@@ -1,19 +1,19 @@
 import React from 'react';
-import './Components/ComponentName/style.css';
+import './Components/NavBar/NavBar.css';
 
 class PaginaInicial extends React.Component{
     constructor(props){
       super(props);
     }
     render(){
-    return (
-        <div>
-            <HeaderInicial />
-            <HeaderMenor />
-            <CorpoInicial />
-            <FooterInicial />
-        </div>
-    );
+        return (
+            <div>
+                <HeaderInicial />
+                <HeaderMenor />
+                <CorpoInicial />
+                <FooterInicial />
+            </div>
+        );
     }
 }
   
@@ -25,13 +25,13 @@ class HeaderInicial extends React.Component{
         return(
             <header className='headerInicial'>
                 <nav>
-                    <div className='logo'>Gagá Insano</div>
+                    <div className='logo'>GAGÁ INSANO</div>
                     <ul className='ulNav'>
                         <li>Cursos</li>
                         <li>Olimpíadas</li>
                         <li>Materiais Gratuitos</li>
                         <li>Gagá Insano Resolve</li>
-                        <li><button className='acesso'>Acessar</button></li>
+                        <li><button className='acess'>Acessar</button></li>
                     </ul>
                 </nav>
             </header>
@@ -107,7 +107,7 @@ class CorpoInicial extends React.Component{
                     <li></li>
                     <li></li>
                 </ul>
-                <h1 className='titulo'>Gagá Insano</h1>
+                <h1 className='titulo'>GAGÁ INSANO</h1>
                 <section className='introducao'>
                     <h2>Prepare-se Com os Melhores!</h2>
                     <div className='flex2'>
