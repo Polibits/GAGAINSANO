@@ -1,5 +1,7 @@
 import React from 'react';
-import './Components/ComponentName/style.css';
+import './Components/ComponentName/styleInitialPage.css';
+import HeaderInicial from './HeaderInicial';
+import HeaderMenor from './HeaderMenor';
 
 class PaginaInicial extends React.Component{
     constructor(props){
@@ -14,47 +16,6 @@ class PaginaInicial extends React.Component{
             <FooterInicial />
         </div>
     );
-    }
-}
-  
-class HeaderInicial extends React.Component{
-    constructor(props){
-        super(props);
-    }
-    render(){
-        return(
-            <header className='headerInicial'>
-                <nav>
-                    <div className='logo'>Gagá Insano</div>
-                    <ul className='ulNav'>
-                        <li>Cursos</li>
-                        <li>Olimpíadas</li>
-                        <li>Materiais Gratuitos</li>
-                        <li>Gagá Insano Resolve</li>
-                        <li><button className='acesso'>Acessar</button></li>
-                    </ul>
-                </nav>
-            </header>
-        );
-    }
-}
-
-class HeaderMenor extends React.Component{
-    constructor(props){
-        super(props);
-    }
-    render(){
-        return(
-            <header className='headerMenor'>
-                <nav>
-                    <div className='menuLateral'></div>
-                    <div className='logo'>Gagá Insano</div>
-                    <ul>
-                        <li><button className='acesso'>Acessar</button></li>
-                    </ul>
-                </nav>
-            </header>
-        );
     }
 }
 

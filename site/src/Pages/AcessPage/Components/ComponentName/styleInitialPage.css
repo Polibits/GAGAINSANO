@@ -7,7 +7,7 @@
 /*Definindo variáveis*/
 :root{
     font-size: 16px;
-    --preto: black;
+    --preto: #000000;
     --margem: 10px;
     --alutraHeader: 80px;
     --fonteNormal: 500;
@@ -15,127 +15,6 @@
     --fonteNegrito: 700;
     --alturaCorpo: 1537px;
 }
-  
-  /*Estilos do header*/
-    /*Decide qual header usar*/
-    @media screen and (max-width: 1000px){
-      .headerMenor{
-        display: block;
-      }
-      .headerInicial{
-        display: none;
-      }
-    }
-    @media screen and (min-width: 1060px){
-      .headerMenor{
-        display: none;
-      }
-      .headerInicial{
-        display: block;
-      }
-    }
-
-    /*Colapsa a barra em algumas distâncias*/
-    @media screen and (max-width: 1100px){
-      .headerInicial nav ul li:nth-child(1){
-        display: none;
-      }
-    }
-    /*Configura o header da pagina inicial*/
-    header{
-      width: calc(100vw - 15px);
-      height: var(--alutraHeader);
-  
-      position: fixed;
-      top: 0;
-      left: 0;
-  
-      background: #000118; 
-      background: linear-gradient(0deg, #000118 0%, #000121 100%);
-      background: -webkit-linear-gradient(0deg, #000118, #000121);
-
-      color: white;
-      font-weight: var(--fonteNormal);
-      font-size: 1.3rem;
-      z-index: 100;
-    }
-
-    /*Menu lateral do header menor*/
-    .menuLateral{
-      width: 120px;
-      height: 20px;
-      background-color: rgba(40, 0, 20, 0.8);
-    }
-  
-    /*Arruma a altura da navbar*/
-    nav{
-      height: inherit;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      width: calc(100% - 8 * var(--margem));
-      margin: 0 calc(4*var(--margem));
-    }
-  
-    /*Arruma o posicionamento do logo*/
-    .logo{
-      font-size: 2rem;
-      width: 200px;
-      overflow: visible;
-    }
-  
-    /*Display em flexbox para os botões da página inicial*/
-    header nav ul{
-      list-style: none;
-      height: inherit;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: right;
-      align-items: center;
-      float: right;
-      gap: calc(2*var(--margem));
-    }
-    
-    /*Estiliza todos os botões com exceção do botão de acesso*/
-    header nav ul li:not(header ul li:last-of-type){
-      vertical-align: center;
-      transition: 0.3s;
-      text-decoration: underline rgba(255,255,255,0);
-      text-underline-offset: 6px;
-    }
-  
-    header nav ul li:not(header ul li:last-of-type):hover{
-      text-decoration: underline rgba(255,255,255,1);
-      font-weight: var(--fonteNegrito);
-      cursor: pointer;
-    }
-  
-    /*Estiliza o botão de acesso*/
-    header nav ul li button{
-      height: 45px;
-      width: 120px;
-      
-      color: white;
-      font-weight: var(--fonteNormal);
-      font-family: Montserrat !important;
-      font-size: 1.3rem !important;
-  
-      background-color: rgba(0,0,0,0);
-      border: white solid 1px;
-      border-radius: 5px;
-  
-      transition: 0.5s;
-    }
-  
-    header nav ul li button:hover{
-      font-weight: var(--fonteNegrito);
-      background-color: white;
-      color: black;
-      cursor: pointer;
-    }
-  /*Fim dos estilos do header*/
   /*Começo dos estilos do corpo da pagina*/
     /*Configura o fundo do corpo*/
     .corpo{
@@ -250,6 +129,7 @@
       padding: var(--margem);
       width: 65%;
       max-width: 700px;
+      min-width: 320px;
     }
 
     .metodologia li:hover{
