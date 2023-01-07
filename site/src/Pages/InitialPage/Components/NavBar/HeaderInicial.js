@@ -1,6 +1,7 @@
 import React from 'react';
 import './NavBar.css';
-import logo from "../../Assets/Logo.png";
+import logo from "../../Assets/Logo2.png";
+import { Link } from 'react-router-dom';
 
 class HeaderInicial extends React.Component{
     constructor(props){
@@ -10,12 +11,12 @@ class HeaderInicial extends React.Component{
         return(
             <header className='headerInicial'>
                 <nav>
-                    <img className='logo' src={logo}/>
+                    <Link to='/'><img className='logo' src={logo}/></Link>
                     <ul className='ulNav'>
-                        <li>Cursos</li>
-                        <li>Olimpíadas</li>
-                        <li>Materiais Gratuitos</li>
-                        <li>Gagá Insano Resolve</li>
+                        <li><Link to='/cursos'>Cursos</Link></li>
+                        <li><Link to='/olimpiadas'>Olimpíadas</Link></li>
+                        <li><Link to ='/MateriaisGratuitos'>Materiais Gratuitos</Link></li>
+                        <li><Link to='/GagaInsanoResolve'>Gagá Insano Resolve</Link></li>
                         <li><button className='acesso'>Acessar</button></li>
                     </ul>
                 </nav>

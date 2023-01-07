@@ -1,6 +1,7 @@
 import React from 'react';
 import './NavBar.css';
-import logo from "../../Assets/Logo.png";
+import logo from "../../Assets/Logo2.png";
+import { Link } from 'react-router-dom';
 
 class HeaderMenor extends React.Component{
     constructor(props){
@@ -35,10 +36,10 @@ class MenuLateral extends React.Component{
                 </ul>
                 <div className='hiddenMenu'>
                     <ul>
-                        <li>Cursos</li>
-                        <li>Olimpíadas</li>
-                        <li>Materiais Gratuitos</li>
-                        <li>Gagá Insano Resolve</li>
+                        <li><Link to='/cursos'>Cursos</Link></li>
+                        <li><Link to='/olimpiadas'>Olimpíadas</Link></li>
+                        <li><Link to ='/MateriaisGratuitos'>Materiais Gratuitos</Link></li>
+                        <li><Link to='/GagaInsanoResolve'>Gagá Insano Resolve</Link></li>
                     </ul>
                 </div>
             </>
