@@ -1,0 +1,53 @@
+/* Estilos do footer */
+
+/* Arruma o básico do footer */
+footer{
+    background-color: var(--preto);
+    color: white;
+    padding: calc(4*var(--margem));
+    width: calc(100vw - 15px);
+    display: block;
+}
+
+/* Flexbox no footer */
+footer .ulFooter{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: top;
+  list-style: none;
+}
+
+/* Ajustando os itens da flexbox */
+footer .ulFooter li{
+    width: calc(100%/3);
+}
+
+/* Listas internas */
+footer .ulFooter li ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(2*var(--margem));
+}
+
+/* Distância entre elementos */
+footer .ulFooter li ul li{
+  padding: calc(var(--margem) / 2) 0;
+  font-weight: var(--fonteNormal);
+  transition: 0s;
+}
+
+footer .ulFooter li ul li:first-of-type{
+  text-decoration: underline orangered 1px;
+  text-underline-offset: 2px;
+}
+
+footer .ulFooter li ul li:not(:first-of-type):hover{
+    font-weight: var(--fonteNegrito);
+    cursor: pointer;
+}
+/* Fim dos estilos do footer */

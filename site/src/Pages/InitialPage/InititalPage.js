@@ -1,5 +1,7 @@
 import React from 'react';
 import './Components/NavBar/NavBar.css';
+import './Components/Footer/Footer.css';
+import './Components/StarsBackground/StarsBackground.css';
 
 class PaginaInicial extends React.Component{
     constructor(props){
