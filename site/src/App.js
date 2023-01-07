@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import PaginaInicial from './Pages/AcessPage/AcessPage';
-//import './Pages/AcessPage/Components/ComponentName/style.css';
+import PaginaInicial from './Pages/InitialPage/InititalPage';
+//import './Pages/InitialPage/Components/ComponentName/style.css';
 
 function App() {
   return (
