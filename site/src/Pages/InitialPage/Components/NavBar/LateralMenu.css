@@ -52,7 +52,7 @@
     width: calc(100vw - 15px);
     height: auto;
     box-sizing: border-box;
-    background-color: var(--preto);
+    background-color: #01022d;
     overflow: hidden;
     transition: 1s;
     padding: 0;
