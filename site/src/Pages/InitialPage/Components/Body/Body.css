@@ -121,8 +121,10 @@
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+  max-width: 1000px;
   flex-wrap: wrap;
   align-items: center;
+  margin: auto;
   gap: calc(2*var(--margem));
 }
 

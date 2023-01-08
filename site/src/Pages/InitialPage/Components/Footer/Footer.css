@@ -20,7 +20,7 @@ footer{
 footer .ulFooter{
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: top;
   list-style: none;
@@ -28,7 +28,7 @@ footer .ulFooter{
 
 /* Ajustando os itens da flexbox */
 footer .ulFooter li{
-    width: calc(100%/3);
+    width: 300px;
 }
 
 /* Listas internas */
