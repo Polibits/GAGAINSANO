@@ -1,5 +1,6 @@
 import React from 'react';
 import './NavBar.css';
+import './LateralMenu.css';
 import logo from "../../Assets/Logo2.png";
 import { Link } from 'react-router-dom';
 
