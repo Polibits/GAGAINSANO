@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import logo from "../../Assets/Logo.png";
 
 class FooterInicial extends React.Component{
     constructor(props){
@@ -8,10 +9,15 @@ class FooterInicial extends React.Component{
     render(){
         return(
             <footer>
+                
                 <ul className='ulFooter'>
+                    <div class='footer_logo'>
+                        <img src={logo} ></img>
+                    </div>
+                    
                     <li>
                         <ul>
-                            <li>Menu:</li>
+                            <li>MENU</li>
                             <li>Cursos</li>
                             <li>Olimpíadas</li>
                             <li>Materiais Gratuitos</li>
@@ -20,7 +26,7 @@ class FooterInicial extends React.Component{
                     </li>
                     <li>
                         <ul>
-                            <li>Redes Sociais:</li>
+                            <li>REDES SOCIAIS:</li>
                             <li>Instagram</li>
                             <li>Telegram</li>
                             <li>Whatsapp</li>
@@ -28,7 +34,7 @@ class FooterInicial extends React.Component{
                     </li>
                     <li>
                         <ul>
-                            <li>Nossos Cursos:</li>
+                            <li>NOSSOS CURSOS</li>
                             <li>Turma ITA</li>
                             <li>Turma IME</li>
                             <li>ENEM tunado</li>

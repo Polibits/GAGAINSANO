@@ -1,12 +1,19 @@
-/* Estilos do footer */
-
 /* Arruma o básico do footer */
 footer{
   background-color: var(--preto);
-  color: white;
+  color: #ffffff;
   padding: calc(4*var(--margem));
   width: calc(100vw - 15px);
   display: block;
+}
+
+/* Formatando a Logo */
+.footer_logo{
+  align-items: center;
+}
+
+.footer_logo img{
+  width: 250px;
 }
 
 /* Flexbox no footer */
@@ -41,8 +48,11 @@ footer .ulFooter li ul li{
   transition: 0s;
 }
 
+/* "Título" de cada secção do footer */
 footer .ulFooter li ul li:first-of-type{
-  text-decoration: underline orangered 1px;
+  -webkit-text-fill-color: #ef6108;
+  font-weight: var(--fonteNegrito);
+  text-decoration: underline #ef6108 2px;
   text-underline-offset: 2px;
 }
 
