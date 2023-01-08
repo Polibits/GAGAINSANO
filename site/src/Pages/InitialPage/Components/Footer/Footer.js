@@ -26,7 +26,7 @@ class FooterInicial extends React.Component{
                     </li>
                     <li>
                         <ul>
-                            <li>REDES SOCIAIS:</li>
+                            <li>REDES SOCIAIS</li>
                             <li>Instagram</li>
                             <li>Telegram</li>
                             <li>Whatsapp</li>
