@@ -93,19 +93,18 @@ header nav ul{
   float: right;
   gap: calc(2*var(--margem));
 }
-  
-/* Estiliza todos os botões com exceção do botão de acesso */
-header nav ul li:not(header ul li:last-of-type){
-  vertical-align: center;
-  transition: 0.3s;
-  text-decoration: underline rgba(255,255,255,0);
-  text-underline-offset: 6px;
+
+/* Estiliza os links das abas */
+header a{
+  font-weight: var(--fonteNormal);
+  color: #ffffff;
+  text-decoration: none;
 }
 
-header nav ul li:not(header ul li:last-of-type):hover{
-  text-decoration: underline rgba(255,255,255,1);
+header a:hover{
   font-weight: var(--fonteNegrito);
-  cursor: pointer;
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 /* Estiliza o botão de acesso */
@@ -123,12 +122,6 @@ header nav ul li button{
   transition: 0.5s;
 }
 
-header nav ul li button:hover{
-  font-weight: var(--fonteNegrito);
-  background-color: white;
-  color: black;
-  cursor: pointer;
-}
 
 /* Estiliza o menu lateral da página */
 .menuLateral{
