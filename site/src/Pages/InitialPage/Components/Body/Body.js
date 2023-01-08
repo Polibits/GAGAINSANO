@@ -12,7 +12,8 @@ import OBM_logo from "../Body/Vestibulares/OBM.jpg";
 import OBF_logo from "../Body/Vestibulares/OBF.jpg";
 
 
-import IME_resolucao_01 from "../Body/Resoluções/IME_01.jpg";
+import POST_01 from "../Body/Resoluções/POST_01.jpg";
+import POST_02 from "../Body/Resoluções/POST_02.jpg";
 
 class CorpoInicial extends React.Component{
     constructor(props){
@@ -31,8 +32,20 @@ class CorpoInicial extends React.Component{
                 <section className='introducao'>
                     <div className='flex2'>
                         <div className='flex'>
+                            
+                            <article className='imaginar'>
+                                <p class='basic_text'>
+                                    Imagine escapar da superficialidade, não se prender a apenas decorar fórmulas, como é de costume, e, ao invés disso, alcançar um entendimento sólido dos assuntos mais complexos de física, química e matemática?
+                                </p>
+                            </article>
+                            <div class='PostDiv'>
+                                <img src={POST_01} class='ResolucaoPost'></img>
+                                <img src={POST_02} class='ResolucaoPost'></img>
+                            </div>
                             <article className='militares'>
-                                Cursos completos, voltados a preparações para vestibulares militares - ITA, IME, AFA, EFOM -, vestibulares tradicionais - FUVEST, ENEM -, e olimpíadas de exatas - OBM, OBF, OBQ.
+                                <p class='basic_text'>
+                                Cursos completos, voltados a preparações para vestibulares militares — ITA, IME, AFA, EFOM —, vestibulares tradicionais — FUVEST, ENEM — e olimpíadas de exatas — OBM, OBF, OBQ.
+                                </p>
                             </article>
                             <div class='vestibulares_main_container'>
                                 <div class='militares_imgs_container'>
@@ -52,14 +65,11 @@ class CorpoInicial extends React.Component{
                                     <img src={OBF_logo} class='OBF_logo'></img>
                                 </div>
                             </div>
-                            <article className='imaginar'>
-                                Imagine escapar da superficialidade, não se prender a apenas decorar fórmulas, como é de costume, e, ao invés disso, alcançar um entendimento sólido dos assuntos mais complexos de física, química e matemática.
-                            </article>
-                            <div>
-                                <img src={IME_resolucao_01}></img>
-                            </div>
+                            
                             <article className='preparado'>
-                                Aqui, você encontra cursos completos, em que trazemos o embasamento teórico necessário e o aprofundamento nos assuntos para que você, ao final da preparação, esteja preparado para enfrentar as provas mais difíceis!
+                                <p class='basic_text'>
+                                    Aqui, você encontra cursos completos, em que trazemos o embasamento teórico necessário e o aprofundamento nos assuntos para que você, ao final da preparação, esteja preparado para enfrentar as provas mais difíceis!
+                                </p>
                             </article>
                         </div>
                     </div>
@@ -69,10 +79,14 @@ class CorpoInicial extends React.Component{
                     <div className='flex2'>
                         <div className='flex'>
                             <article className='quemSomos'>
-                                O Gagá Insano é um preparatório online, que surgiu de uma iniciativa de alunos motivados a revolucionar o ensino de exatas no Brasil, ao trazer maior profundidade nos conteúdos e um carinho especial com os conceitos.
+                                <p class='basic_text'>
+                                    O Gagá Insano é um preparatório online, que surgiu de uma iniciativa de alunos motivados a revolucionar o ensino de exatas no Brasil, ao trazer maior profundidade nos conteúdos e um carinho especial com os conceitos.
+                                </p>
                             </article>
                             <article className='numeros'>
-                                Hoje, temos uma comunidade muito ativa. São mais de 30 mil seguidores na página principal do instagram e esse número não para de crescer!
+                            <p class='basic_text'>
+                            Hoje, temos uma comunidade muito ativa. São mais de 30 mil seguidores na página principal do instagram e esse número não para de crescer!
+                            </p>   
                             </article>
                         </div>
                         <p className='citacao'>

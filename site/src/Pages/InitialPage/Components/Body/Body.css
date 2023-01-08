@@ -38,6 +38,10 @@
   50% { border-color: #ffffff }
 }
 
+.basic_text{
+  font-size: 1.3rem;
+}
+
 /* Formatando a Logo */
 .main_logo{
   align-items: center;
@@ -103,6 +107,17 @@
   width: 500px;
   height: 200px;
   background-color: rgba(40, 0, 20, 0.5);
+}
+
+/* Estiliza a parte das postagens do instagram */
+.PostDiv{
+  margin: 10px auto;
+  align-items: center;
+}
+
+.ResolucaoPost{
+  display: flexbox;
+  height: 500px;
 }
 
 /* Display flex para as seções */
