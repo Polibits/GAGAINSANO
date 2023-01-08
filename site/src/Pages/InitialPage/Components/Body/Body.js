@@ -1,7 +1,18 @@
 import React from 'react';
 import './Body.css';
+import './Vestibulares.css';
+
 import Stars from '../StarsBackground/Stars';
 import logo from "../../Assets/Logo.png";
+import ITA_logo from "../Body/Vestibulares/ITA.jpg";
+import IME_logo from "../Body/Vestibulares/IME.png";
+import FUVEST_logo from "../Body/Vestibulares/FUVEST.jpg";
+import ENEM_logo from "../Body/Vestibulares/ENEM.jpg";
+import OBM_logo from "../Body/Vestibulares/OBM.jpg";
+import OBF_logo from "../Body/Vestibulares/OBF.jpg";
+
+
+import IME_resolucao_01 from "../Body/Resoluções/IME_01.jpg";
 
 class CorpoInicial extends React.Component{
     constructor(props){
@@ -23,9 +34,30 @@ class CorpoInicial extends React.Component{
                             <article className='militares'>
                                 Cursos completos, voltados a preparações para vestibulares militares - ITA, IME, AFA, EFOM -, vestibulares tradicionais - FUVEST, ENEM -, e olimpíadas de exatas - OBM, OBF, OBQ.
                             </article>
+                            <div class='vestibulares_main_container'>
+                                <div class='militares_imgs_container'>
+                                    <h3>VESTIBULARES MILITARES</h3>
+                                    <img src={ITA_logo} class='ITA_logo'></img>
+                                    <img src={IME_logo} class='IME_logo'></img>
+
+                                </div>
+                                <div class='civis_imgs_container'>
+                                    <h3>VESTIBULARES CIVIS</h3>
+                                    <img src={FUVEST_logo} class='FUVEST_logo'></img>
+                                    <img src={ENEM_logo} class='ENEM_logo'></img>
+                                </div>
+                                <div class='olimpíadas_imgs_container'>
+                                    <h3>OLIMPÍADAS</h3>
+                                    <img src={OBM_logo} class='OBM_logo'></img>
+                                    <img src={OBF_logo} class='OBF_logo'></img>
+                                </div>
+                            </div>
                             <article className='imaginar'>
                                 Imagine escapar da superficialidade, não se prender a apenas decorar fórmulas, como é de costume, e, ao invés disso, alcançar um entendimento sólido dos assuntos mais complexos de física, química e matemática.
                             </article>
+                            <div>
+                                <img src={IME_resolucao_01}></img>
+                            </div>
                             <article className='preparado'>
                                 Aqui, você encontra cursos completos, em que trazemos o embasamento teórico necessário e o aprofundamento nos assuntos para que você, ao final da preparação, esteja preparado para enfrentar as provas mais difíceis!
                             </article>
