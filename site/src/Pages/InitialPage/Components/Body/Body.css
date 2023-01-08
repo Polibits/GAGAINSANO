@@ -17,6 +17,48 @@
   font-weight: var(--fonteNegrito);
   font-size: 3rem;
   margin-bottom: calc(2*var(--margem));
+  letter-spacing: .20em;
+  border-right: .05em transparent #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 0%;
+  animation:
+    typing 3.5s steps(30, end) 2s forwards,
+    blink-caret 0.5s step-end 2s;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #ffffff }
+}
+
+/* Formatando a Logo */
+.main_logo{
+  align-items: center;
+  margin-bottom: calc(2*var(--margem));
+}
+
+.main_logo img{
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: logo_fade_in 5s;
+}
+
+@keyframes logo_fade_in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 .logo_subtitle{
@@ -34,19 +76,6 @@
   text-underline-offset: 4px;
   font-weight: var(--fonteNegrito);
   margin-bottom: calc(2*var(--margem));
-}
-
-/* Formatando a Logo */
-.main_logo{
-  align-items: center;
-  margin-bottom: calc(2*var(--margem));
-}
-
-.main_logo img{
-  width: 500px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
   
 /* Arruma as seções */

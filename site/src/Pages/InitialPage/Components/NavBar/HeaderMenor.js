@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavBar.css';
 import './LateralMenu.css';
-import logo from "../../Assets/Logo2.png";
+import logo from "../../Assets/Logo.png";
 import { Link } from 'react-router-dom';
 
 class HeaderMenor extends React.Component{

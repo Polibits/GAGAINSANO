@@ -1,7 +1,7 @@
 import React from 'react';
 import './Body.css';
 import Stars from '../StarsBackground/Stars';
-import logo from "../../Assets/Logo2.png";
+import logo from "../../Assets/Logo.png";
 
 class CorpoInicial extends React.Component{
     constructor(props){
