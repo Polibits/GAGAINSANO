@@ -2,7 +2,7 @@
 /* Configura o fundo do corpo */
 .corpo{
   background: #101010;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #101010, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to top, #0d0d0d, #000000);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #101010, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
   width: calc(100vw - 15px);
@@ -24,7 +24,7 @@
 /* Alinha os títulos de suseções */
 .corpo h2{
   text-align: center;
-  text-decoration: underline orangered 1px;
+  text-decoration: underline #002462 3px;
   text-underline-offset: 4px;
   font-weight: var(--fonteNegrito);
   margin-bottom: calc(2*var(--margem));
@@ -106,7 +106,7 @@
 }
 /* Arruma os boxes */
 .metodologia li{
-  border: solid orangered 1px;
+  border: solid #002462 2px;
   padding: var(--margem);
   width: 65%;
   max-width: 700px;

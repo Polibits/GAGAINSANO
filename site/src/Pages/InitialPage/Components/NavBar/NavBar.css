@@ -51,7 +51,7 @@ header{
   position: fixed;
   top: 0;
   left: 0;
-  background: var(--preto); 
+  background: linear-gradient(0deg, #01022d 0%, #000121 100%); 
   color: white;
   font-weight: var(--fonteNormal);
   font-size: 1.3rem;
