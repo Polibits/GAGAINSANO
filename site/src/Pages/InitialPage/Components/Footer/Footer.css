@@ -2,11 +2,11 @@
 
 /* Arruma o básico do footer */
 footer{
-    background-color: var(--preto);
-    color: white;
-    padding: calc(4*var(--margem));
-    width: calc(100vw - 15px);
-    display: block;
+  background-color: var(--preto);
+  color: white;
+  padding: calc(4*var(--margem));
+  width: calc(100vw - 15px);
+  display: block;
 }
 
 /* Flexbox no footer */
@@ -50,4 +50,3 @@ footer .ulFooter li ul li:not(:first-of-type):hover{
     font-weight: var(--fonteNegrito);
     cursor: pointer;
 }
-/* Fim dos estilos do footer */

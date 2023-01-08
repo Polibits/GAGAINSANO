@@ -5,9 +5,6 @@ import CorpoInicial from './Components/Body/Body';
 import FooterInicial from './Components/Footer/Footer';
 
 class PaginaInicial extends React.Component{
-    constructor(props){
-      super(props);
-    }
     render(){
         return (
             <div>
@@ -19,6 +16,5 @@ class PaginaInicial extends React.Component{
         );
     }
 }
-
 
 export default PaginaInicial;

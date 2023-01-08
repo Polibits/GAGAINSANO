@@ -1,20 +1,20 @@
 /* Apenas zerando margens e padding */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Definindo variáveis */
 :root{
-    font-size: 16px;
-    --preto: #000000;
-    --margem: 10px;
-    --alutraHeader: 80px;
-    --fonteNormal: 500;
-    --fontMenor: 400;
-    --fonteNegrito: 700;
-    --alturaCorpo: 1537px;
+  font-size: 16px;
+  --preto: #000000;
+  --margem: 10px;
+  --alutraHeader: 80px;
+  --fonteNormal: 500;
+  --fontMenor: 400;
+  --fonteNegrito: 700;
+  --alturaCorpo: 1537px;
 }
   
 /* Estilos do header */
@@ -226,4 +226,3 @@ header nav ul li button:hover{
   opacity: 1;
   padding: calc(4*var(--margem));
 }
-/* Fim dos estilos do header */
