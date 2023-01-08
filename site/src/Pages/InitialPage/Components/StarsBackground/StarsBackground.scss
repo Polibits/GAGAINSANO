@@ -10,8 +10,6 @@ $numStarTwoStars: 700;
 $numStarThreeStars: 200;
 $numComet: 10;
 
-
-
 @function create-stars($n) {
   $stars: "#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF";
 
@@ -33,7 +31,7 @@ $numComet: 10;
 
 @keyframes animShootingStar {
   from {
-    transform: translateY(0px) translateX(0px) rotate(0deg);
+    transform: translateY(0px) translateX(0px) rotate(-45deg);
     opacity: 1;
     height: 5px;
   }
