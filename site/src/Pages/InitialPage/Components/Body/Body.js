@@ -1,6 +1,7 @@
 import React from 'react';
 import './Body.css';
 import Stars from '../StarsBackground/Stars';
+import logo from "../../Assets/Logo2.png";
 
 class CorpoInicial extends React.Component{
     constructor(props){
@@ -10,32 +11,25 @@ class CorpoInicial extends React.Component{
         return(
             <main className='corpo'>
                 <Stars />
-                <h1 className='titulo'>GAGÁ INSANO</h1>
+                
+                <div class='main_logo'>
+                    <h1 class='titulo'>GAGÁ INSANO</h1>
+                    <img src={logo}></img>
+                </div>
+                <h3 class='logo_subtitle'>PREPARE-SE COM OS MELHORES!</h3>
                 <section className='introducao'>
-                    <h2>Prepare-se Com os Melhores!</h2>
                     <div className='flex2'>
                         <div className='flex'>
                             <article className='militares'>
-                                Cursos completos, voltados a preparações para <br />
-                                vestibulares militares - ITA, IME, AFA, EFOM -, <br />
-                                vestibulares tradicionais - FUVEST, ENEM -, <br />
-                                e olimpíadas de exatas - OBM, OBF, OBQ.
+                                Cursos completos, voltados a preparações para vestibulares militares - ITA, IME, AFA, EFOM -, vestibulares tradicionais - FUVEST, ENEM -, e olimpíadas de exatas - OBM, OBF, OBQ.
                             </article>
                             <article className='imaginar'>
-                                Imagine escapar da superficialidade, não se prender a<br />
-                                apenas decorar fórmulas, como é de costume, <br />
-                                e, ao invés disso, alcançar um entendimento sólido <br />
-                                dos assuntos mais complexos de física, química e matemática.
+                                Imagine escapar da superficialidade, não se prender a apenas decorar fórmulas, como é de costume, e, ao invés disso, alcançar um entendimento sólido dos assuntos mais complexos de física, química e matemática.
                             </article>
                             <article className='preparado'>
-                                Aqui, você encontra cursos completos, em que <br />
-                                trazemos o embasamento teórico necessário e o <br />
-                                aprofundamento nos assuntos para que você, ao <br />
-                                final da preparação, esteja preparado para <br />
-                                enfrentar as provas mais difíceis!
+                                Aqui, você encontra cursos completos, em que trazemos o embasamento teórico necessário e o aprofundamento nos assuntos para que você, ao final da preparação, esteja preparado para enfrentar as provas mais difíceis!
                             </article>
                         </div>
-                        <Carrossel />
                     </div>
                 </section>
                 <section className='sobreNos1'>
@@ -43,16 +37,10 @@ class CorpoInicial extends React.Component{
                     <div className='flex2'>
                         <div className='flex'>
                             <article className='quemSomos'>
-                                O Gagá Insano é um preparatório online, <br />
-                                que surgiu de uma iniciativa de alunos motivados a <br />
-                                revolucionar o ensino de exatas no Brasil, ao <br />
-                                trazer maior profundidade nos conteúdos e <br />
-                                um carinho especial com os conceitos.
+                                O Gagá Insano é um preparatório online, que surgiu de uma iniciativa de alunos motivados a revolucionar o ensino de exatas no Brasil, ao trazer maior profundidade nos conteúdos e um carinho especial com os conceitos.
                             </article>
                             <article className='numeros'>
-                                Hoje, temos uma comunidade muito ativa. <br />
-                                São mais de 30 mil seguidores na página principal do <br />
-                                instagram e esse número não para de crescer!
+                                Hoje, temos uma comunidade muito ativa. São mais de 30 mil seguidores na página principal do instagram e esse número não para de crescer!
                             </article>
                         </div>
                         <p className='citacao'>

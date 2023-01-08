@@ -103,7 +103,6 @@ header a{
 
 header a:hover{
   font-weight: var(--fonteNegrito);
-  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -112,12 +111,12 @@ header nav ul li button{
   height: 45px;
   width: 120px;
   
-  color: white;
+  color: #ffffff;
   font-weight: var(--fonteNormal);
   font-family: Montserrat !important;
   font-size: 1.3rem !important;
   background-color: rgba(0,0,0,0);
-  border: white solid 1px;
+  border: #ffffff solid 1px;
   border-radius: 5px;
   transition: 0.5s;
 }

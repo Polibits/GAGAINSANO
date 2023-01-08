@@ -1,5 +1,3 @@
-/* Começo dos estilos do corpo da pagina */
-/* Configura o fundo do corpo */
 .corpo{
   background: #101010;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #0d0d0d, #000000);  /* Chrome 10-25, Safari 5.1-6 */
@@ -21,6 +19,14 @@
   margin-bottom: calc(2*var(--margem));
 }
 
+.logo_subtitle{
+  text-align: center;
+  font-style: italic;
+  font-weight: var(--fonteNormal);
+  font-size: 16;
+  margin-bottom: calc(2*var(--margem));
+}
+
 /* Alinha os títulos de suseções */
 .corpo h2{
   text-align: center;
@@ -28,6 +34,19 @@
   text-underline-offset: 4px;
   font-weight: var(--fonteNegrito);
   margin-bottom: calc(2*var(--margem));
+}
+
+/* Formatando a Logo */
+.main_logo{
+  align-items: center;
+  margin-bottom: calc(2*var(--margem));
+}
+
+.main_logo img{
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
   
 /* Arruma as seções */
@@ -64,12 +83,7 @@
   justify-content: center;
   align-items: left;
   gap: calc(2*var(--margem));
-  width: 430px;
-}
-
-/* Formatando texto dos artigos */
-.corpo section:not(:last-of-type) article{
-  text-align: justify;
+  width: 1200px;
 }
 
 /* Flex de posição para a citação */
@@ -83,6 +97,11 @@
   gap: calc(2*var(--margem));
 }
 
+/* Formatando texto dos artigos */
+.corpo section:not(:last-of-type) article{
+  text-align: justify;
+}
+
 /* Formatando a citação */
 .citacao{
   float: right;  
@@ -94,6 +113,7 @@
 .italico{
   font-style: italic;
 }
+
 /* Seção de metodologias */
 .metodologia{
   list-style: none;
@@ -104,13 +124,15 @@
   align-items: center;
   gap: calc(2*var(--margem));
 }
+
 /* Arruma os boxes */
 .metodologia li{
   border: solid #002462 2px;
   padding: var(--margem);
-  width: 65%;
-  max-width: 700px;
+  width: 80%;
+  max-width: 1200px;
 }
+
 .metodologia li:hover{
   cursor: pointer;
   font-weight: var(--fonteNegrito);
