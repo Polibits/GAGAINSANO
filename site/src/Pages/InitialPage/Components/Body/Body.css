@@ -173,7 +173,7 @@
 
 /* Arruma os boxes */
 .metodologia li{
-  border: solid #002462 2px;
+  border: solid var(--azul-claro) 2px;
   padding: var(--margem);
   width: 80%;
   max-width: 1200px;

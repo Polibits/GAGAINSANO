@@ -50,9 +50,9 @@ footer .ulFooter li ul li{
 
 /* "Título" de cada secção do footer */
 footer .ulFooter li ul li:first-of-type{
-  -webkit-text-fill-color: #ef6108;
+  -webkit-text-fill-color: var(--azul-claro);
   font-weight: var(--fonteNegrito);
-  text-decoration: underline #ef6108 2px;
+  text-decoration: underline var(--azul-claro) 2px;
   text-underline-offset: 2px;
 }
 
