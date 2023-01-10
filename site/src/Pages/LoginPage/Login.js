@@ -9,9 +9,9 @@ class Login extends React.Component{
     }
     render(){
         return(
-            <main>
+            <main className='mainLogin'>
                 <div className='box'>
-                    <Link to='/'><img className='logo' src={Logo}/></Link>
+                    <Link to='/'><img className='logo2' src={Logo}/></Link>
                     <h1>Seja bem vindo!</h1>
                     <hr />
                     <form>

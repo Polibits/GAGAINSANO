@@ -1,5 +1,5 @@
 /* Arruma o background da caixa de login */
-main{
+.mainLogin{
     background-color: var(--preto);
     z-index: -1;
     display: flex;
@@ -44,7 +44,7 @@ hr{
 }
 
 /* Tamanho e osição da logo */
-.logo{
+.logo2{
     height: 140px;
     margin: auto;
     display: block;
