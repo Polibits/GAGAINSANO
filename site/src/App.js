@@ -6,7 +6,7 @@ import Cursos from "./Pages/InitialPage/Cursos/Cursos";
 import Olimpiadas from "./Pages/InitialPage/Olimpíadas/Olimpiadas";
 import MateriaisGratuitos from "./Pages/InitialPage/Materiais Gratuitos/MateriaisGratuitos";
 import GagaInsanoResolve from "./Pages/InitialPage/GagaInsanoResolve/GagaInsanoResolve";
-import HeaderInicial from './Pages/InitialPage/Components/NavBar/HeaderInicial';
+import Login from "./Pages/LoginPage/Login";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
           <Route element = {< Olimpiadas />}  path="/olimpiadas" />
           <Route element = {< MateriaisGratuitos />} path="/MateriaisGratuitos" />
           <Route element = {< GagaInsanoResolve />} path="/GagaInsanoResolve" />
+          <Route element = {< Login />} path="/Login" />
         </Routes>
       </Router>
     </>

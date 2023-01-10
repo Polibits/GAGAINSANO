@@ -18,7 +18,7 @@ class HeaderInicial extends React.Component{
                         <li><Link to='/olimpiadas'>Olimpíadas</Link></li>
                         <li><Link to ='/MateriaisGratuitos'>Materiais Gratuitos</Link></li>
                         <li><Link to='/GagaInsanoResolve'>Gagá Insano Resolve</Link></li>
-                        <li><button className='acesso'>Acessar</button></li>
+                        <li><Link to='/Login'><button className='acesso'>Acessar</button></Link></li>
                     </ul>
                 </nav>
             </header>

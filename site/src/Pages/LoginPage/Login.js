@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import "./Components/Login.css";
+import Logo from '../InitialPage/Assets/Logo.png';
 
 class Login extends React.Component{
     constructor(props){
@@ -8,7 +11,7 @@ class Login extends React.Component{
         return(
             <main>
                 <div className='box'>
-                    <img className='logo' />
+                    <Link to='/'><img className='logo' src={Logo}/></Link>
                     <h1>Seja bem vindo!</h1>
                     <hr />
                     <form>
@@ -21,9 +24,11 @@ class Login extends React.Component{
                             <button>Esqueci minha senha</button>
                         </fieldset>
                     </form>
-                    <footer>Não tem conta? <strong>Crie uma!</strong></footer>
+                    <span className='footer'>Não tem conta? <strong>Crie uma!</strong></span>
                 </div>
             </main>
         );
     }
 }
+
+export default Login;

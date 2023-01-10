@@ -18,6 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: Montserrat !important;
   overflow-x: hidden;
+  background-color: var(--preto);
 }
 
 code {

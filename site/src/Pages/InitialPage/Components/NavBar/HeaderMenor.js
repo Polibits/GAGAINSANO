@@ -13,9 +13,9 @@ class HeaderMenor extends React.Component{
             <header className='headerMenor'>
                 <nav>
                     <div className='menuLateral'><MenuLateral /></div>
-                    <img className='logo' src={logo}/>
+                    <Link to='/'><img className='logo' src={logo}/></Link>
                     <ul>
-                        <li><button className='acesso'>Acessar</button></li>
+                        <li><Link to='/Login'><button className='acesso'>Acessar</button></Link></li>
                     </ul>
                 </nav>
             </header>
