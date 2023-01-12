@@ -24,7 +24,7 @@ class Login extends React.Component{
                             <button>Esqueci minha senha</button>
                         </fieldset>
                     </form>
-                    <span className='footer'>Não tem conta? <strong>Crie uma!</strong></span>
+                    <span className='footer'>Não tem conta? <Link to='/SignUp'>Crie uma!</Link></span>
                 </div>
             </main>
         );

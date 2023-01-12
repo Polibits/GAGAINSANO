@@ -7,6 +7,7 @@ import Olimpiadas from "./Pages/InitialPage/Olimpíadas/Olimpiadas";
 import MateriaisGratuitos from "./Pages/InitialPage/Materiais Gratuitos/MateriaisGratuitos";
 import GagaInsanoResolve from "./Pages/InitialPage/GagaInsanoResolve/GagaInsanoResolve";
 import Login from "./Pages/LoginPage/Login";
+import SignUp from "./Pages/SignUpPage/SignUp";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route element = {< MateriaisGratuitos />} path="/MateriaisGratuitos" />
           <Route element = {< GagaInsanoResolve />} path="/GagaInsanoResolve" />
           <Route element = {< Login />} path="/Login" />
+          <Route element = { <SignUp /> } path="/SignUp" />
         </Routes>
       </Router>
     </>

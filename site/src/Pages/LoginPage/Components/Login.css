@@ -126,4 +126,16 @@ fieldset{
     color: white;
 }
 
+.mainLogin a{
+    color: var(--branco);
+    font-weight: var(--fonteNegrito);
+    text-decoration: underline var(--azul-claro) 1px;
+    text-underline-offset: 2px;
+    transition: 0.5s;
+}
+
+.mainLogin a:hover{
+    text-decoration: underline var(--azul-claro) 1.5px;
+}
+
 
