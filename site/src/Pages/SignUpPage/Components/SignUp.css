@@ -1,5 +1,5 @@
 /* Cor e tamanho da caixa de login em telas grandes */
-.box{
+.mainSignUp .box{
     background: linear-gradient(0deg, #01022d 0%, #000121 100%); 
     width: 800px;
     margin: calc(4*var(--margem));
@@ -23,7 +23,7 @@
 }
 
 /* Caixa de login ocupa a tela toda no celular */
-.box{
+.mainSignUp .box{
     width: 100% !important;
     position: absolute !important;
     top: 0 !important;
