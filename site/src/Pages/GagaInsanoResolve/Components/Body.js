@@ -21,6 +21,8 @@ class Body extends React.Component{
                         <li>ENEM</li>
                         <li>ITA</li>
                         <li>IME</li>
+                        <li>AFA</li>
+                        <li>EFOM</li>
                         <li>OBF</li>
                         <li>OBQ</li>
                         <li>OBM</li>
