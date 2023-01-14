@@ -23,7 +23,7 @@ class Body extends React.Component{
                         <li>IME</li>
                         <li>OBF</li>
                         <li>OBQ</li>
-                        <li>{window.innerWidth}</li>
+                        <li>OBM</li>
                     </ul>
                 </main>
             </>

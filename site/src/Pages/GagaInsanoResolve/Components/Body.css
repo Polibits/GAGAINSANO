@@ -37,6 +37,7 @@
     border: solid var(--branco) 1px;
     line-height: 80px;
     height: 80px;
+    transition: 0.5s;
 }
 
 /* Altera o estilo de lista para tela pequenas */
@@ -44,4 +45,13 @@
     .corpoResolve ul li{
         width: 100%;
     }
+    .corpoResolve ul{
+        gap: 10px;
+    }
+}
+
+.corpoResolve ul li:hover{
+    cursor: pointer;
+    background-color: var(--branco);
+    color: var(--preto);
 }
