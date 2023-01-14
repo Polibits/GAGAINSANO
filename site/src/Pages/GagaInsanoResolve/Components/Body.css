@@ -1,0 +1,47 @@
+/* Ajustes gerais do corpo */
+.corpoResolve{
+    margin-top: var(--alutraHeader);
+    padding: calc((4*var(--margem)));
+    color: var(--branco); 
+    background: #101010;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #0d0d0d, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #101010, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Estilizando o subtítulo */
+.SubtituloResolve{
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    margin: calc(2*var(--margem)) auto;
+}
+
+/* Estiliza a lista flex */
+.corpoResolve ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 50px;
+    width: 80%;
+    margin: 100px auto 0 auto;
+}
+
+/* Estiliza os tamanhos dos items */
+.corpoResolve ul li{
+    width: calc(100%/3 - 100px/3);
+    font-size: 40px;
+    text-align: center;
+    border: solid var(--branco) 1px;
+    line-height: 80px;
+    height: 80px;
+}
+
+/* Altera o estilo de lista para tela pequenas */
+@media screen and (max-width: 1250px){
+    .corpoResolve ul li{
+        width: 100%;
+    }
+}
