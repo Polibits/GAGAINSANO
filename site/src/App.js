@@ -2,10 +2,10 @@ import './App.css';
 import React from 'react';
 import {Routes, Route, BrowserRouter as Router} from 'react-router-dom';
 import InitialPage from "./Pages/InitialPage/InititalPage";
-import Cursos from "./Pages/InitialPage/Cursos/Cursos";
-import Olimpiadas from "./Pages/InitialPage/Olimpíadas/Olimpiadas";
-import MateriaisGratuitos from "./Pages/InitialPage/Materiais Gratuitos/MateriaisGratuitos";
-import GagaInsanoResolve from "./Pages/InitialPage/GagaInsanoResolve/GagaInsanoResolve";
+import Cursos from "./Pages/Cursos/Cursos";
+import Olimpiadas from "./Pages/Olimpíadas/Olimpiadas";
+import MateriaisGratuitos from "./Pages/Materiais Gratuitos/MateriaisGratuitos";
+import GagaInsanoResolve from "./Pages/GagaInsanoResolve/GagaInsanoResolve";
 import Login from "./Pages/LoginPage/Login";
 import SignUp from "./Pages/SignUpPage/SignUp";
 

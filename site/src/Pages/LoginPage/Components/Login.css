@@ -28,6 +28,21 @@
     }
 }
 
+/* Caixa de login ocupa a tela toda no celular */
+@media screen and (max-height: 700px){
+    .box{
+        width: 100% !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        margin: 0 !important;
+        height: 100vh !important;
+        border-radius: 0 !important;
+    }
+    hr{
+        width: 400px !important;
+    }
+}
 hr{
     width: 450px;
     display: block;

@@ -1,7 +1,7 @@
 import React from 'react';
-import HeaderInicial from '../Components/NavBar/HeaderInicial';
-import HeaderMenor from '../Components/NavBar/HeaderMenor';
-import Footer from '../Components/Footer/Footer';
+import HeaderInicial from '../InitialPage/Components/NavBar/HeaderInicial';
+import HeaderMenor from '../InitialPage/Components/NavBar/HeaderMenor';
+import Footer from '../InitialPage/Components/Footer/Footer';
 
 class MateriaisGratuitos extends React.Component{
     constructor(props){
