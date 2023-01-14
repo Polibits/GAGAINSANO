@@ -1,0 +1,161 @@
+.corpo{
+  background: #101010;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #0d0d0d, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #101010, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  width: calc(100vw - 15px);
+  box-sizing: border-box;
+  margin-top: var(--alutraHeader);
+  padding-top: calc(4*var(--margem));
+  display: block;
+  color: white;
+}
+
+.OlympiadImage{
+  height: 300px;
+}
+
+.book{
+  height: 200px;
+}
+
+.img_container{
+  align-items: center;
+}
+  
+/* Configura o título da seção */
+.titulo{
+  text-align: center;
+  font-weight: var(--fonteNegrito);
+  font-size: 3rem;
+  margin-bottom: calc(2*var(--margem));
+  letter-spacing: .20em;
+  border-right: .05em transparent #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 0%;
+  animation:
+    typing 3.5s steps(30, end) 2s forwards,
+    blink-caret 0.5s step-end 2s;
+}
+
+
+.logo_subtitle{
+  text-align: center;
+  font-style: italic;
+  font-weight: var(--fonteNormal);
+  font-size: 16;
+  margin-bottom: calc(2*var(--margem));
+}
+
+/* Alinha os títulos de suseções */
+.corpo h2{
+  text-align: center;
+  text-decoration: underline #002462 3px;
+  text-underline-offset: 4px;
+  font-weight: var(--fonteNegrito);
+  margin-bottom: calc(2*var(--margem));
+}
+  
+/* Arruma as seções */
+.corpo section{
+  margin: auto;
+  display: block;
+  padding: 50px calc(4*var(--margem));
+}
+
+/* Arruma as cores do background */
+.corpo section:nth-child(3){
+  background-color: rgba(0,0,0,0.8);
+}
+
+.corpo section:nth-child(4){
+  background-color: rgba(5,5,5,0.8);
+}
+
+.corpo section:nth-child(5){
+  background-color: rgba(10,10,10,0.8);
+}
+
+/* Arruma o carrossel */
+.carrossel{
+  width: 500px;
+  height: 200px;
+  background-color: rgba(40, 0, 20, 0.5);
+}
+
+/* Estiliza a parte das postagens do instagram */
+.PostDiv{
+  margin: 10px auto;
+  align-items: center;
+}
+
+.ResolucaoPost{
+  display: flexbox;
+  height: 500px;
+}
+
+/* Display flex para as seções */
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: calc(2*var(--margem));
+  width: 1200px;
+}
+
+/* Flex de posição para a citação */
+.flex2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  gap: calc(2*var(--margem));
+}
+
+/* Formatando texto dos artigos */
+.corpo section:not(:last-of-type) article{
+  text-align: justify;
+}
+
+/* Formatando a citação */
+.citacao{
+  float: right;  
+  text-align: right;
+  clear: right;
+}
+
+/* Itálico */
+.italico{
+  font-style: italic;
+}
+
+/* Seção de metodologias */
+.metodologia{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: calc(2*var(--margem));
+}
+
+/* Arruma os boxes */
+.metodologia li{
+  border: solid var(--azul-claro) 2px;
+  padding: var(--margem);
+  width: 80%;
+  max-width: 1200px;
+}
+
+.metodologia li:hover{
+  cursor: pointer;
+  font-weight: var(--fonteNegrito);
+}
