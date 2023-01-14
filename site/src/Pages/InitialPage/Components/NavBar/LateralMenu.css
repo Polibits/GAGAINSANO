@@ -50,7 +50,7 @@
     top: var(--alutraHeader);
     left: 0;
     width: calc(100vw - 15px);
-    height: auto;
+    height: 0;
     box-sizing: border-box;
     background-color: #01022d;
     overflow: hidden;
