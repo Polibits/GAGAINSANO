@@ -25,13 +25,6 @@
   }
 }
 
-/* Colapsa a barra em algumas distâncias */
-@media screen and (max-width: 1100px){
-  .headerInicial nav ul li:nth-child(1){
-    display: none;
-  }
-}
-
 /* Configura o header da pagina inicial */
 header{
   width: calc(100vw - 15px);

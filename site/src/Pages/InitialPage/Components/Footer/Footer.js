@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import logo from "../../Assets/Logo.png";
+import { Link } from 'react-router-dom';
 
 class FooterInicial extends React.Component{
     constructor(props){
@@ -11,17 +12,16 @@ class FooterInicial extends React.Component{
             <footer>
                 
                 <ul className='ulFooter'>
-                    <div class='footer_logo'>
+                    <li class='footer_logo'>
                         <img src={logo} ></img>
-                    </div>
-                    
+                    </li>
                     <li>
                         <ul>
                             <li>MENU</li>
-                            <li>Cursos</li>
-                            <li>Olimpíadas</li>
-                            <li>Materiais Gratuitos</li>
-                            <li>Gagá Insano Resolve</li>
+                            <li><Link to='/cursos'>Cursos</Link></li>
+                            <li><Link to='/olimpiadas'>Olimpíadas</Link></li>
+                            <li><Link to='/MateriaisGratuitos'>Materiais Gratuitos</Link></li>
+                            <li><Link to='/GagaInsanoResolve'>Gagá Insano Resolve</Link></li>
                         </ul>
                     </li>
                     <li>

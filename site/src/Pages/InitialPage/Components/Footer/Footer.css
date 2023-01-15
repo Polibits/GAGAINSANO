@@ -60,3 +60,9 @@ footer .ulFooter li ul li:not(:first-of-type):hover{
     font-weight: var(--fonteNegrito);
     cursor: pointer;
 }
+
+/* remove os estilos de link */
+footer a{
+  color: var(--branco);
+  text-decoration: none;
+}
