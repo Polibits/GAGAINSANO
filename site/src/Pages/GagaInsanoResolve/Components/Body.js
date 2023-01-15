@@ -16,16 +16,16 @@ class Body extends React.Component{
                         Aqui você encontra as nossas resoluções das provas de vestibulares e olimpíadas
                     </p>
                     <ul>
-                        <li onClick={this.props.clickHandler}>FUVEST</li>
-                        <li onClick={this.props.clickHandler}>UNICAMP</li>
-                        <li onClick={this.props.clickHandler}>ENEM</li>
-                        <li onClick={this.props.clickHandler}>ITA</li>
-                        <li onClick={this.props.clickHandler}>IME</li>
-                        <li onClick={this.props.clickHandler}>AFA</li>
-                        <li onClick={this.props.clickHandler}>EFOM</li>
-                        <li onClick={this.props.clickHandler}>OBF</li>
-                        <li onClick={this.props.clickHandler}>OBQ</li>
-                        <li onClick={this.props.clickHandler}>OBM</li>
+                        <li onClick={() => {this.props.clickHandler('FUVEST')}}>FUVEST</li>
+                        <li onClick={() => {this.props.clickHandler('UNICAMP')}}>UNICAMP</li>
+                        <li onClick={() => {this.props.clickHandler('ENEM')}}>ENEM</li>
+                        <li onClick={() => {this.props.clickHandler('ITA')}}>ITA</li>
+                        <li onClick={() => {this.props.clickHandler('IME')}}>IME</li>
+                        <li onClick={() => {this.props.clickHandler('AFA')}}>AFA</li>
+                        <li onClick={() => {this.props.clickHandler('EFOM')}}>EFOM</li>
+                        <li onClick={() => {this.props.clickHandler('OBF')}}>OBF</li>
+                        <li onClick={() => {this.props.clickHandler('OBQ')}}>OBQ</li>
+                        <li onClick={() => {this.props.clickHandler('OBM')}}>OBM</li>
                     </ul>
                 </main>
             </>

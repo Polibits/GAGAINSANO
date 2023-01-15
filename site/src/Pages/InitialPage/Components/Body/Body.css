@@ -3,7 +3,6 @@
   background: -webkit-linear-gradient(to top, #0d0d0d, #000000);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #101010, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
-  width: calc(100vw - 15px);
   box-sizing: border-box;
   margin-top: var(--alutraHeader);
   padding-top: calc(4*var(--margem));

@@ -16,13 +16,13 @@ class Years extends React.Component{
                         Aqui você encontra as nossas resoluções das provas de vestibulares e olimpíadas
                     </p>
                     <ul>
-                        <li onClick={this.props.clickHandler}>Voltar</li>
-                        <li>2023</li>
-                        <li>2022</li>
-                        <li>2021</li>
-                        <li>2020</li>
-                        <li>2019</li>
-                        <li>2018</li>
+                        <li onClick={() => {this.props.clickHandler('')}}>Voltar</li>
+                        <li onClick={() => {this.props.clickHandler2(2023)}}>2023</li>
+                        <li onClick={() => {this.props.clickHandler2(2022)}}>2022</li>
+                        <li onClick={() => {this.props.clickHandler2(2021)}}>2021</li>
+                        <li onClick={() => {this.props.clickHandler2(2020)}}>2020</li>
+                        <li onClick={() => {this.props.clickHandler2(2019)}}>2019</li>
+                        <li onClick={() => {this.props.clickHandler2(2018)}}>2018</li>
                     </ul>
                 </main>
             </>

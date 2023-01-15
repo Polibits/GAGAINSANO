@@ -1,0 +1,110 @@
+/* Estilos do corpo principal do texto */
+.Solutions{
+    margin-top: var(--alutraHeader);
+    padding: calc((4*var(--margem)));
+    color: var(--branco); 
+    background: #101010;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #0d0d0d, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #101010, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Display flex das diferentes seções */
+.Solutions .noFlexSolutions{
+    display: block;
+    width: 100%;
+    height: 800px;
+    margin-top: 40px;
+}
+
+/* Posicionamento dos filtros */
+.Solutions .noFlexSolutions section:nth-child(1){
+    float: left;
+    margin-right: 50px;
+}
+
+/* Barra branca separando as seções */
+.separador{
+    height: 800px;
+    width: 3px;
+    background-color: var(--branco);
+    float: left;
+}
+
+/* Estiliza os filtros */
+.Solutions section form label{
+    border: solid 1px var(--branco);
+    font-size: 30px;
+    height: 80px;
+    width: 320px;
+    text-align: center;
+    line-height: 80px;
+    transition: 0.5s;
+}
+
+.Solutions section form label:focus-within{
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+.Solutions section form label:hover{
+    cursor: pointer;
+}
+
+/* Posicionamento dos filtros */
+.Solutions section form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Esconde os radio buttons */
+.Solutions section form label input{
+    display: auto;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* Arruma o posicionamento das questões na página */
+.Solutions .questoes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: space-around;
+    border: solid var(--branco) 1px;
+    padding: calc(4*var(--margem));
+    width: 100%;
+    float: right;
+    list-style: none;
+}
+
+/* Estiliza e posiciona os numeros das questoes */
+.Solutions .questoes li{
+    width: calc(100%/3);
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Cria as caixinhas */
+.Solutions .questoes li span{
+    border: solid var(--branco) 1px;
+    display: block;
+    width: 60px;
+    margin: auto;
+}
+
+/* Arruma o tamanho da seção de questões */
+.Solutions .noFlexSolutions section:nth-child(3){
+    width: calc(100% - 103px - 320px);
+    margin-left: 50px;
+    display: inline-block;
+}
+
+
