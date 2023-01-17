@@ -4,12 +4,12 @@ import './Vestibulares.css';
 
 import Stars from '../StarsBackground/Stars';
 import logo from "../../Assets/Logo.png";
-import ITA_logo from "../Body/Vestibulares/ITA.jpg";
+import ITA_logo from "../Body/Vestibulares/ITA.png";
 import IME_logo from "../Body/Vestibulares/IME.png";
-import FUVEST_logo from "../Body/Vestibulares/FUVEST.jpg";
-import ENEM_logo from "../Body/Vestibulares/ENEM.jpg";
-import OBM_logo from "../Body/Vestibulares/OBM.jpg";
-import OBF_logo from "../Body/Vestibulares/OBF.jpg";
+import FUVEST_logo from "../Body/Vestibulares/FUVEST.png";
+import ENEM_logo from "../Body/Vestibulares/ENEM.png";
+import OBM_logo from "../Body/Vestibulares/OBM.png";
+import OBF_logo from "../Body/Vestibulares/OBF.png";
 
 
 import POST_01 from "../Body/Resoluções/POST_01.jpg";
@@ -50,19 +50,19 @@ class CorpoInicial extends React.Component{
                             <div class='vestibulares_main_container'>
                                 <div class='militares_imgs_container'>
                                     <h3>VESTIBULARES MILITARES</h3>
-                                    <img src={ITA_logo} class='ITA_logo'></img>
-                                    <img src={IME_logo} class='IME_logo'></img>
+                                    <img src={ITA_logo} class='vest_logo'></img>
+                                    <img src={IME_logo} class='vest_logo'></img>
 
                                 </div>
                                 <div class='civis_imgs_container'>
                                     <h3>VESTIBULARES CIVIS</h3>
-                                    <img src={FUVEST_logo} class='FUVEST_logo'></img>
-                                    <img src={ENEM_logo} class='ENEM_logo'></img>
+                                    <img src={FUVEST_logo} class='vest_logo'></img>
+                                    <img src={ENEM_logo} class='vest_logo'></img>
                                 </div>
                                 <div class='olimpíadas_imgs_container'>
                                     <h3>OLIMPÍADAS</h3>
-                                    <img src={OBM_logo} class='OBM_logo'></img>
-                                    <img src={OBF_logo} class='OBF_logo'></img>
+                                    <img src={OBM_logo} class='vest_logo'></img>
+                                    <img src={OBF_logo} class='vest_logo'></img>
                                 </div>
                             </div>
                             

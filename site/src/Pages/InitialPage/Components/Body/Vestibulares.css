@@ -23,32 +23,9 @@
     padding-bottom: 10px;
 }
 
-.ITA_logo{
-    display: flexbox;
-    height: 120px;
-}
-
-.IME_logo{
-    display: flexbox;
-    height: 120px;
-}
-
-.FUVEST_logo{
-    display: flexbox;
-    height: 120px;
-}
-
-.ENEM_logo{
-    display: flexbox;
-    height: 120px;
-}
-
-.OBM_logo{
-    display: flexbox;
-    height: 120px;
-}
-
-.OBF_logo{
+.vest_logo{
+    margin-left: 00px;
+    margin-right: 00px;
     display: flexbox;
     height: 120px;
 }
