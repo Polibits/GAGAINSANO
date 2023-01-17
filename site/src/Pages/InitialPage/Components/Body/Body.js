@@ -22,7 +22,7 @@ class CorpoInicial extends React.Component{
     render(){
         return(
             <main className='corpo'>
-                <Stars />
+                <Stars/>
                 
                 <div class='main_logo'>
                     <h1 class='titulo'>GAGÁ INSANO</h1>
