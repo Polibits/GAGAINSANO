@@ -11,16 +11,32 @@
   color: white;
 }
 
+.img_container{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .OlympiadImage{
+  margin: 0 auto;
+  display: block;
   height: 300px;
 }
 
 .book{
-  height: 200px;
+  height: 250px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.img_container{
-  align-items: center;
+.post_img{
+  height: 450px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+  display: inline-flex;
 }
   
 /* Configura o título da seção */
@@ -40,6 +56,14 @@
     blink-caret 0.5s step-end 2s;
 }
 
+.corpo h1{
+  font-size: 24pt;
+  text-align: center;
+  text-decoration: underline #002462 3px;
+  text-underline-offset: 4px;
+  font-weight: var(--fonteNegrito);
+  margin-bottom: calc(2*var(--margem));
+}
 
 .logo_subtitle{
   text-align: center;
@@ -134,6 +158,10 @@
 /* Itálico */
 .italico{
   font-style: italic;
+}
+
+.basic_text{
+  font-size: 14pt;
 }
 
 /* Seção de metodologias */
