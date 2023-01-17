@@ -33,8 +33,11 @@ class Body extends React.Component{
                             <h1>RECEBA AGORA!</h1>
                             <form>
                                 <fieldset class='fields'>
+                                    <p class='send_text'>NOME</p>
                                     <input type={'text'} required name='name' placeholder='Digite seu nome'/>
+                                    <p class='send_text'>EMAIL</p>
                                     <input type={'text'} required name='email' placeholder='Digite seu email'/>
+                                    <button class='send_button'>ENVIAR</button>
                                 </fieldset>
                             </form>
                         </div>
