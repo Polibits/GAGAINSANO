@@ -11,32 +11,43 @@
   color: white;
 }
 
-.img_container{
-  text-align: center;
+.fields{
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 40px auto;
+  width: 400px;
+  border: none;
+}
+
+.send_container{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 500px;
+  height: 600px;
+  background-color: #000000;
+  margin: auto;
+}
+
+.img_container{
+  display: block;
+  justify-content: safe;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.OlympiadImage{
-  margin: 0 auto;
-  display: block;
-  height: 300px;
+.post_img{
+  height: 350px;
+  margin: auto;
+  display: inline-flex;
 }
 
 .book{
   height: 250px;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.post_img{
-  height: 450px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: auto;
-  display: inline-flex;
 }
   
 /* Configura o título da seção */
