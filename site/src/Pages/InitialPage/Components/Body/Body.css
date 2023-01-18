@@ -41,6 +41,10 @@
   font-size: 14pt;
 }
 
+h1{
+  font-size: 26pt;
+}
+
 /* Formatando a Logo */
 .main_logo{
   align-items: center;

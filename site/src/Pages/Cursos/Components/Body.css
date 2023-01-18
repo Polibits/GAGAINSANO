@@ -8,6 +8,10 @@
     background: linear-gradient(to top, #101010, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.basic_text{
+    font-size: 14pt;
+}
+
 /* Estilizando o subtítulo */
 .SubtituloCursos{
     text-align: center;

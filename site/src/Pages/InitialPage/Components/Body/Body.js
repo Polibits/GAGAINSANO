@@ -101,36 +101,32 @@ class CorpoInicial extends React.Component{
                         <li>
                             <article>
                                 <h3>Vídeo-aulas ao vivo</h3>
-                                Tenha aulas incríveis com já experiente em preparações militares e civis <br />
+                                Tenha aulas incríveis com professores já experientes em preparações militares e civis. <br/>
                                 Todas completíssimas e com objetivo de deixar o aluno no nível da banca do vestiular
                             </article>
                         </li>
                         <li>
                             <article>
                                 <h3>Resoluções detalhadas</h3>
-                                Acreditamos que um bom estudo necessita de resoluções ricas em detalhe <br />
-                                Por isso, contamos com resoluções com alto padrão de qualidade
+                                Acreditamos que um bom estudo necessita de resoluções ricas em detalhes, para que se possa entender o processo, o raciocínio em certa questão. Por isso, gostamos de apresentar nossas resoluções com alto padrão de qualidade
                             </article>
                         </li>
                         <li>
                             <article>
                                 <h3>Listas de questões</h3>
-                                Prepare-se com listas de exercícios autorais, com questões inéditas e <br />
-                                Compatíveis com a complexidade dos vestibulares
+                                Prepare-se com listas de exercícios autorais, com questões inéditas e com o grau de dificuldade compatíveis com a complexidade dos vestibulares.
                             </article>
                         </li>
                         <li>
                             <article>
                                 <h3>Simulados</h3>
-                                Nossos simulados imitam as provas dos vestibulares, afinal não há <br />
-                                Nada melhor para se preparar do que fazer provas do mesmo estilo dos vestibulares
+                                Nossos simulados imitam as provas dos vestibulares, afinal nada melhor para se preparar para um vestibular que fazer provas do mesmo estilo.
                             </article>
                         </li>
                         <li>
                             <article>
                                 <h3>Grupos de discussão</h3>
-                                Oferecemos grupos de tirada de dúvidas com os professores, a fim de <br />
-                                Ajudar o aluno com problems conceituais, de organizção e de estudos
+                                Oferecemos grupos de tira-dúvidas, com os professores, com  finalidade de sanar eventuais dúvidas e ajudar o aluno com problemas de toda natureza — problemas conceituais, organização, estudo, etc.
                             </article>
                         </li>
                     </ul>
