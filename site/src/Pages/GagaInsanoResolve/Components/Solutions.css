@@ -33,6 +33,7 @@
 /* Estiliza os filtros */
 .Solutions section form label{
     border: solid 1px var(--branco);
+    border-radius: 10px;
     font-size: 30px;
     height: 80px;
     width: 320px;
