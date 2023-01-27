@@ -6,6 +6,7 @@ import Cursos from "./Pages/InitialPage/Cursos/Cursos";
 import Olimpiadas from "./Pages/InitialPage/Olimpíadas/Olimpiadas";
 import MateriaisGratuitos from "./Pages/InitialPage/Materiais Gratuitos/MateriaisGratuitos";
 import GagaInsanoResolve from "./Pages/InitialPage/GagaInsanoResolve/GagaInsanoResolve";
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 const func = () => {
    return(
@@ -16,6 +17,7 @@ const func = () => {
                 <Route component = { Olimpiadas }  path="/olimpiadas" />
                 <Route component = { MateriaisGratuitos } path="/MateriaisGratuitos" />
                 <Route component = { GagaInsanoResolve } path="/GagaInsanoResolve" />
+                <Route component = { Dashboard } path="/dashboard" />
             </Routes>
         </BrowserRouter>
    )
