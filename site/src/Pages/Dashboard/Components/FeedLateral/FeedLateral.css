@@ -1,0 +1,9 @@
+.boxFeedLateral {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    width: 64px;
+    align-items: center;
+    background: #01023e;
+}

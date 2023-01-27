@@ -1,0 +1,48 @@
+.materiaBox {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 0;
+    opacity: 80%;
+    transition: 0.25s;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+}
+
+.materiaName {
+    display: flex;
+    position: absolute;
+    background-color: #01023e00;
+    box-sizing: content-box;
+    align-items: center;
+    color: #01023e00;
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 72px;
+    font-size: 0;
+    height: 48px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: auto;
+    transition: 0.25s;
+}
+
+.materiaName p {
+    padding-left: 20px;
+}
+
+.materiaBox:hover {
+    opacity: 100%;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.materiaBox:hover .materiaName {
+    color: #fff;
+    background-color: #01023e;
+    font-size: 16px;
+    margin-left: 220px;
+    padding-right: 100px;
+    transition: 0.25s;
+}
+
