@@ -8,6 +8,7 @@ import MateriaisGratuitos from "./Pages/Materiais Gratuitos/MateriaisGratuitos";
 import GagaInsanoResolve from "./Pages/GagaInsanoResolve/GagaInsanoResolve";
 import Login from "./Pages/LoginPage/Login";
 import SignUp from "./Pages/SignUpPage/SignUp";
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route element = {< GagaInsanoResolve />} path="/GagaInsanoResolve" />
           <Route element = {< Login />} path="/Login" />
           <Route element = { <SignUp /> } path="/SignUp" />
+          <Route element = { <Dashboard /> } path="/dashboard" />
         </Routes>
       </Router>
     </>
