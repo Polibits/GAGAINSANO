@@ -84,7 +84,14 @@
     blink-caret 0.5s step-end 2s;
 }
 
-
+.corpo h1{
+  font-size: 24pt;
+  text-align: center;
+  text-decoration: underline #002462 3px;
+  text-underline-offset: 4px;
+  font-weight: var(--fonteNegrito);
+  margin-bottom: calc(2*var(--margem));
+}
 
 .logo_subtitle{
   text-align: center;

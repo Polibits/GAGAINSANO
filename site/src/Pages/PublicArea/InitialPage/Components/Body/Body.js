@@ -1,16 +1,15 @@
 import React from 'react';
 import './Body.css';
 import './Vestibulares.css';
+import Logo from './Logo/Logo.js';
 
 import Stars from '../StarsBackground/Stars';
-import logo from "../../Assets/Logo.png";
 import ITA_logo from "../Body/Vestibulares/ITA.png";
 import IME_logo from "../Body/Vestibulares/IME.png";
 import FUVEST_logo from "../Body/Vestibulares/FUVEST.png";
 import ENEM_logo from "../Body/Vestibulares/ENEM.png";
 import OBM_logo from "../Body/Vestibulares/OBM.png";
 import OBF_logo from "../Body/Vestibulares/OBF.png";
-
 
 import POST_01 from "../Body/Resoluções/POST_01.jpg";
 import POST_02 from "../Body/Resoluções/POST_02.jpg";
@@ -21,14 +20,10 @@ class CorpoInicial extends React.Component{
     }
     render(){
         return(
-            <main className='corpo'>
+            <main>
                 <Stars/>
+                <Logo></Logo>
                 
-                <div class='main_logo'>
-                    <h1 class='titulo'>GAGÁ INSANO</h1>
-                    <img src={logo}></img>
-                </div>
-                <h3 class='logo_subtitle'>PREPARE-SE COM OS MELHORES!</h3>
                 <section className='introducao'>
                     <div className='flex2'>
                         <div className='flex'>

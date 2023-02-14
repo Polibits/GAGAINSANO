@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../Body/Body.css';
-
 import OBF from '../Body/Assets/OBF.jpg';
 import OBQ from '../Body/Assets/OBQ.jpg';
 
@@ -34,7 +32,7 @@ class Body extends React.Component{
                 <Stars></Stars>
                 <main class='corpo'>
                     <section>
-                        <h1 class='subtitle'>PREPARAÇÃO OLÍMPICA</h1>
+                        <h1>PREPARAÇÃO OLÍMPICA</h1>
                         <p class='basic_text'>Conquiste suas medalhas com apoio do GAGÁ INSANO!</p>
                         <p class='basic_text'>Imagine desfrutar de aulas avançadas, com conteúdo de aprofundamento para sua olimpíada que se baseia nos melhores livros da atualidade...</p>
                         <div class='img_container'>
