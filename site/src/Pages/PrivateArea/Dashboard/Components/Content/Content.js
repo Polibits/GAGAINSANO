@@ -1,5 +1,8 @@
 import React from "react";
 
+import Courses from './Courses/Courses.js';
+import Profile from './Profile/Profile.js'
+
 class Content extends React.Component {
     constructor(props) {
         super(props);
@@ -7,10 +10,9 @@ class Content extends React.Component {
 
     render() {
         return (
-            <>
-                <h1>srgnsodfugnosdj</h1>
-                <h1>srgnsodfugnosdj</h1>
-            </>
+            <div>
+                <Profile></Profile>
+            </div>
         );
     }
 }

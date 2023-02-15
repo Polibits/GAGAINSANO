@@ -1,0 +1,7 @@
+.CourseItem img {
+    height: 100px;
+}
+
+.CourseItem {
+    display: flex;
+}

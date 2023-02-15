@@ -15,6 +15,7 @@ main {
 
 /* Configura o título da seção */
 h1 {
+    color: #FFFFFF;
     text-align: center;
     font-weight: var(--fonteNegrito);
     font-size: 32pt;
@@ -23,21 +24,22 @@ h1 {
     white-space: nowrap;
 }
 
-
 h2 {
+    color: #FFFFFF;
     text-align: center;
-    text-decoration: underline #002462 3px;
     text-underline-offset: 4px;
-    font-weight: var(--fonteNegrito);
+    font-weight: 300;
     margin-bottom: calc(2*var(--margem));
 }
 
 h3 {
+    color: #FFFFFF;
     text-align: center;
-    font-weight: var(--fonteNegrito);
+    font-weight: 300;
     margin-bottom: calc(2*var(--margem));
 }
 
 p {
-    font-size: 2rem;;
+    color: #FFFFFF;
+    font-size: 2rem;
 }

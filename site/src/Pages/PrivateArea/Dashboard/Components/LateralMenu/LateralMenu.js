@@ -13,7 +13,7 @@ class LateralMenu extends React.Component {
     render() {
         return (
             <div className="LateralMenu">
-                <ProfileInfo username='Paulo'></ProfileInfo>
+                <ProfileInfo username={this.props.username}></ProfileInfo>
                 <Item name='Meu Perfil'></Item>
                 <Item name='Meus Cursos'></Item>
                 <Item name='Comprar Cursos'></Item>
