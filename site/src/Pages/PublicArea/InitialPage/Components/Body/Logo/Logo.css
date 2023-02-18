@@ -59,3 +59,11 @@
         opacity: 100%;
     }
 }
+
+.intro_logo p {
+    text-align: center;
+}
+
+.intro_logo {
+    margin-bottom: 50px;
+}

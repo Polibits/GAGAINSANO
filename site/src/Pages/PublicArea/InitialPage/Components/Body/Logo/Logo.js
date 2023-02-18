@@ -10,13 +10,13 @@ class Logo extends React.Component {
 
     render() {
         return(
-            <>
+            <div className="intro_logo">
                 <div className="logo_div">
                     <h1 className='triunfal_title'>GAGÁ INSANO</h1>
                     <img className="triunfal_logo" src={logo_img}></img>
                 </div>
-                <h3>PREPARE-SE COM OS MELHORES!</h3>
-            </>
+                <p>PREPARE-SE COM OS MELHORES!</p>
+            </div>
         );
     }
 }
