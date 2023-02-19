@@ -12,7 +12,7 @@ class Courses extends React.Component {
     render() {
         return (
             <div>
-                <h1>Cursos</h1>
+                <h1>CURSOS</h1>
                 <Course name='Física para Militares' img={example_img} description='desde mecânica clássica até física moderna!'></Course>
                 <Course name='ENEM/Fuvest' img={example_img} description='desde mecânica clássica até física moderna!'></Course>
             </div>

@@ -1,7 +1,37 @@
-.CourseItem img {
-    height: 100px;
-}
-
 .CourseItem {
     display: flex;
+    background-color: #050624;
+    opacity: 100%;
+    margin-bottom: 10px;
+}
+
+.CourseItem .CourseImg {
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 150px;
+    width: 200px;
+    position: relative;
+}
+
+.CourseItem .CourseImg img {
+    height: 100px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.CourseItem .CourseDescription {
+    margin-top: 25px;
+    display: block;
+}
+
+.CourseItem .CourseDescription h2{
+    font-size: 18pt;
+    font-weight: 600;
+}
+
+.CourseItem .CourseDescription p{
+    font-size: 12pt;
+    font-weight: 300;
 }

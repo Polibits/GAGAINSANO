@@ -13,7 +13,10 @@ class Content extends React.Component {
     render() {
         return (
             <div className="ContentMainDiv">
-                <Profile></Profile>
+                <div className="Contents">
+                    <Courses></Courses>
+                </div>
+                
             </div>
         );
     }

@@ -10,11 +10,11 @@ class Course extends React.Component {
     render() {
         return (
             <div className="CourseItem">
-                <div>
+                <div className="CourseImg">
                     <img src={this.props.img}></img>
                 </div>
-                <div>
-                    <h1> {this.props.name}</h1>
+                <div className="CourseDescription">
+                    <h2> {this.props.name}</h2>
                     <p>{this.props.description}</p>
                     <p>ir para curso</p>
                 </div>

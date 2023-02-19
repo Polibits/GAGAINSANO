@@ -1,4 +1,10 @@
 .ContentMainDiv {
+    width: 100vw;
+    background: linear-gradient(0deg, #000000 0%, #030320 100%);
+}
+
+.ContentMainDiv .Contents {
+    
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
