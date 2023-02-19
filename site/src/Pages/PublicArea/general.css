@@ -15,31 +15,31 @@ main {
 
 /* Configura o título da seção */
 h1 {
+    font-size: 36pt;
     color: #FFFFFF;
-    text-align: center;
-    font-weight: var(--fonteNegrito);
-    font-size: 32pt;
-    margin-bottom: calc(2*var(--margem));
-    letter-spacing: .20em;
-    white-space: nowrap;
 }
 
 h2 {
+    font-size: 28pt;
     color: #FFFFFF;
-    text-align: center;
-    text-underline-offset: 4px;
-    font-weight: 300;
-    margin-bottom: calc(2*var(--margem));
 }
 
 h3 {
+    font-size: 22pt;
     color: #FFFFFF;
-    text-align: center;
-    font-weight: 300;
-    margin-bottom: calc(2*var(--margem));
+}
+
+h4 {
+    font-size: 18pt;
+    color: #FFFFFF;
 }
 
 p {
+    font-size: 18pt;
     color: #FFFFFF;
-    font-size: 2rem;
+}
+
+.body {
+    margin-left: 50px;
+    margin-right: 50px;
 }
