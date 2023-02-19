@@ -12,7 +12,7 @@ class Dashboard extends React.Component{
     render(){
         return(
             <div className='DashboardBody'>
-                <LateralMenu username='Carlos'></LateralMenu>
+                <LateralMenu username='Carlos Eduardo F.'></LateralMenu>
                 <Content></Content>
             </div>
         );

@@ -1,3 +1,27 @@
-.profilePicture {
-    width: 100px;
+.lateralMenuProfileDiv {
+    display: block;
+    justify-content: center;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.lateralMenuProfileDiv h1{
+    font-size: 16pt;
+}
+
+.lateralMenuProfileDiv h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14pt;
+}
+
+.lateralMenuProfileDiv .profilePictureContainer img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
 }

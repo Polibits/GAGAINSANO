@@ -10,9 +10,12 @@ class ProfileInfo extends React.Component {
 
     render(){
         return (
-            <div>
-                <h1>{this.props.username}</h1>
-                <img className="profilePicture" src={profilePicture}></img>
+            <div className="lateralMenuProfileDiv">
+                <h1 className="profileName">{this.props.username}</h1>
+                <div className="profilePictureContainer">
+                    <img className="profilePicture" src={profilePicture}></img>
+                </div>
+                <h2>{this.props.userType}</h2>
             </div>
         );
     }
