@@ -12,13 +12,14 @@ import Login from "./Pages/PublicArea/LoginPage/Login";
 import SignUp from "./Pages/PublicArea/SignUpPage/SignUp";
 
 import Dashboard from './Pages/PrivateArea/Dashboard/Dashboard';
+import CoursePage from './Pages/PrivateArea/CoursePage/CoursePage';
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route element = {< InitialPage />}  path="/dashboard"/>
+          <Route element = {< InitialPage />}  path="/InitialPage"/>
           <Route element = {< Cursos />}  path="/cursos" />
           <Route element = {< Olimpiadas />}  path="/olimpiadas" />
           <Route element = {< MateriaisGratuitos />} path="/MateriaisGratuitos" />
@@ -27,7 +28,8 @@ function App() {
           <Route element = {< Login />} path="/Login" />
           <Route element = { <SignUp /> } path="/SignUp" />
 
-          <Route element = { <Dashboard /> } path="/" exact/>
+          <Route element = { <Dashboard /> } path="/dashboard"/>
+          <Route element = { <CoursePage /> } path="/" exact/>
         </Routes>
       </Router>
     </>
