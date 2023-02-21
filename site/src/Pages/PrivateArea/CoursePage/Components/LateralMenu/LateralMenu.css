@@ -2,6 +2,7 @@
     width: 300px;
     height: 100vh;
     background: linear-gradient(180deg, #8504a9 0%, #1b0048 100%);
+    overflow: visible;
 }
 
 .LateralMenuDiv h1{
@@ -15,7 +16,12 @@
     text-align: center;
 }
 
-.LateralMenuDiv .MenuItemsDiv p{
+.LateralMenuDiv .IndexItemsDiv{
+    height: 50vh;
+    overflow: auto;
+}
+
+.LateralMenuDiv .IndexItemsDiv p{
     text-align: left;
 }
 
@@ -24,15 +30,19 @@
     justify-content: center;
     width: 300px;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .LateralMenuDiv .CourseInfoDiv .CourseImageDiv img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.CourseInfoDiv {
+    height: 50vh;
 }

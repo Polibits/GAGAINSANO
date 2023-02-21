@@ -14,7 +14,7 @@ class LateralMenu extends React.Component {
         return (
             <div className="LateralMenuDiv">
                 <CourseInfo name='gaga insano' description='bla bla bla' img={CourseImg}></CourseInfo>
-                <MenuItems></MenuItems>
+                <Index></Index>
             </div>
         );
     }
@@ -38,17 +38,18 @@ class CourseInfo extends React.Component {
     }
 }
 
-class MenuItems extends React.Component {
+class Index extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
         return (
-            <div className="MenuItemsDiv">
+            <div className="IndexItemsDiv">
                 <Chapter name='Capítulo 1'></Chapter>
                 <Chapter name='Capítulo 2'></Chapter>
                 <Chapter name='Capítulo 3'></Chapter>
+                <Chapter name='Capítulo 4'></Chapter>
             </div>
         );
     }
