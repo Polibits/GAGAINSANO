@@ -11,6 +11,9 @@ class Content extends React.Component {
         return (
             <div className="CoursePageContentDiv">
                 <h1>{this.props.title}</h1>
+                <div className="CoursePageVideoDiv">
+                    <video src={this.props.src} controls></video>
+                </div>
             </div>
         );
     }

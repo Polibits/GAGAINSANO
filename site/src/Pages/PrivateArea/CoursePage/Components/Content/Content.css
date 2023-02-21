@@ -5,3 +5,16 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.CoursePageContentDiv .CoursePageVideoDiv {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+.CoursePageContentDiv .CoursePageVideoDiv video{
+    height: 80vh;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
