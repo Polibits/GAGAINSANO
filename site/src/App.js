@@ -1,4 +1,5 @@
 import React from 'react';
+import {Routes, Route, BrowserRouter as Router} from 'react-router-dom';
 
 /* páginas públicas */
 import InitialPage from "./Pages/Public/InitialPage/InitialPage";
@@ -14,7 +15,21 @@ import Course from "./Pages/Private/Course/Course";
 
 function App() {
   return (
-      <Login/>
+    <>
+      <Router>
+        <Routes>
+          <Route element = {< InitialPage />}  path="/"/>
+          <Route element = {< CoursesPreview />}  path="/cursos"/>
+          <Route element = {< OlympiadPreview />}  path="/olimpiadas"/>
+          <Route element = {< Login />}  path="/login"/>
+          <Route element = {< Register />}  path="/registro"/>
+
+          <Route element = {< AdmDashboard />}  path="/administracao"/>
+          <Route element = {< Dashboard />}  path="/dashboard"/>
+          <Route element = {< Course />}  path="/curso"/>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
