@@ -4,7 +4,7 @@ class Login extends React.Component {
     constructor(props) {
         super(props);
     }
-    
+
     render(){
         return (
             <div className='LoginPage'>
@@ -20,6 +20,7 @@ class Login extends React.Component {
                             <input type="text"></input>
                         </label>
                     </forms>
+                    <button>entrar</button>
                 </div>
             </div>
         );
