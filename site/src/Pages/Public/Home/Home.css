@@ -1,0 +1,63 @@
+.TriunfalLogo .TriunfalTitle {
+    text-align: center;
+    letter-spacing: .20em;
+    border-right: .05em transparent #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 0%;
+    animation:
+        typing 3.5s steps(30, end) 2s forwards,
+        blink-caret 0.5s step-end 2s;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #ffffff
+    }
+}
+
+/* Formatando a Logo */
+.TriunfalLogo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.TriunfalLogo img {
+    width: 520px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: logo_fade_in 5s;
+}
+
+@keyframes logo_fade_in {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.TriunfalLogo p {
+    text-align: center;
+}

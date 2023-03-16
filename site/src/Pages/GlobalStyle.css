@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     background-color: #000000;
     color: #ffffff;
     font-family: Montserrat;
@@ -8,4 +10,9 @@ h1 {
     text-align: center;
     font-size: 32pt;
     font-weight: 900;
+}
+
+p {
+    font-size: 12pt;
+    font-weight: 400;
 }

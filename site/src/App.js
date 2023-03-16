@@ -2,9 +2,10 @@ import React from 'react';
 import {Routes, Route, BrowserRouter as Router} from 'react-router-dom';
 
 /* páginas públicas */
-import InitialPage from "./Pages/Public/InitialPage/InitialPage";
+import Home from "./Pages/Public/Home/Home";
 import CoursesPreview from "./Pages/Public/CoursesPreview/CoursesPreview";
 import OlympiadPreview from "./Pages/Public/OlympiadPreview/OlympiadPreview";
+import GagaInsanoResolve from "./Pages/Public/GagaInsanoResolve/GagaInsanoResolve";
 import Login from "./Pages/Public/Login/Login";
 import Register from "./Pages/Public/Register/Register";
 
@@ -18,9 +19,10 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route element = {< InitialPage />}  path="/"/>
+          <Route element = {< Home />}  path="/"/>
           <Route element = {< CoursesPreview />}  path="/cursos"/>
           <Route element = {< OlympiadPreview />}  path="/olimpiadas"/>
+          <Route element = {< GagaInsanoResolve />}  path="/gagainsanoresolve"/>
           <Route element = {< Login />}  path="/login"/>
           <Route element = {< Register />}  path="/registro"/>
 

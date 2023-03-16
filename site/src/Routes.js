@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 /* páginas públicas */
-import InitialPage from "./Pages/Public/InitialPage/InitialPage";
+import InitialPage from "./Pages/Public/Home/Home";
 import CoursesPreview from "./Pages/Public/CoursesPreview/CoursesPreview";
 import OlympiadPreview from "./Pages/Public/OlympiadPreview/OlympiadPreview";
 import Login from "./Pages/Public/Login/Login";
@@ -21,6 +21,6 @@ const func = () => {
              </Routes>
          </BrowserRouter>
     )
- }
+}
  
  export default func;
