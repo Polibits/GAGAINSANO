@@ -1,4 +1,18 @@
 import React from "react";
+import axios from 'axios';
+import { Link } from "react-router-dom";
+
+function login() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    var valid = false;
+    
+    if(email=='email@email.com' && password=='123'){
+        console.log('autenticação bem sucedida');
+    } else {
+        console.log('falha na autenticação');
+    }
+}
 
 class Login extends React.Component {
     constructor(props) {
@@ -13,14 +27,14 @@ class Login extends React.Component {
                     <forms>
                         <label>
                             Email
-                            <input type="text"></input>
+                            <input id="email" type="text"></input>
                         </label>
                         <label>
                             Senha
-                            <input type="text"></input>
+                            <input id="password" type="password"></input>
                         </label>
                     </forms>
-                    <button>entrar</button>
+                    <button onClick={login}>entrar</button>
                 </div>
             </div>
         );
