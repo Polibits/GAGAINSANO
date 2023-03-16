@@ -1,0 +1,52 @@
+.LoginPage {
+    height: 100vh;
+    background-color: #04001d;
+}
+
+.LoginPage h2{
+    text-align: center;
+}
+
+.LoginPage .Forms{
+    margin-left: auto;
+    margin-right: auto;
+    width: 410px;
+}
+
+.LoginPage .Forms .Field{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.LoginPage .Forms .Field input{
+    font-size: 14pt;
+    width: 360px;
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.LoginPage .Forms .Button{
+    margin-left: auto;
+    margin-right: auto;
+    width: 410px;
+}
+
+.LoginPage .Forms .Button button{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+    height: 40px;
+    width: 410px;
+    border-radius: 10px;
+    background-color: #000008;
+}
+
+.LoginPage .Forms .Button button:hover{
+    background-color: #12011a;
+}
+
+.LoginPage .Forms .Field p{
+    margin-bottom: 5px;
+}

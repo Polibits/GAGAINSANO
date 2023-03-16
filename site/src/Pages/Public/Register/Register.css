@@ -1,0 +1,47 @@
+.RegisterPage h2{
+    text-align: center;
+}
+
+.RegisterPage .Forms{
+    margin-left: auto;
+    margin-right: auto;
+    width: 410px;
+}
+
+.RegisterPage .Forms .Field{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.RegisterPage .Forms .Field input{
+    font-size: 14pt;
+    width: 360px;
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.RegisterPage .Forms .Button{
+    margin-left: auto;
+    margin-right: auto;
+    width: 410px;
+}
+
+.RegisterPage .Forms .Button button{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+    height: 40px;
+    width: 410px;
+    border-radius: 10px;
+    background-color: #000008;
+}
+
+.RegisterPage .Forms .Button button:hover{
+    background-color: #12011a;
+}
+
+.RegisterPage .Forms .Field p{
+    margin-bottom: 5px;
+}

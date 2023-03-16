@@ -1,12 +1,14 @@
 import React from "react";
 import axios from 'axios';
+import './../../GlobalStyle.css';
+import './Login.css';
 import { Link } from "react-router-dom";
 
 function login() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     var valid = false;
-    
+
     if(email=='email@email.com' && password=='123'){
         console.log('autenticação bem sucedida');
     } else {
@@ -22,19 +24,25 @@ class Login extends React.Component {
     render(){
         return (
             <div className='LoginPage'>
-                <h1>LoginPage</h1>
                 <div className="Forms">
+                    <h2>LoginPage</h2>
                     <forms>
-                        <label>
-                            Email
-                            <input id="email" type="text"></input>
-                        </label>
-                        <label>
-                            Senha
-                            <input id="password" type="password"></input>
-                        </label>
+                        <div className="Field">
+                            <p>Email</p>
+                            <label>
+                                <input id="email" type="text"></input>
+                            </label>
+                        </div>
+                        <div className="Field">
+                            <p>Senha</p>
+                            <label>
+                                <input id="password" type="password"></input>
+                            </label>
+                        </div>    
                     </forms>
-                    <button onClick={login}>entrar</button>
+                    <div className="Button">
+                        <button onClick={login}>entrar</button>
+                    </div>
                 </div>
             </div>
         );
