@@ -1,0 +1,37 @@
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+	font-size: 1.1rem;
+}
+
+body {
+	font-family: montserrat;
+
+}
+
+#logomaior{
+    width: 300px;
+    margin: 1rem;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+#gagatitulo{
+    font-size: 2rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

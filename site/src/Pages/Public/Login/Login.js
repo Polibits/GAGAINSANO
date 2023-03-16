@@ -9,6 +9,18 @@ class Login extends React.Component {
         return (
             <div className='LoginPage'>
                 <h1>LoginPage</h1>
+                <div className="Forms">
+                    <forms>
+                        <label>
+                            Email
+                            <input type="text"></input>
+                        </label>
+                        <label>
+                            Senha
+                            <input type="text"></input>
+                        </label>
+                    </forms>
+                </div>
             </div>
         );
     }

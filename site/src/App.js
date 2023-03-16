@@ -14,8 +14,7 @@ import Course from "./Pages/Private/Course/Course";
 
 function App() {
   return (
-      <InitialPage/>
-
+      <Login/>
   );
 }
 
