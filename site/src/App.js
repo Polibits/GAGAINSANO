@@ -19,17 +19,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route element = {< InitialPage />}  path="/InitialPage"/>
-          <Route element = {< Cursos />}  path="/cursos" />
-          <Route element = {< Olimpiadas />}  path="/olimpiadas" />
-          <Route element = {< MateriaisGratuitos />} path="/MateriaisGratuitos" />
-          <Route element = {< GagaInsanoResolve />} path="/GagaInsanoResolve" />
-          
-          <Route element = {< Login />} path="/Login" />
-          <Route element = { <SignUp /> } path="/SignUp" />
-
-          <Route element = { <Dashboard /> } path="/dashboard"/>
-          <Route element = { <CoursePage /> } path="/" exact/>
+          <Route element = {< InitialPage />}  path="/" exact/>
         </Routes>
       </Router>
     </>
@@ -37,20 +27,3 @@ function App() {
 }
 
 export default App;
-
-/*
-import Olimpiadas from "./Pages/PublicArea/Olimpíadas/Olimpiadas";
-import MateriaisGratuitos from "./Pages/PublicArea/Materiais Gratuitos/MateriaisGratuitos";
-import GagaInsanoResolve from "./Pages/PublicArea/GagaInsanoResolve/GagaInsanoResolve";
-
-import Login from "./Pages/LoginPage/Login";
-import SignUp from "./Pages/SignUpPage/SignUp";
-import Dashboard from './Pages/Dashboard/Dashboard';
-
-          <Route element = {< Olimpiadas />}  path="/olimpiadas" />
-          <Route element = {< MateriaisGratuitos />} path="/MateriaisGratuitos" />
-          <Route element = {< GagaInsanoResolve />} path="/GagaInsanoResolve" />
-          <Route element = {< Login />} path="/Login" />
-          <Route element = { <SignUp /> } path="/SignUp" />
-          <Route element = { <Dashboard /> } path="/dashboard"/>
- */
