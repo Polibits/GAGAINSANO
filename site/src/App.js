@@ -10,6 +10,7 @@ import FreeContent from './Pages/Public/FreeContent/FreeContent';
 import Login from "./Pages/Public/Login/Login";
 import Register from "./Pages/Public/Register/Register";
 
+/* páginas privadas */
 import AdmCourses from './Pages/Private/adm/courses/AdmCourses';
 import AdmDashboard from './Pages/Private/adm/dashboard/AdmDashboard';
 import StudentCourses from './Pages/Private/student/courses/StudentCourses';
@@ -17,7 +18,8 @@ import StudentDashboard from './Pages/Private/student/dashboard/StudentDashboard
 import ProfessorCourses from './Pages/Private/professor/courses/ProfessorCourses';
 import ProfessorDashboard from './Pages/Private/professor/dashboard/ProfessorDashboard';
 
-/* páginas privadas */
+/* página de desenvolvedores */
+import Debug from './Pages/Debug/Debug';
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
           <Route element = {< StudentDashboard />}  path="/estudante/dashboard"/>
           <Route element = {< ProfessorCourses />}  path="/professor/cursos"/>
           <Route element = {< ProfessorDashboard />}  path="/professor/dashboard"/>
+
+          <Route element = {< Debug />}  path="/debug"/>
         </Routes>
       </Router>
     </>
