@@ -1,0 +1,20 @@
+Áreas Públicas
+    /home
+        /cursos
+        /olimpiadas
+        /materiaisgratuitos
+        /gagainsanoresolve
+
+Áreas Privadas
+    /aluno
+        /dashboard
+        /cursos
+        /curso/nome_do_curso
+    /administrador
+        /dashboard
+        /cursos
+        /usuarios
+    /professor
+        /dashboard
+        /cursos
+        /curso/nome_do_curso
