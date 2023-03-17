@@ -4,12 +4,14 @@
         /olimpiadas
         /materiaisgratuitos
         /gagainsanoresolve
+        /login
+        /registro
 
 Áreas Privadas
     /aluno
         /dashboard
         /cursos
-        /curso/nome_do_curso
+        /cursos/nome_do_curso
     /administrador
         /dashboard
         /cursos

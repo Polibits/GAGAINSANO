@@ -1,17 +1,17 @@
 import React from "react";
 
-class Course extends React.Component {
+class AdmCourses extends React.Component {
     constructor(props) {
         super(props);
     }
     
     render(){
         return (
-            <div className='CoursePage'>
-                <h1>CoursePage</h1>
+            <div className='AdmCoursesPage'>
+                <h1>AdmCoursesPage</h1>
             </div>
         );
     }
 }
 
-export default Course;
+export default AdmCourses;
