@@ -2,24 +2,42 @@ import React from "react";
 
 import { UserController } from "../../Controllers/Users";
 
-function userFrame(fullName, username, email, password, cpf) {
+var allUsers = [
+    {
+        'id':'1',
+        'fullName':'full name',
+        'username':'username',
+        'email':'email@email.com',
+        'userType':'userType'
+    },
+    {
+        'id':'2',
+        'fullName':'full name 2',
+        'username':'username 2',
+        'email':'email2@email.com',
+        'userType':'userType2'
+    }
+]
+
+function userFrame(ID, fullname, username, email, userType) {
     return (
-        <div>
-            <p>{fullName} {username} {email} {password} {cpf}</p>
+        <div key={ID}>
+            <p>{ID} {fullname} {username} {email} {userType}</p>
         </div>
     );
 }
 
-function usersList() {
-    const list = [
-        userFrame(
-            'Henrique Eduardo',
-            'henriqueedu2001',
-            'henrique@email.com',
-            '123',
-            '123.123.123-45'
-        )
-    ];
+function usersFrameList() {
+    const list = allUsers.map((user) => {
+        return userFrame(
+            user.id, 
+            user.fullName, 
+            user.username, 
+            user.email, 
+            user.userType
+        );
+    });
+
     return (
         <div>
             {list}
@@ -34,7 +52,7 @@ class AllUsersFrame extends React.Component {
     
     render(){
         return (
-            <div>{usersList()}</div>
+            <div>{usersFrameList()}</div>
         );
     }
 }
