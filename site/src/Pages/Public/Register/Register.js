@@ -17,7 +17,7 @@ class Register extends React.Component {
                     <forms>
                         {Field('Nome Completo', 'fullName', 'text')}
                         {Field('Nome de Usuário', 'username', 'text')}
-                        {Field('email', 'email', 'text')}
+                        {Field('Email', 'email', 'text')}
                         {Field('CPF', 'cpf', 'text')}
                         {Field('Senha', 'password', 'password')}
                         {Field('Confirme sua senha', 'passwordConfirmation', 'password')}

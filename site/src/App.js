@@ -28,6 +28,7 @@ function App() {
       <Router>
         <Routes>
           <Route element = {< Home />}  path="/"/>
+          <Route element = {< Home />}  path="/home"/>
           <Route element = {< CoursesPreview />}  path="/cursos"/>
           <Route element = {< OlympiadPreview />}  path="/olimpiadas"/>
           <Route element = {< GagaInsanoResolve />}  path="/gagainsanoresolve"/>

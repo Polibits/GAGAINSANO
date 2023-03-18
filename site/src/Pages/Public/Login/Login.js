@@ -2,7 +2,33 @@ import React from "react";
 import axios from 'axios';
 import './../../GlobalStyle.css';
 import './Login.css';
+import Stars from "../../Common Components/StarsBackground/StarsBackground";
 import { Link } from "react-router-dom";
+
+class Login extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render(){
+        return (
+            <div className='LoginPage'>
+                <div className="Forms">
+                    <h2>LoginPage</h2>
+                    <forms>
+                        {Field('Email', 'email', 'text')}
+                        {Field('Senha', 'password', 'password')} 
+                    </forms>
+                    <div className="Button">
+                        <button onClick={login}>entrar</button>
+                    </div>
+                    <p>Ainda não tem conta? <Link to='/registro'>cadastre-se</Link></p>
+                    
+                </div>
+            </div>
+        );
+    }
+}
 
 function login() {
     const email = document.getElementById("email").value;
@@ -34,38 +60,15 @@ function login() {
     }
 }
 
-class Login extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render(){
-        return (
-            <div className='LoginPage'>
-                <div className="Forms">
-                    <h2>LoginPage</h2>
-                    <forms>
-                        <div className="Field">
-                            <p>Email</p>
-                            <label>
-                                <input id="email" type="text"></input>
-                            </label>
-                        </div>
-                        <div className="Field">
-                            <p>Senha</p>
-                            <label>
-                                <input id="password" type="password"></input>
-                            </label>
-                        </div>    
-                    </forms>
-                    <div className="Button">
-                        <button onClick={login}>entrar</button>
-                    </div>
-                    <Link to='/registro'>registrar-se</Link>
-                </div>
-            </div>
-        );
-    }
+function Field(name, id, type) {
+    return (
+        <div className="Field">
+            <p>{name}</p>
+            <label>
+                <input id={id} type={type}></input>
+            </label>
+        </div>
+    );
 }
 
 export default Login;
