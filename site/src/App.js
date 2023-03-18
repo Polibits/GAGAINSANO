@@ -13,6 +13,7 @@ import Register from "./Pages/Public/Register/Register";
 /* páginas privadas */
 import AdmCourses from './Pages/Private/adm/courses/AdmCourses';
 import AdmDashboard from './Pages/Private/adm/dashboard/AdmDashboard';
+import AdmUsers from './Pages/Private/adm/users/AdmUsers';
 import StudentCourses from './Pages/Private/student/courses/StudentCourses';
 import StudentDashboard from './Pages/Private/student/dashboard/StudentDashboard';
 import ProfessorCourses from './Pages/Private/professor/courses/ProfessorCourses';
@@ -36,6 +37,7 @@ function App() {
 
           <Route element = {< AdmCourses />}  path="/administrador/cursos"/>
           <Route element = {< AdmDashboard />}  path="/administrador/dashboard"/>
+          <Route element = {<AdmUsers />} path="/administrador/usuarios"/>
           <Route element = {< StudentCourses />}  path="/estudante/cursos"/>
           <Route element = {< StudentDashboard />}  path="/estudante/dashboard"/>
           <Route element = {< ProfessorCourses />}  path="/professor/cursos"/>
