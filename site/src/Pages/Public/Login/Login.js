@@ -22,6 +22,12 @@ function login() {
             params: user
         }).then((response) => {
             console.log(response.data.response);
+            if(response.data.response == 'sucess'){
+                console.log('usuário autenticado com sucesso');
+                window.location.href = '/';
+            } else {
+                console.log('falha na autenticação');
+            }
         });
     } catch (error) {
         console.log(error);
@@ -55,6 +61,7 @@ class Login extends React.Component {
                     <div className="Button">
                         <button onClick={login}>entrar</button>
                     </div>
+                    <Link to='/registro'>registrar-se</Link>
                 </div>
             </div>
         );

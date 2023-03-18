@@ -1,7 +1,36 @@
 import axios from "axios";
 import React from "react";
+import { Link } from "react-router-dom";
 import './../../GlobalStyle.css';
 import './Register.css';
+
+class Register extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    
+    render(){
+        return (
+            <div className='RegisterPage'>
+                <div className="Forms">
+                    <h2>Crie sua conta!</h2>
+                    <forms>
+                        {Field('Nome Completo', 'fullName', 'text')}
+                        {Field('Nome de Usuário', 'username', 'text')}
+                        {Field('email', 'email', 'text')}
+                        {Field('CPF', 'cpf', 'text')}
+                        {Field('Senha', 'password', 'password')}
+                        {Field('Confirme sua senha', 'passwordConfirmation', 'password')}
+                    </forms>
+                    <div className="Button">
+                        <button onClick={register}>registrar</button>
+                        <p>Ao se inscrever, você concorda com os <Link>termos de serviço</Link> do site</p>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
 
 function register() {
     const fullName = document.getElementById("fullName").value;
@@ -37,61 +66,15 @@ function register() {
     }
 }
 
-class Register extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    
-    render(){
-        return (
-            <div className='RegisterPage'>
-                <div className="Forms">
-                    <h2>Crie sua conta!</h2>
-                    <forms>
-                        <div className="Field">
-                            <p>Nome Completo</p>
-                            <label>
-                                <input id="fullName" type="text"></input>
-                            </label>
-                        </div>
-                        <div className="Field">
-                            <p>Nome de Usuário</p>
-                            <label>
-                                <input id="username" type="text"></input>
-                            </label>
-                        </div>    
-                        <div className="Field">
-                            <p>Email</p>
-                            <label>
-                                <input id="email" type="text"></input>
-                            </label>
-                        </div>
-                        <div className="Field">
-                            <p>CPF</p>
-                            <label>
-                                <input id="cpf" type="text"></input>
-                            </label>
-                        </div>
-                        <div className="Field">
-                            <p>Senha</p>
-                            <label>
-                                <input id="password" type="password"></input>
-                            </label>
-                        </div>
-                        <div className="Field">
-                            <p>Confirme sua senha</p>
-                            <label>
-                                <input id="passwordConfirmation" type="password"></input>
-                            </label>
-                        </div>
-                    </forms>
-                    <div className="Button">
-                        <button onClick={register}>registrar</button>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+function Field(name, id, type) {
+    return (
+        <div className="Field">
+            <p>{name}</p>
+            <label>
+                <input id={id} type={type}></input>
+            </label>
+        </div>
+    );
 }
 
 export default Register;
