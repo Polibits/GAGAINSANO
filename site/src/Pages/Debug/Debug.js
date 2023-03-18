@@ -1,58 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
-import { UserController } from "../../Controllers/Users";
-
-var allUsers = [
-    {
-        'id':'1',
-        'fullName':'full name',
-        'username':'username',
-        'email':'email@email.com',
-        'userType':'userType'
-    },
-    {
-        'id':'2',
-        'fullName':'full name 2',
-        'username':'username 2',
-        'email':'email2@email.com',
-        'userType':'userType2'
-    }
-]
-
-function userFrame(ID, fullname, username, email, userType) {
-    return (
-        <div key={ID}>
-            <p>{ID} {fullname} {username} {email} {userType}</p>
-        </div>
-    );
-}
-
-function usersFrameList() {
-    const list = allUsers.map((user) => {
-        return userFrame(
-            user.id, 
-            user.fullName, 
-            user.username, 
-            user.email, 
-            user.userType
+function UsersFrame(users) {
+    var list = [];
+    function userFrame(user){
+        return (
+            <div>
+                <p key={user.UserId}>email:{user.email}; id: {user.UserId}; </p>
+                <p></p>
+            </div>
+            
         );
-    });
-
+    }
+    /*
     return (
-        <div>
-            {list}
-        </div>
+        <div>{users.map((user) => <p key={user.UserId}>{user.UserId}</p>) }</div>
+    );
+    */
+    return (
+        <div>{users.map(userFrame)}</div>
     );
 }
 
 class AllUsersFrame extends React.Component {
     constructor(props) {
         super(props);
+        this.state = { users:[], loaded:false};
     }
-    
+
+    getUsers = () => {
+        const request = axios({
+            method: 'get',
+            url: 'http://localhost:5050/user/read/all'
+        }).then((response) => {
+            this.setState({ users: response.data.users, loaded: true});
+        });
+        
+        return request;
+    }
+
     render(){
         return (
-            <div>{usersFrameList()}</div>
+            <div>
+                <button onClick={this.getUsers}>Carregar</button>
+                <div>{UsersFrame(this.state.users)}</div>
+            </div>
         );
     }
 }

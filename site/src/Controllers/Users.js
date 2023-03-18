@@ -43,6 +43,15 @@ class UserController {
      * @returns {userInfo} uma lista com todos os usuários
      */
     static async getAllUsersInfo() {
+        const request = await axios({
+            method: 'get',
+            url: 'http://localhost:5050/user/read/all'
+        }).then(function(response) {
+            return response.data;
+        }).catch(function(error){
+            console.log(error);
+        });
+        return request;
         return [
             {
                 'id':'1',
@@ -58,7 +67,7 @@ class UserController {
                 'email':'email2@email.com',
                 'userType':'userType2'
             }
-        ]
+        ];
     }
 
     /**
