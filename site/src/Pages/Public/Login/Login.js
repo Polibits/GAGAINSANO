@@ -9,10 +9,22 @@ function login() {
     const password = document.getElementById("password").value;
     var valid = false;
 
-    if(email=='email@email.com' && password=='123'){
-        console.log('autenticação bem sucedida');
-    } else {
-        console.log('falha na autenticação');
+    const user = {
+        email:email,
+        password:password
+    }
+
+    try {
+        console.log('tentativa de login de usuário:\n', user);
+        axios({
+            method:'get',
+            url:'http://localhost:5050/user/authenticate',
+            params: user
+        }).then((response) => {
+            console.log(response.data.response);
+        });
+    } catch (error) {
+        console.log(error);
     }
 }
 
