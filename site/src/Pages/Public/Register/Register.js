@@ -1,25 +1,40 @@
+import axios from "axios";
 import React from "react";
 import './../../GlobalStyle.css';
 import './Register.css';
 
 function register() {
+    const fullName = document.getElementById("fullName").value;
+    const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
+    const cpf = document.getElementById("cpf").value;
     const password = document.getElementById("password").value;
     const passwordConfirmation = document.getElementById("passwordConfirmation").value;
-    const fullName = document.getElementById("fullName").value;
-    const preferedName = document.getElementById("preferedName").value;
 
-    if(password !== passwordConfirmation){
-        console.log('as senhas são diferentes');
-    }
-
-    console.log({
+    const data = {
         email,
         password,
-        passwordConfirmation,
         fullName,
-        preferedName
-    });
+        username,
+        cpf
+    }
+    
+    console.log('tentando criar usuário:\n', data);
+
+    try {
+        axios({
+            method:'post',
+            url:'http://localhost:5050/user/create',
+            data:data
+        }).then((response) => {
+            if(response.data.response == 'sucess'){
+                console.log('usuário criado com sucesso!');
+            }
+            console.log(response);
+        });
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 class Register extends React.Component {
@@ -42,7 +57,7 @@ class Register extends React.Component {
                         <div className="Field">
                             <p>Nome de Usuário</p>
                             <label>
-                                <input id="preferedName" type="text"></input>
+                                <input id="username" type="text"></input>
                             </label>
                         </div>    
                         <div className="Field">
