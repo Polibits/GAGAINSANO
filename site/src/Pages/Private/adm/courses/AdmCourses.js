@@ -70,9 +70,6 @@ function createCourse() {
 }
 
 function CoursesFrame(courses) {
-    var list = []
-    console.log('fffffffffffffffff', courses);
-
     return (
         <div>
             {courses.map((course) => {
