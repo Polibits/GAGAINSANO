@@ -41,20 +41,11 @@ class Debug extends React.Component {
         formData.append("file", file);
 
         try {
-            /*
-            fetch('http://localhost:5050/files/upload', {
-                method:'POST',
-                body:formData
-            }).then((response) => {
-                console.log(response);
-            }).catch((error) => {
-                console.log(error);
-            });*/
-            
             axios.post('http://localhost:5050/files/upload', formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
+                data:data
             }).then((response) => {
                 console.log(response);
             }).catch((error) => {
