@@ -38,7 +38,7 @@ function App() {
 
           <Route element = {< AdmCourses />}  path="/administrador/cursos"/>
           <Route element = {< AdmDashboard />}  path="/administrador/dashboard"/>
-          <Route element = {<AdmUsers />} path="/administrador/usuarios"/>
+          <Route element = {< AdmUsers />} path="/administrador/usuarios"/>
           <Route element = {< StudentCourses />}  path="/estudante/cursos"/>
           <Route element = {< StudentDashboard />}  path="/estudante/dashboard"/>
           <Route element = {< ProfessorCourses />}  path="/professor/cursos"/>

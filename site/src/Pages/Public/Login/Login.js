@@ -23,7 +23,15 @@ class Login extends React.Component {
 
 function content() {
     // verifica se o usuário está logado (via cookies)
-    if(cookies.get('loadedUser') == false || cookies.get('loadedUser') == undefined){
+    if(cookies.get('loadedUser') == true){
+        redirect();
+        return (
+            <div>
+                <p>você já está logado! Redirecionando para área privada.</p>
+            </div>
+        );
+    } else {
+        
         return (
             <div className="Forms">
                 <h2>LoginPage</h2>
@@ -35,13 +43,6 @@ function content() {
                     <button onClick={login}>entrar</button>
                 </div>
                 <p>Ainda não tem conta? <Link to='/registro'>cadastre-se</Link></p>
-            </div>
-        );
-    } else {
-        redirect();
-        return (
-            <div>
-                <p>você já está logado! Redirecionando para área privada.</p>
             </div>
         );
     }
@@ -93,14 +94,18 @@ function loadUserInfo(email) {
     }).then(function(response) {
         console.log(response.data);
         if(response.data.response == 'sucess'){
+            console.log('COOKIE CRIADO');
             cookies.set(
                 'userInfo', 
-                response.data.user
+                response.data.user,
+                {path: "/"}
             );
             cookies.set(
                 'loadedUser', 
-                true
+                true,
+                {path: "/"}
             );
+            
         }
     }).catch(function(error){
         console.log(error);
