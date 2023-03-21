@@ -14,9 +14,9 @@ body {
 	background-repeat:no;
 	background-size: cover;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #0d0d0d, #000000);
+    background: -webkit-linear-gradient( #0d0d0d);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #101010, #000000);
+    background: linear-gradient( #000000);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     box-sizing: border-box;
     display: block;
