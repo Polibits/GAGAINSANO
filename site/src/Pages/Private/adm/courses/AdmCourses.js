@@ -9,10 +9,12 @@ class AdmCourses extends React.Component {
 
     getCoursesFrameworks = () => {
         axios({
-            method:'get',
-            url:'http://localhost:5050/courses/framework/read/all'
+            url:'http://localhost:5050/courses/read/all',
+            method:'get'
         }).then((response) => {
             this.setState({coursesFrameworks: response.data.coursesFrameworks});
+        }).catch((error) => {
+            console.log(error);
         });
     }
     
@@ -62,7 +64,7 @@ function createCourse() {
     };
     axios({
         method:'post',
-        url:'http://localhost:5050/courses/framework/create',
+        url:'http://localhost:5050/courses/create',
         data:courseFramework
     }).then((response) => {
         console.log(response.data);

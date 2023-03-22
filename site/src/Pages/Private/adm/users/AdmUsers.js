@@ -13,6 +13,7 @@ function UsersFrame(users) {
                 <p>email: {user.email}</p>
                 <p>cpf: {user.cpf}</p>
                 <p>userType: {user.userType}</p>
+                <p>integrityHash: {user.integrityHash}</p>
             </div>
         );
     }

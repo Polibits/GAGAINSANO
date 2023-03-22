@@ -1,0 +1,11 @@
+.Lateralmenu {
+    float: left;
+    width: 300px;
+    background: linear-gradient(0deg, #000a62 100%, #06002f 0%);
+    
+}
+
+div {
+    border-color: rgb(215, 23, 23);
+    border-radius: 4px;
+}

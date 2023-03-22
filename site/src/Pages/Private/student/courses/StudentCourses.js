@@ -14,4 +14,8 @@ class StudentCourses extends React.Component {
     }
 }
 
+function loadMyCourses(courseCode) {
+    
+}
+
 export default StudentCourses;

@@ -81,9 +81,7 @@ function login() {
 
 function loadUserInfo(email) {
     const data = {
-        UserId:'',
-        email:email,
-        cpf:''
+        email:email
     }
     console.log(data);
     axios({
