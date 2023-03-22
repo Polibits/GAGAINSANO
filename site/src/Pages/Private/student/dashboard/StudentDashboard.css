@@ -1,14 +1,35 @@
-.StudentDashboardPage {
-    display: inline;
+.Content {
+    display: flex;
+    width: 100vw;
 }
 
-.Lateralmenu {
+.Content .LateralMenu {
     float: left;
     width: 300px;
-    background: linear-gradient(0deg, #000a62 100%, #06002f 0%);
-    
+    height: 100vh;
 }
 
-.StudentDashboardPage .Lateralmenu .MenuOption {
+.MenuOption {
+    display: flex;
+    justify-content: center;
     width: 300px;
+    height: 50px;
+}
+
+.MenuOptionRender {
+    width: calc(100vw - 300px);
+}
+
+.MenuOptionRender .Title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.MainContent{
+    padding: 20px;
+}
+
+.Profile{
+    width: 100%;
+    height: 250px;
 }

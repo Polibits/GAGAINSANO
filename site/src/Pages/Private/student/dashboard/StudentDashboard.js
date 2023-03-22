@@ -11,24 +11,35 @@ class StudentDashboard extends React.Component {
     
     render(){
         return (
-            <div className='StudentDashboardPage'>
-                <div id="lateralMenu" className="Lateralmenu">
-                <MenuOption name='Meu Perfil'/>
-                <MenuOption name='Meus Cursos'/>
-                <MenuOption name='Pagamentos'/>
-                <MenuOption name='Recados'/>
-                <MenuOption name='Ajuda'/>
-                <MenuOption name='Sair'/>
-                </div>
-                <div id="Content" className="Content">
-                    <h1>StudentDashboard</h1>
-                    <div>
-                        {userInfo()}
+            <div className='Page'>
+                <div className="Content">
+                    <div className="LateralMenu">
+                        <Profile/>
+                        <div className="MenuOptions">
+                            <MenuOption name='Meu Perfil'/>
+                            <MenuOption name='Meus Cursos'/>
+                            <MenuOption name='Pagamentos'/>
+                            <MenuOption name='Recados'/>
+                            <MenuOption name='Ajuda'/>
+                            <MenuOption name='Sair'/>
+                        </div>
+
                     </div>
-                    <div>
-                        <button onClick={logout}>sair</button>
+                    <div className="MenuOptionRender">
+                        <div className="Title">
+                            <h1>StudentDashboard</h1>
+                        </div>
+                        
+                        <div className="MainContent">
+                            {userInfo()}
+                            <div>
+                                <button onClick={logout}>sair</button>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
+                
                 
             </div>
         );
@@ -57,7 +68,10 @@ class MenuOption extends React.Component {
     render(){
         return (
             <div className='MenuOption'>
-                <p>{this.props.name}</p>
+                <div>
+                    <p>{this.props.name}</p>
+                </div>
+                
             </div>
         );
     }
