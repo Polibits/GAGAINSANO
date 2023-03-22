@@ -7,13 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="./stylescss/InitialPage.css">
     <link rel="stylesheet" href="./stylescss/stylesNavBar.css">
+    <link rel="stylesheet" href="./stylescss/registerloginCSS.css">
 </head>
 <body>
     <!-- nav bar ---------------------------------------------------------------->
     <nav>
 		<input type="checkbox" id="check">
 		<label for="check" class="checkbtn">
-			<i class="fas fa-bars"></i>
+			<i class="fas fa-bars">MENU</i>
 		</label>
 		<label class="logo"><img id="logopng" src="./images/Logo.png"></label>
 		<ul>
@@ -26,12 +27,21 @@
 	</nav>
     <!-- nav bar ---------------------------------------------------------------->
 	<main>
-        <div class="maindiv">
-            <h1 id="gagatitulo">GAGÁ INSANO</h1>
-            <img id="logomaior" src="./images/Logo.png">
+        <div class="auth-container">
+            <h2>Entrar</h2>
+            <form action="/login" method="POST">
+                <div class="form-control">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" placeholder="Digite o seu e-mail">
+                </div>
+                    <div class="form-control">
+                    <label for="password">Senha:</label>
+                    <input type="password" name="password" placeholder="Digite a sua senha">
+                </div>
+                <input type="submit" value="Entrar">
+                <p>Não tem conta? <a id="cliqueaqui" href="/register">Clique aqui</a></p>
+            </form>
         </div>
-        
-       
     </main>
     
 </body>

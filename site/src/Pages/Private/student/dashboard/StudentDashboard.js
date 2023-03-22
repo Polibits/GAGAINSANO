@@ -13,8 +13,12 @@ class StudentDashboard extends React.Component {
         return (
             <div className='StudentDashboardPage'>
                 <div id="lateralMenu" className="Lateralmenu">
-                    <MenuOption name='meu perfil'/>
-                    <MenuOption name='meus cursos'/>
+                <MenuOption name='Meu Perfil'/>
+                <MenuOption name='Meus Cursos'/>
+                <MenuOption name='Pagamentos'/>
+                <MenuOption name='Recados'/>
+                <MenuOption name='Ajuda'/>
+                <MenuOption name='Sair'/>
                 </div>
                 <div id="Content" className="Content">
                     <h1>StudentDashboard</h1>

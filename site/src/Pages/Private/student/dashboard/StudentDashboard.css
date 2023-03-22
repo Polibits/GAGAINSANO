@@ -1,3 +1,7 @@
+.StudentDashboardPage {
+    display: inline;
+}
+
 .Lateralmenu {
     float: left;
     width: 300px;
@@ -5,7 +9,6 @@
     
 }
 
-div {
-    border-color: rgb(215, 23, 23);
-    border-radius: 4px;
+.StudentDashboardPage .Lateralmenu .MenuOption {
+    width: 300px;
 }

@@ -11,20 +11,22 @@ class Register extends React.Component {
     
     render(){
         return (
-            <div className='RegisterPage'>
-                <div className="Forms">
-                    <h2>Crie sua conta!</h2>
-                    <forms>
-                        {Field('Nome Completo', 'fullName', 'text')}
-                        {Field('Nome de Usuário', 'username', 'text')}
-                        {Field('Email', 'email', 'text')}
-                        {Field('CPF', 'cpf', 'text')}
-                        {Field('Senha', 'password', 'password')}
-                        {Field('Confirme sua senha', 'passwordConfirmation', 'password')}
-                    </forms>
-                    <div className="Button">
-                        <button onClick={register}>registrar</button>
-                        <p>Ao se inscrever, você concorda com os <Link>termos de serviço</Link> do site</p>
+            <div className='Page'>
+                <div className="RegisterFormsBase">
+                    <div className="Forms">
+                        <h2>Crie sua conta!</h2>
+                        <forms>
+                            {Field('Nome Completo', 'fullName', 'text')}
+                            {Field('Nome de Usuário', 'username', 'text')}
+                            {Field('Email', 'email', 'text')}
+                            {Field('CPF', 'cpf', 'text')}
+                            {Field('Senha', 'password', 'password')}
+                            {Field('Confirme sua senha', 'passwordConfirmation', 'password')}
+                        </forms>
+                        <div className="Button">
+                            <button onClick={register}>registrar</button>
+                            <p>Ao se inscrever, você concorda com os <Link>termos de serviço</Link> do site</p>
+                        </div>
                     </div>
                 </div>
             </div>

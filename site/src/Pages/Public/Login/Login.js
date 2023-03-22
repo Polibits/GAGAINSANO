@@ -14,7 +14,7 @@ class Login extends React.Component {
 
     render(){
         return (
-            <div className='LoginPage'>
+            <div className='Page'>
                 {content()}
             </div>
         );
@@ -33,16 +33,18 @@ function content() {
     } else {
         
         return (
-            <div className="Forms">
-                <h2>LoginPage</h2>
-                <forms>
-                    {Field('Email', 'email', 'text')}
-                    {Field('Senha', 'password', 'password')} 
-                </forms>
-                <div className="Button">
-                    <button onClick={login}>entrar</button>
+            <div className="FormsBase">
+                <div className="Forms">
+                    <h2>Login</h2>
+                    <form>
+                        {Field('Email', 'email', 'text')}
+                        {Field('Senha', 'password', 'password')} 
+                    </form>
+                    <div className="Button">
+                        <button onClick={login}>entrar</button>
+                    </div>
+                    <p>Ainda não tem conta? <Link to='/registro'>cadastre-se</Link></p>
                 </div>
-                <p>Ainda não tem conta? <Link to='/registro'>cadastre-se</Link></p>
             </div>
         );
     }
