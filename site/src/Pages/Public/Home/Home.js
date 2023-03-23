@@ -14,7 +14,7 @@ class InitialPage extends React.Component {
     
     render(){
         return (
-            <div className='InitialPage'>
+            <div className='Page'>
                 <NavigationBar/>
                 <TriunfalLogo/>
                 <StarsBackground/>

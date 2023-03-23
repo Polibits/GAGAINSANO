@@ -1,6 +1,7 @@
 import React from "react";
 import Cookies from "universal-cookie";
 import './StudentDashboard.css';
+import profilePicture from '../../../../content/Logo.png';
 
 const cookies = new Cookies();
 
@@ -13,15 +14,19 @@ class StudentDashboard extends React.Component {
         return (
             <div className='Page'>
                 <div className="Content">
-                    <div className="LateralMenu">
-                        <Profile/>
+                    <div id="LateralMenu">
+                        <Profile profilePicture={profilePicture} username='Henrique Eduardo' userType='estudante'/>
                         <div className="MenuOptions">
-                            <MenuOption name='Meu Perfil'/>
-                            <MenuOption name='Meus Cursos'/>
-                            <MenuOption name='Pagamentos'/>
-                            <MenuOption name='Recados'/>
-                            <MenuOption name='Ajuda'/>
-                            <MenuOption name='Sair'/>
+                            <div id='MenuOptionsDiv'>
+
+                            
+                                <MenuOption name='Meu Perfil'/>
+                                <MenuOption name='Meus Cursos'/>
+                                <MenuOption name='Pagamentos'/>
+                                <MenuOption name='Recados'/>
+                                <MenuOption name='Ajuda'/>
+                                <MenuOption name='Sair'/>
+                            </div>
                         </div>
 
                     </div>
@@ -53,8 +58,12 @@ class Profile extends React.Component {
     
     render(){
         return (
-            <div className='Profile'>
-                <p>{this.props.username}</p>
+            <div id='ProfileDiv'>
+                <div id='ProfileUsernameDiv'>{this.props.username}</div>
+                <div id ='ProfilePictureDiv'>
+                    <img id='ProfilePictureImg' src={this.props.profilePicture}></img>
+                </div>
+                <div id='ProfileUserType'>{this.props.userType}</div>
             </div>
         );
     }

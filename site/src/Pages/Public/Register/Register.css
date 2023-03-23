@@ -1,7 +1,6 @@
 .RegisterFormsBase {
     display: flex;
     align-items: center;
-    background: linear-gradient(0, #01040b 100%, #090015 0%);
     height: 600px;
     width: 500px;
     border-radius: 30px;

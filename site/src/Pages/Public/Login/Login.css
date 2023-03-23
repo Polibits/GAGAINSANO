@@ -17,7 +17,7 @@
 .Page .FormsBase {
     display: flex;
     align-items: center;
-    background: linear-gradient(0, #01040b 100%, #090015 0%);
+    border-radius: 4px;
     height: 350px;
     width: 500px;
     border-radius: 30px;
