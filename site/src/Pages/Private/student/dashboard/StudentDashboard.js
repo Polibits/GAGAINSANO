@@ -9,6 +9,26 @@ class StudentDashboard extends React.Component {
     constructor(props) {
         super(props);
     }
+
+    loadMyProfile() {
+        console.log('Loading Profile');
+    }
+
+    loadMyCourses() {
+        console.log('Loading Courses');
+    }
+
+    loadPayments() {
+        console.log('Loading Payments');
+    }
+
+    loadNotifications() {
+        console.log('Loading Notifications');
+    }
+
+    loadHelp() {
+        console.log('Loading Help');
+    }
     
     render(){
         return (
@@ -18,14 +38,12 @@ class StudentDashboard extends React.Component {
                         <Profile profilePicture={profilePicture} username='Henrique Eduardo' userType='estudante'/>
                         <div className="MenuOptions">
                             <div id='MenuOptionsDiv'>
-
-                            
-                                <MenuOption name='Meu Perfil'/>
-                                <MenuOption name='Meus Cursos'/>
-                                <MenuOption name='Pagamentos'/>
-                                <MenuOption name='Recados'/>
-                                <MenuOption name='Ajuda'/>
-                                <MenuOption name='Sair'/>
+                                <MenuOption action={this.loadMyProfile} name='Meu Perfil'/>
+                                <MenuOption action={this.loadMyCourses} name='Meus Cursos'/>
+                                <MenuOption action={this.loadPayments} name='Pagamentos'/>
+                                <MenuOption action={this.loadNotifications} name='Recados'/>
+                                <MenuOption action={this.loadHelp} name='Ajuda'/>
+                                <MenuOption action={logout} name='Sair'/>
                             </div>
                         </div>
 
@@ -69,6 +87,10 @@ class Profile extends React.Component {
     }
 }
 
+function log() {
+    console.log('fff');
+}
+
 class MenuOption extends React.Component {
     constructor(props) {
         super(props);
@@ -76,7 +98,7 @@ class MenuOption extends React.Component {
     
     render(){
         return (
-            <div className='MenuOption'>
+            <div className='MenuOption' onClick={this.props.action}>
                 <div>
                     <p>{this.props.name}</p>
                 </div>
