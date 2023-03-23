@@ -8,22 +8,37 @@ const cookies = new Cookies();
 class StudentDashboard extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            actualPage:'MyCourses'
+        }
     }
 
-    loadMyProfile() {
+    loadMyProfile = () => {
         console.log('Loading Profile');
+        this.setState({
+            actualPage:'MyProfile'
+        });
     }
 
-    loadMyCourses() {
+    loadMyCourses = () => {
         console.log('Loading Courses');
+        this.setState({
+            actualPage:'MyCourses'
+        });
     }
 
-    loadPayments() {
+    loadPayments = () => {
         console.log('Loading Payments');
+        this.setState({
+            actualPage:'Payments'
+        });
     }
 
-    loadNotifications() {
+    loadNotifications = () => {
         console.log('Loading Notifications');
+        this.setState({
+            actualPage:'Notifications'
+        });
     }
 
     loadHelp() {
@@ -54,16 +69,64 @@ class StudentDashboard extends React.Component {
                         </div>
                         
                         <div className="MainContent">
-                            {userInfo()}
-                            <div>
-                                <button onClick={logout}>sair</button>
-                            </div>
+                            {MainContent(this.state.actualPage)}
                         </div>
                         
                     </div>
                 </div>
                 
                 
+            </div>
+        );
+    }
+}
+
+function MainContent(name) {
+    const pages = {
+        'MyProfile':<UserProfileView/>,
+        'MyCourses':<MyCoursesView/>,
+        'Payments':<Payments/>,
+        'Notifications':<UserProfileView/>,
+        'Help':<UserProfileView/>
+    }
+    return pages[name];
+} 
+
+class UserProfileView extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div>
+                <p>UserProfileView</p>
+                {userInfo()}
+            </div>
+        );
+    }
+}
+
+class MyCoursesView extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div>
+                <p>Courses</p>
+            </div>
+        );
+    }
+}
+
+class Payments extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div>
+
             </div>
         );
     }
