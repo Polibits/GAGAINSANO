@@ -20,7 +20,7 @@ class AdmCourses extends React.Component {
     
     render(){
         return (
-            <div className='AdmCoursesPage'>
+            <div className='Page'>
                 <h1>AdmCoursesPage</h1>
                 <div className="Forms">
                     <form>

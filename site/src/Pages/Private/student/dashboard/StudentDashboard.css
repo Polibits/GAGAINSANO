@@ -81,3 +81,47 @@
     justify-content: center;
     font-style: italic;
 }
+
+#StudentDashboardCourseDiv {
+    display: flex;
+    width: 90%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #21002c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#StudentDashboardCourseDiv .CourseImg {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#StudentDashboardCourseDiv img {
+    height: 120px;
+    width: 120px;
+}
+
+#StudentDashboardCourseDiv .CourseDetails {
+    width: calc(60%);
+}
+
+#StudentDashboardCourseDiv .CourseDetails h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#StudentDashboardCourseDiv .CourseDetails p{
+    text-align: justify;
+}
+
+#StudentDashboardCourseDiv .CourseAcess {
+    width: calc(40% - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

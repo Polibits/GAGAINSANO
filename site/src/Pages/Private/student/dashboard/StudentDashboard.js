@@ -1,5 +1,6 @@
 import React from "react";
 import Cookies from "universal-cookie";
+import axios from 'axios';
 import './StudentDashboard.css';
 import profilePicture from '../../../../content/Logo.png';
 
@@ -20,6 +21,7 @@ class StudentDashboard extends React.Component {
 
     loadMyCourses = () => {
         console.log('Loading Courses');
+        loadCourses();
         this.setState({actualPage:'MyCourses'});
     }
 
@@ -57,10 +59,6 @@ class StudentDashboard extends React.Component {
 
                     </div>
                     <div className="MenuOptionRender">
-                        <div className="Title">
-                            <h1>StudentDashboard</h1>
-                        </div>
-                        
                         <div className="MainContent">
                             {MainContent(this.state.actualPage)}
                         </div>
@@ -72,6 +70,17 @@ class StudentDashboard extends React.Component {
             </div>
         );
     }
+}
+
+function loadCourses() {
+    axios({
+        url:'http://localhost:5050/courses/read/all',
+        method:'get'
+    }).then((response) => {
+        cookies.set('userCourses', response.data.coursesFrameworks, '/');
+    }).catch((error) => {
+        console.log(error);
+    });
 }
 
 function MainContent(name) {
@@ -89,11 +98,27 @@ class UserProfileView extends React.Component {
     constructor(props) {
         super(props);
     }
+
+    userInfo = () => {
+        var info = cookies.get('userInfo');
+        console.log(info);
+        return (
+            <div>
+                <p>fullName: {info.fullName}</p>
+                <p>username: {info.username}</p>
+                <p>email: {info.email}</p>
+                <p>cpf: {info.cpf}</p>
+                <p>userType: {info.userType}</p>
+                <p>UserId: {info.UserId}</p>
+            </div>
+        );
+    }
+
     render() {
         return (
             <div>
                 <p>UserProfileView</p>
-                {userInfo()}
+                {this.userInfo()}
             </div>
         );
     }
@@ -102,11 +127,46 @@ class UserProfileView extends React.Component {
 class MyCoursesView extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {courses: []}
     }
+
+    CourseDiv = (course) => {
+        console.log('criando div para curso\n', course);
+        return (
+            <div id='StudentDashboardCourseDiv' key={course.id}>
+                <div className="CourseImg">
+                    <img src={profilePicture}></img>
+                </div>
+                <div className="CourseDetails">
+                    <h2>{course.comercialName}</h2>
+                    <p>{course.description}</p>
+                </div>
+                <div className="CourseAcess">
+                    <a>acessar</a>
+                </div>
+            </div>
+        );
+    }
+
+    Courses = () => {
+        const serverCourses = cookies.get('userCourses');
+        var coursesList = [];
+
+        for(var course in serverCourses) {
+            console.log(serverCourses[course]);
+            coursesList.push(this.CourseDiv(serverCourses[course]));
+        }
+
+        return coursesList;
+    }
+
     render() {
         return (
             <div>
-                <p>Courses</p>
+                <div id='StudentDashboardCoursesDiv'>
+                    <h2>Meus Cursos</h2>
+                    {this.Courses()}
+                </div>
             </div>
         );
     }
@@ -158,21 +218,6 @@ class MenuOption extends React.Component {
             </div>
         );
     }
-}
-
-function userInfo() {
-    var info = cookies.get('userInfo');
-    console.log(info);
-    return (
-        <div>
-            <p>fullName: {info.fullName}</p>
-            <p>username: {info.username}</p>
-            <p>email: {info.email}</p>
-            <p>cpf: {info.cpf}</p>
-            <p>userType: {info.userType}</p>
-            <p>UserId: {info.UserId}</p>
-        </div>
-    );
 }
 
 function logout() {
