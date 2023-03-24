@@ -8,7 +8,8 @@
     float: left;
     width: 300px;
     height: 100vh;
-    background: linear-gradient(0, #00041a 0%, #042148 100%);
+    
+    background: linear-gradient(0, #0b0013 0%, #380448 100%);
 }
 
 #MenuOptionsDiv {
@@ -24,7 +25,7 @@
 }
 
 .MenuOption:hover {
-    background-color: rgb(0, 66, 66);
+    background-color: rgb(78, 0, 92);
 }
 
 .MenuOption p {
@@ -51,6 +52,10 @@
 }
 
 #ProfilePictureDiv {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: center;
 }
@@ -62,6 +67,7 @@
 }
 
 #ProfilePictureImg {
+    
     width: 200px;
     height: 200px;
     object-fit: cover;

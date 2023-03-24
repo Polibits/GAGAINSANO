@@ -15,34 +15,27 @@ class StudentDashboard extends React.Component {
 
     loadMyProfile = () => {
         console.log('Loading Profile');
-        this.setState({
-            actualPage:'MyProfile'
-        });
+        this.setState({actualPage:'MyProfile'});
     }
 
     loadMyCourses = () => {
         console.log('Loading Courses');
-        this.setState({
-            actualPage:'MyCourses'
-        });
+        this.setState({actualPage:'MyCourses'});
     }
 
     loadPayments = () => {
         console.log('Loading Payments');
-        this.setState({
-            actualPage:'Payments'
-        });
+        this.setState({actualPage:'Payments'});
     }
 
     loadNotifications = () => {
         console.log('Loading Notifications');
-        this.setState({
-            actualPage:'Notifications'
-        });
+        this.setState({actualPage:'Notifications'});
     }
 
     loadHelp() {
         console.log('Loading Help');
+        this.setState({actualPage:'Help'});
     }
     
     render(){
@@ -148,10 +141,6 @@ class Profile extends React.Component {
             </div>
         );
     }
-}
-
-function log() {
-    console.log('fff');
 }
 
 class MenuOption extends React.Component {
