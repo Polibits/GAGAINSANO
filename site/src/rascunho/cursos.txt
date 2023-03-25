@@ -1,0 +1,27 @@
+Vestibuares Militares valor R$79,90/mensal
+	-Física 
+	-Química
+	-Matemática
+	-Pacote Militar (física, química e matemática)
+
+Vestibuares Tradicionais valor R$79,90/mensal
+	-Física
+	-Química
+	-Matemática
+
+Olimpíadas
+	-OBF : valor R$ 81,90 /mensal 
+	-OBMEP: valor R$79,90/ mensal 
+	-OBQ: valor R$ 79,90/ mensal 
+	-OBA : valor R$ 70,90 / mensal
+
+Engenharia:
+	-Cálculo 1: R$85,00/mensal
+	-Algelin 1: R$85,00/mensal
+	-Mecânica 1: R$ 87,00/mensal 
+	-Mecânica 2: R$ 87,00/mensal
+	-Termodinâmica Aplicada: R$ 87,00/mensal
+	-Mecânica dos Fluidos: R$ 87,00/mensal
+	-Hidrodinâmica: R$ 89,00/mensal
+	-Mecânica de Voo Espacial: R$ 89,00/mensal
+	-Aerodinâmica: R$ 89,00/ mensal 

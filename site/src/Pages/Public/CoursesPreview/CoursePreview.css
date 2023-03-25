@@ -11,8 +11,31 @@
     height: 100vh;
     z-index: 0;
     position: absolute;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-#CoursesPreviewPage h1 {
-    color: brown;
+#CoursesPreviewPage .body {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#CoursesPreviewPage .body {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#CoursesPreviewPage .SectionTitle {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#CoursesPreviewPage .CoursePresentation {
+    width: 80vw;
+    height: 500px;
+    background-color: rgb(23, 94, 156);
+}
+
+#CoursesPreviewPage .CoursePresentation img{
+    width: 100px;
 }
