@@ -3,6 +3,8 @@ import Cookies from "universal-cookie";
 import profilePicture from '../../../../content/Logo.png';
 import './AdmDashboard.css';
 
+import AdmCourses from '../courses/AdmCourses.js';
+
 const cookies = new Cookies();
 
 class AdmDashboard extends React.Component {
@@ -66,10 +68,51 @@ class AdmCoursesView extends React.Component {
     constructor(props) {
         super(props);
     }
+    
     render() {
         return (
             <div>
                 <h1>Courses</h1>
+                <div id='coursesList'>
+                    <CourseCard
+                    imgURL="a"
+                    id="1"
+                    price="300" 
+                    courseCode="34234"
+                    description="descricaoFodaa"
+                    paymentFrequency = "100"
+                    comercialName='fisica 1'/>
+                    
+                </div>
+            </div>
+        );
+    }
+}
+
+class CourseCard extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    
+    render() {
+        return (
+            <div id='courseCard'>
+                
+                    <img src={this.props.imgURL}></img>
+                        <div>
+                            <p id="course-item">Nome do Curso: {this.props.comercialName}</p>
+                            <p id="course-item">Código do Curso: {this.props.courseCode}</p>
+                        </div>
+                        <div>
+                            <p id="course-item">Descrição: {this.props.description}</p>
+                            <p id="course-item">Preço: {this.props.price}</p>
+                            <p id="course-item">Frequência de Pagamento: {this.props.paymentFrequency}</p>
+                        </div>
+                        <div>
+                            <button id="course-button" action={this.props.id}> DELETAR</button>
+                            <button id="course-button" action={this.props.id}> ATUALIZAR</button>
+                            <button id="course-button"action={this.props.id}> Adicionar Aula</button>
+                        </div>
             </div>
         );
     }
@@ -96,6 +139,7 @@ class AdmProfileView extends React.Component {
         return (
             <div>
                 <h1>My Profile</h1>
+                <p>texto aleatório</p>
             </div>
         );
     }

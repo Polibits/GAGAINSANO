@@ -91,7 +91,7 @@ function register() {
 function Field(name, id, type) {
     return (
         <div className="Field">
-            <p>{name}</p>
+            <p id="labelfield">{name}</p>
             <label>
                 <input id={id} type={type}></input>
             </label>

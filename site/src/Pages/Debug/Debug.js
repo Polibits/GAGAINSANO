@@ -1,6 +1,23 @@
 import React, { useState } from "react";
+import { kkk } from "../../Database/Controllers/Courses";
 import axios from "axios";
 
+class Debug extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {video:null}
+    }
+    render() {
+        return (
+            <div>
+                <p>{kkk()}</p>
+                
+            </div>
+        );
+    }
+}
+
+/*
 class Debug extends React.Component {
     constructor(props) {
         super(props);
@@ -80,5 +97,6 @@ class Debug extends React.Component {
         );
     }
 }
+*/
 
 export default Debug;
