@@ -3,6 +3,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 1;
+    align-items: center;
 }
 
 #PageBackground {
@@ -13,22 +14,24 @@
     position: absolute;
 }
 
-/*
+
 .RegisterFormsBase {
     display: flex;
     align-items: center;
-    height: 600px;
-    width: 500px;
+    width:100vw;
     border-radius: 30px;
+    
 }
 
 .Page h2 {
-    margin-bottom: 30px;
+    margin:30px;
     text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 3px white solid;
 }
 
 .Page .Forms p {
-    margin-top: 15px;
+    margin:10px;
 }
 
 .Page .Forms{
@@ -62,13 +65,17 @@
     margin-right: auto;
     font-size: large;
     height: 40px;
-    width: 410px;
+    width:50%;
     border-radius: 10px;
     background-color: #000008;
+    color:white;
+    transition: 1s
 }
 
 .Page .Forms .Button button:hover{
-    background-color: #12011a;
+    background-color: #100d20;
+    color: #000008;
+    transform: scale(1.1);
 }
 
 .Page .Forms .Field p{
@@ -78,4 +85,3 @@
 #RegisterWarning p{
     color: #d11909;
 }
-*/
