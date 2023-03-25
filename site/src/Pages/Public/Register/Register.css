@@ -58,3 +58,7 @@
 .Page .Forms .Field p{
     margin-bottom: 5px;
 }
+
+#RegisterWarning p{
+    color: #d11909;
+}

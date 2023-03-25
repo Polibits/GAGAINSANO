@@ -85,7 +85,7 @@
 #StudentDashboardCourseDiv {
     display: flex;
     width: 90%;
-    height: 150px;
+    height: 100px;
     margin-left: auto;
     margin-right: auto;
     background-color: #21002c;
@@ -94,15 +94,15 @@
 }
 
 #StudentDashboardCourseDiv .CourseImg {
-    width: 150px;
+    width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #StudentDashboardCourseDiv img {
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
 }
 
 #StudentDashboardCourseDiv .CourseDetails {

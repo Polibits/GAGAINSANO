@@ -7,8 +7,9 @@ class StudentCourses extends React.Component {
     
     render(){
         return (
-            <div className='StudentCoursesPage'>
-                <h1>StudentCoursesPage</h1>
+            <div className='Page'>
+                <div id='StudentCourseLateralMenu'></div>
+                <div id='StudentCourseLateralMenu'></div>
             </div>
         );
     }

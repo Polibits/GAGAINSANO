@@ -15,14 +15,15 @@ class Register extends React.Component {
                 <div className="RegisterFormsBase">
                     <div className="Forms">
                         <h2>Crie sua conta!</h2>
-                        <forms>
+                        <form>
                             {Field('Nome Completo', 'fullName', 'text')}
                             {Field('Nome de Usuário', 'username', 'text')}
                             {Field('Email', 'email', 'text')}
                             {Field('CPF', 'cpf', 'text')}
                             {Field('Senha', 'password', 'password')}
                             {Field('Confirme sua senha', 'passwordConfirmation', 'password')}
-                        </forms>
+                        </form>
+                        {warning()}
                         <div className="Button">
                             <button onClick={register}>registrar</button>
                             <p>Ao se inscrever, você concorda com os <Link>termos de serviço</Link> do site</p>
@@ -77,6 +78,43 @@ function Field(name, id, type) {
             </label>
         </div>
     );
+}
+
+function warning() {
+    var fullName;
+    var username;
+    var email;
+    var cpf;
+    var password;
+    var passwordConfirmation;
+
+    try {
+        fullName = document.getElementById("fullName").value;
+        username = document.getElementById("username").value;
+        email = document.getElementById("email").value;
+        cpf = document.getElementById("cpf").value;
+        password = document.getElementById("password").value;
+        passwordConfirmation = document.getElementById("passwordConfirmation").value;
+    } catch (error) {
+        
+    }
+
+    var warningMessage = 'nenhum aviso';
+    var warning = false;
+
+    if(warning){
+        return (
+            <div id='RegisterWarning'>
+                <p>{warningMessage}</p>
+            </div>
+        );
+    }else{
+        return <></>;
+    }
+}
+
+function SQLInjectionCharacters(string) {
+    const re = new RegExp("ab+c");
 }
 
 export default Register;
