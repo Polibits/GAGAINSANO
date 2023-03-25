@@ -2,6 +2,7 @@ import React from "react";
 import axios from 'axios';
 import './../../GlobalStyle.css';
 import './Login.css';
+import StarsBackground from '../../Common Components/StarsBackground/StarsBackground';
 import { Link } from "react-router-dom";
 import Cookies from "universal-cookie";
 
@@ -14,8 +15,42 @@ class Login extends React.Component {
 
     render(){
         return (
-            <div className='Page'>
-                {content()}
+            <div className='Page' id='LoginPage'>
+                <div id='PageContent'>
+                    <div id='BackToHome'>
+                        <p><Link to='/home'>voltar</Link></p>
+                    </div>
+                        
+                    <LoginForm/>
+                </div>
+                <div id='PageBackground'>
+                    <StarsBackground/>
+                </div>
+            </div>
+            
+        );
+    }
+}
+
+class LoginForm extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render(){
+        return (
+            <div className="FormsBase">
+                <div className="Forms">
+                    <h2>Login</h2>
+                    <form>
+                        {Field('Email', 'email', 'text')}
+                        {Field('Senha', 'password', 'password')}
+                    </form>
+                    <div className="AcessButton">
+                        <button onClick={login}>entrar</button>
+                    </div>
+                    <p>Ainda não tem conta? <Link to='/registro'>cadastre-se</Link></p>
+                </div>
             </div>
         );
     }

@@ -1,63 +1,90 @@
-.Page h2{
-    margin-bottom: 30px;
-    text-align: center;
+#LoginPage #PageContent {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
 }
 
-.Page p {
-    margin-top: 10px;
+#PageBackground {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
 }
 
+#LoginPage .FormsBase {
+    top: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 30px;
+}
 
-.Page .Forms{
+#LoginPage .Forms{
     margin-left: auto;
     margin-right: auto;
     position: relative;
 }
 
-.Page .FormsBase {
-    display: flex;
-    align-items: center;
-    border-radius: 4px;
-    height: 350px;
-    width: 500px;
-    border-radius: 30px;
+#LoginPage .Forms h2 {
+    font-size: 24pt;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
+#LoginPage .Forms p {
+    font-size: large;
+    margin-top: 10px;
+}
 
-.Page .FormsBase .Field{
+#LoginPage #BackToHome {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+
+#LoginPage #BackToHome p {
+    margin-left: 30px;
+}
+
+#LoginPage .FormsBase .Field input{
+    font-size: 14pt;
+    width: 30vw;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #05000e;
+}
+
+#LoginPage .FormsBase .Field{
     margin-top: 0;
     margin-bottom: 15px;
 }
 
-.Page .FormsBase .Field input{
-    font-size: 14pt;
-    width: 360px;
-    height: 25px;
-    border-radius: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.Page .FormsBase .Button{
+#LoginPage .FormsBase .AcessButton{
     margin-left: auto;
     margin-right: auto;
-    width: 410px;
+    width: calc(30vw + 30px);
 }
 
-.Page .Forms .Button button{
+#LoginPage .Forms .AcessButton button{
     margin-left: auto;
     margin-right: auto;
     font-size: large;
     height: 40px;
-    width: 410px;
+    width: calc(30vw + 30px);
     border-radius: 10px;
     background-color: #12011a;
 }
 
-.Page .Forms .Button button:hover{
+#LoginPage .Forms .AcessButton button:hover{
     background-color: #25062e;
 }
 
-.Page .Forms .Field p{
+#LoginPage .Forms .Field p{
     margin-bottom: 5px;
 }
