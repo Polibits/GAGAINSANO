@@ -14,10 +14,16 @@ class InitialPage extends React.Component {
     
     render(){
         return (
-            <div className='Page'>
-                <NavigationBar/>
-                <TriunfalLogo/>
-                <StarsBackground/>
+            <div className='Page' id='HomePage'>
+                <div id='PageContent'>
+                    <NavigationBar/>
+                    <TriunfalLogo/>
+                </div>
+                <div id='PageBackground'>
+                    <StarsBackground/>
+                </div>
+                
+                
             </div>
         );
     }
@@ -30,10 +36,12 @@ class TriunfalLogo extends React.Component {
     
     render(){
         return (
-            <div className='TriunfalLogo'>
-                <h1 className="TriunfalTitle">GAGÁ INSANO</h1>
-                <img src={Logo}></img>
-                <p>prepare-se com os melhores</p>
+            <div className='TriunfalLogoContainer'>
+                <div className="TriunfalLogo">
+                    <h1 className="TriunfalTitle">GAGÁ INSANO</h1>
+                    <img src={Logo}></img>
+                    <p>prepare-se com os melhores</p>
+                </div>
             </div>
             
         );

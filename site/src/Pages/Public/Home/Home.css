@@ -1,4 +1,18 @@
-.TriunfalLogo .TriunfalTitle {
+#HomePage #PageContent {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+#PageBackground {
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+#HomePage .TriunfalLogo .TriunfalTitle {
     text-align: center;
     letter-spacing: .20em;
     border-right: .05em transparent #ffffff;
@@ -15,37 +29,19 @@
     from {
         width: 0
     }
-
     to {
         width: 100%
     }
 }
 
 @keyframes blink-caret {
-
     from,
     to {
         border-color: transparent
     }
-
     50% {
         border-color: #ffffff
     }
-}
-
-/* Formatando a Logo */
-.TriunfalLogo {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    align-items: center;
-}
-
-.TriunfalLogo img {
-    width: 520px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    animation: logo_fade_in 5s;
 }
 
 @keyframes logo_fade_in {
@@ -58,6 +54,26 @@
     }
 }
 
-.TriunfalLogo p {
+/* Formatando a Logo */
+#HomePage .TriunfalLogoContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
+    margin-bottom: 10px;
+}
+
+#HomePage .TriunfalLogo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#HomePage .TriunfalLogo img {
+    height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+    animation: logo_fade_in 5s;
+}
+
+#HomePage .TriunfalLogo p {
     text-align: center;
 }

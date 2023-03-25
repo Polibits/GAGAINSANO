@@ -8,7 +8,7 @@ class Stars extends React.Component{
     
     render(){
         return(
-            <div className="main-container">
+            <div id="StarsBackground">
                 <div className="sub-container">
                     <div className="sky">
                         <div className="stars"></div>

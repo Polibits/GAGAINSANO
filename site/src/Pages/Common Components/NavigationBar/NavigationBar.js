@@ -12,13 +12,13 @@ class NavigationBar extends React.Component {
     render(){
         return (
             <header>
-                <nav>
+                <nav id='PublicAreaNavBar'>
                     <ul>
                         <li><Link to='/cursos'>Cursos</Link></li>
                         <li><Link to='/olimpiadas'>Olimpíadas</Link></li>
                         <li><Link to='/materiaisgratuitos'>Materiais Gratuitos</Link></li>
                         <li><Link to='/gagainsanoresolve'>Gagá Insano Resolve</Link></li>
-                        <li><Link to='/login'><button className='acesso'>Acessar</button></Link></li>
+                        <li><Link to='/login'>Acessar</Link></li>
                     </ul>
                 </nav>
             </header>
