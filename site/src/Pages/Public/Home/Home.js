@@ -22,8 +22,6 @@ class InitialPage extends React.Component {
                 <div id='PageBackground'>
                     <StarsBackground/>
                 </div>
-                
-                
             </div>
         );
     }

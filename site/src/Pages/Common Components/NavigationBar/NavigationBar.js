@@ -14,8 +14,8 @@ class NavigationBar extends React.Component {
             <header>
                 <nav id='PublicAreaNavBar'>
                     <ul>
+                        <li><Link to='/home'>Início</Link></li>
                         <li><Link to='/cursos'>Cursos</Link></li>
-                        <li><Link to='/olimpiadas'>Olimpíadas</Link></li>
                         <li><Link to='/materiaisgratuitos'>Materiais Gratuitos</Link></li>
                         <li><Link to='/gagainsanoresolve'>Gagá Insano Resolve</Link></li>
                         <li><Link to='/login'>Acessar</Link></li>

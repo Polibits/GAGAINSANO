@@ -4,7 +4,6 @@ import {Routes, Route, BrowserRouter as Router} from 'react-router-dom';
 /* páginas públicas */
 import Home from "./Pages/Public/Home/Home";
 import CoursesPreview from "./Pages/Public/CoursesPreview/CoursesPreview";
-import OlympiadPreview from "./Pages/Public/OlympiadPreview/OlympiadPreview";
 import GagaInsanoResolve from "./Pages/Public/GagaInsanoResolve/GagaInsanoResolve";
 import FreeContent from './Pages/Public/FreeContent/FreeContent';
 import Login from "./Pages/Public/Login/Login";
@@ -30,7 +29,6 @@ function App() {
           <Route element = {< Home />}  path="/"/>
           <Route element = {< Home />}  path="/home"/>
           <Route element = {< CoursesPreview />}  path="/cursos"/>
-          <Route element = {< OlympiadPreview />}  path="/olimpiadas"/>
           <Route element = {< GagaInsanoResolve />}  path="/gagainsanoresolve"/>
           <Route element = {< FreeContent />}  path="/materiaisgratuitos"/>
           <Route element = {< Login />}  path="/login"/>

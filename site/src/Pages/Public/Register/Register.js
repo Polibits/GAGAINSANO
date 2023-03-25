@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
+import StarsBackground from '../../Common Components/StarsBackground/StarsBackground';
 import './../../GlobalStyle.css';
 import './Register.css';
 
@@ -11,23 +12,41 @@ class Register extends React.Component {
     
     render(){
         return (
-            <div className='Page'>
-                <div className="RegisterFormsBase">
-                    <div className="Forms">
-                        <h2>Crie sua conta!</h2>
-                        <form>
-                            {Field('Nome Completo', 'fullName', 'text')}
-                            {Field('Nome de Usuário', 'username', 'text')}
-                            {Field('Email', 'email', 'text')}
-                            {Field('CPF', 'cpf', 'text')}
-                            {Field('Senha', 'password', 'password')}
-                            {Field('Confirme sua senha', 'passwordConfirmation', 'password')}
-                        </form>
-                        {warning()}
-                        <div className="Button">
-                            <button onClick={register}>registrar</button>
-                            <p>Ao se inscrever, você concorda com os <Link>termos de serviço</Link> do site</p>
-                        </div>
+            <div className='Page' id='RegisterPage'>
+                <div id='PageContent'>
+                    <RegisterForm/>
+                </div>
+                <div id='PageBackground'>
+                    <StarsBackground />
+                </div>
+                
+            </div>
+        );
+    }
+}
+
+class RegisterForm extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className="RegisterFormsBase">
+                <div className="Forms">
+                    <h2>Crie sua conta!</h2>
+                    <form>
+                        {Field('Nome Completo', 'fullName', 'text')}
+                        {Field('Nome de Usuário', 'username', 'text')}
+                        {Field('Email', 'email', 'text')}
+                        {Field('CPF', 'cpf', 'text')}
+                        {Field('Senha', 'password', 'password')}
+                        {Field('Confirme sua senha', 'passwordConfirmation', 'password')}
+                    </form>
+                    {warning()}
+                    <div className="Button">
+                        <button onClick={register}>registrar</button>
+                        <p>Ao se inscrever, você concorda com os <Link>termos de serviço</Link> do site</p>
                     </div>
                 </div>
             </div>
