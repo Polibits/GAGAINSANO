@@ -1,7 +1,7 @@
 import React from "react";
 
 import StarsBackground from '../../../Common Components/StarsBackground/StarsBackground.js';
-
+import profilePicture from '../../../../content/Logo.png';
 import example from '../../../../content/videos/example.mp4';
 
 import '../../../GlobalStyle.css';
@@ -41,11 +41,53 @@ class LateralMenu extends React.Component {
     render() {
         return (
             <div className="LateralMenu">
-                <div className="CourseProfile">
-                    <p>{this.props.courseName}</p>
-                </div>
+                <Profile username='Carlos Eduardo' profilePicture={profilePicture} userType='estudante'/>
                 <div className="MenuOptions">
-                    <div className="Index">
+                    <div className="MenuOptions">
+                        <MenuOption name='Informação'/>
+                        <MenuOption name='Aulas'/>
+                        <MenuOption name='Simulados'/>
+                        <MenuOption name='Fórum'/>
+                        <MenuOption name='Materiais'/>
+                        <MenuOption name='Assinatura'/>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+class MenuOption extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    
+    render(){
+        return (
+            <div className='MenuOption' onClick={this.props.action}>
+                <p>{this.props.name}</p>
+            </div>
+        );
+    }
+}
+
+class Profile extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render(){
+        return (
+            <div id='ProfileDiv'>
+                <div>
+                    <div id='ProfileUsernameDiv'>
+                        <p>{this.props.username}</p>
+                    </div>
+                    <div id ='ProfilePictureDiv'>
+                        <img id='ProfilePictureImg' src={this.props.profilePicture}></img>
+                    </div>
+                    <div id='ProfileUserType'>
+                        <p>{this.props.userType}</p>
                     </div>
                 </div>
             </div>
