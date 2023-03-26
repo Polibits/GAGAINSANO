@@ -1,0 +1,14 @@
+Estudante Cursos
+    -Ver seus cursos
+    -Comprar cursos
+    -Acessar curso
+    -Cancelar assinatura
+    -Pagar curso
+    -
+
+ADM Cursos
+    -Ver todos os cursos
+    -Editar cursos
+    -Adicionar mais cursos
+    -adicionar aulas
+    -editar aulas

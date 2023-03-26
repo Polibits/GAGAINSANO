@@ -23,36 +23,36 @@
     
 }
 
-.Page h2 {
+#RegisterPage .Page h2 {
     margin:30px;
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 3px white solid;
 }
 
-.Page .Forms p {
+#RegisterPage .Page .Forms p {
     margin:10px;
 }
 
-.Page .Forms{
+#RegisterPage .Page .Forms{
     margin-left: auto;
     margin-right: auto;
     width: 410px;
 }
 
-.Page .Forms .Field{
+#RegisterPage .Page .Forms .Field{
     margin-top: 0;
     margin-bottom: 15px;
 }
 
-.Page .Forms #labelfield{
+#RegisterPage .Page .Forms #labelfield{
     color:white;
     border-left: 3px solid white;
     padding-left: 10px;
     font-size: 18px;
 }
 
-.Page .Forms .Field input{
+#RegisterPage .Page .Forms .Field input{
     font-size: 14pt;
     width: 360px;
     height: 25px;
@@ -61,13 +61,13 @@
     padding-right: 20px;
 }
 
-.Page .Forms .Button{
+#RegisterPage .Page .Forms .Button{
     margin-left: auto;
     margin-right: auto;
     width: 410px;
 }
 
-.Page .Forms .Button button{
+#RegisterPage .Page .Forms .Button button{
     margin-left: auto;
     margin-right: auto;
     font-size: large;
@@ -82,16 +82,16 @@
 
 }
 
-.Page .Forms .Button button:hover{
+#RegisterPage .Page .Forms .Button button:hover{
     background-color: #340042;
     color: rgb(255, 255, 255);
     transform: scale(1.1);
 }
 
-.Page .Forms .Field p{
+#RegisterPage .Page .Forms .Field p{
     margin-bottom: 5px;
 }
 
-#RegisterWarning p{
+#RegisterPage #RegisterWarning p{
     color: #d11909;
 }

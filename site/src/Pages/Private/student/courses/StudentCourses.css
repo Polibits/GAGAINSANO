@@ -1,0 +1,67 @@
+#StudentCoursesPage #PageContent {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+#StudentCoursesPage #PageBackground {
+    left: 0;
+    width: 100vw;
+    z-index: 0;
+    position: absolute;
+}
+
+#StudentCoursesPage .Lecture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#StudentCoursesPage .LectureBox {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#StudentCoursesPage .ComponentsDiv {
+    width: 100%;
+}
+
+#StudentCoursesPage .Title h2{
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#StudentCoursesPage .Frame {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+#StudentCoursesPage .Frame .Video {
+    width: 100%;
+}
+
+#StudentCoursesPage .Frame .Video iframe{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+#StudentCoursesPage .Navigation {
+    font-size: large;
+    margin-top: 10px;
+    display: flex;
+}
+
+#StudentCoursesPage .Navigation .Previous{
+    text-align: left;
+}
+
+#StudentCoursesPage .Navigation .Next{
+    text-align: right;
+}
