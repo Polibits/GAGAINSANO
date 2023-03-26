@@ -22,7 +22,7 @@ class AdmDashboard extends React.Component {
             <div id='PageContent'>
                 <div className="Content">
                     <LateralMenu/>
-                    {MainContent('')}
+                    <AdmCoursesView/>
                 </div>
             </div>
             <div id='PageBackground'>
@@ -85,6 +85,20 @@ class LateralMenu extends React.Component {
     }
 }
 
+class MenuOption extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    
+    render(){
+        return (
+            <div className='MenuOption' onClick={this.props.action}>
+                <p>{this.props.name}</p>
+            </div>
+        );
+    }
+}
+
 class AdmCoursesView extends React.Component {
     constructor(props) {
         super(props);
@@ -93,16 +107,22 @@ class AdmCoursesView extends React.Component {
     render() {
         return (
             <div id='AdmCoursesView'>
-                <h1>Courses</h1>
+                <h1>Cursos</h1>
                 <div id='coursesList'>
                     <CourseCard
-                    imgURL="a"
-                    id="1"
+                    imgURL={profilePicture}
                     price="300" 
-                    courseCode="34234"
-                    description="descricaoFodaa"
-                    paymentFrequency = "100"
-                    comercialName='fisica 1'/>
+                    courseCode="militares_fisica"
+                    description="este curso é foda de mais, seloko cachorro. Vai estourar no ita. Nóis é pika confia"
+                    paymentFrequency = "mensal"
+                    comercialName='Física para Militares'/>
+                    <CourseCard
+                    imgURL={profilePicture}
+                    price="300" 
+                    courseCode="olimpiadas_fisica"
+                    description="este curso é foda de mais, seloko cachorro. Vai estourar no ita. Nóis é pika confia"
+                    paymentFrequency = "mensal"
+                    comercialName='Olimpíadas de Física'/>
                 </div>
             </div>
         );
@@ -117,20 +137,25 @@ class CourseCard extends React.Component {
     render() {
         return (
             <div id='CourseCard'>
-                <img src={this.props.imgURL}></img>
-                <div>
-                    <p id="course-item">Nome do Curso: {this.props.comercialName}</p>
-                    <p id="course-item">Código do Curso: {this.props.courseCode}</p>
+                <div className="CourseImg">
+                    <img src={this.props.imgURL}></img>
                 </div>
-                <div>
-                    <p id="course-item">Descrição: {this.props.description}</p>
-                    <p id="course-item">Preço: {this.props.price}</p>
-                    <p id="course-item">Frequência de Pagamento: {this.props.paymentFrequency}</p>
+                
+                <div className='IdentificationInfo'>
+                    <h2>{this.props.comercialName}</h2>
+                    <p>{this.props.description}</p>
+                    
                 </div>
-                <div>
-                    <button id="course-button" action={this.props.id}> DELETAR</button>
-                    <button id="course-button" action={this.props.id}> ATUALIZAR</button>
-                    <button id="course-button" action={this.props.id}> Adicionar Aula</button>
+                <div className="SpecificInfo">
+                    <div>
+                        <p>Código: {this.props.courseCode}</p>
+                        <p>Preço: R$ {this.props.price}</p>
+                        <p>Pagamento: {this.props.paymentFrequency}</p>
+                    </div>
+                </div>
+                <div className="Actions">
+                    <button action={this.props.id}> adicionar aulas</button>
+                    <button action={this.props.id}> editar </button>
                 </div>
             </div>
         );
@@ -177,19 +202,7 @@ class Payments extends React.Component {
     }
 }
 
-class MenuOption extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    
-    render(){
-        return (
-            <div className='MenuOption' onClick={this.props.action}>
-                <p>{this.props.name}</p>
-            </div>
-        );
-    }
-}
+
 
 class Profile extends React.Component {
     constructor(props) {

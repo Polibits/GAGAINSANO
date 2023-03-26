@@ -57,7 +57,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(60vh/6);
+    height: calc(100%/6);
 }
 
 #AdmDashboardPage .Content {
@@ -68,17 +68,99 @@
     background-color: rgb(8, 0, 92);
 }
 
-#CourseCard{
+#AdmDashboardPage #AdmCoursesView {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
     width: 100%;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin:10px
 }
 
-#AdmDashboardPage #AdmCoursesView {
+#AdmDashboardPage #AdmCoursesView #coursesList {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+}
+
+#AdmDashboardPage #CourseCard{
+    width: 90%;
+    height: 25vh;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(0deg, #000520 0%, #00274ec3 100%);
+    border: 0px solid white;
+    border-radius: 10px;
+    margin:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#AdmDashboardPage #CourseCard:hover{
+    background: linear-gradient(0deg, #000730 0%, #00366cc3 100%);
+}
+
+#AdmDashboardPage #CourseCard .CourseImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 30vh;
+}
+
+#AdmDashboardPage #CourseCard .CourseImg img{
+    height: 100%;
+}
+
+#AdmDashboardPage #CourseCard .IdentificationInfo {
+    width: 30%;
+}
+
+#AdmDashboardPage #CourseCard .IdentificationInfo h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-decoration: underline;
+    font-size: 16pt;
+}
+
+#AdmDashboardPage #CourseCard .IdentificationInfo p {
+    font-style: italic;
+    text-align: justify;
+    font-size: 12pt;
+}
+
+#AdmDashboardPage #CourseCard .SpecificInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+}
+
+#AdmDashboardPage #CourseCard .SpecificInfo div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+#AdmDashboardPage #CourseCard .Actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+}
+
+#AdmDashboardPage #CourseCard button {
+    background-color: #00093e;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 20%;
+    width: 100%;
+}
+
+#AdmDashboardPage #CourseCard button:hover {
+    background-color: #000f62;
+    
 }
