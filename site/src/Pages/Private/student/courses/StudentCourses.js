@@ -20,7 +20,10 @@ class StudentCourses extends React.Component {
         return (
             <div className='Page' id='StudentCoursesPage'>
                 <div id='PageContent'>
-                    <Lecture title='Aula 01 - Leis de Newton' src={example} description={description}/>
+                    <div className="Content">
+                        <LateralMenu courseName='Física para Militares'/>
+                        <Lecture title='Aula 01 - Leis de Newton' src={example} description={description}/>
+                    </div>
                 </div>
                 <div id='PageBackground'>
                     <StarsBackground/>
@@ -38,9 +41,12 @@ class LateralMenu extends React.Component {
     render() {
         return (
             <div className="LateralMenu">
-                <div className="CourseProfile"></div>
+                <div className="CourseProfile">
+                    <p>{this.props.courseName}</p>
+                </div>
                 <div className="MenuOptions">
-                    <div className="Index"></div>
+                    <div className="Index">
+                    </div>
                 </div>
             </div>
         );
@@ -81,46 +87,6 @@ class Lecture extends React.Component {
     }
 }
 
-function videoURL(youtubeURL) {
-    var finalURL = '';
-    var id = '';
-    var URLendStart = 32;
-
-    for(var i = URLendStart; i < youtubeURL.length; i++){
-        id += youtubeURL[i];
-    }
-
-    /*
-    finalURL += 'https://www.youtube-nocookie.com/embed/';
-    finalURL += id;
-    finalURL += '?modestbranding=1'
-    finalURL += '&showinfo=0';
-    finalURL += '&controls=1';
-    finalURL += '&showinfo=0';
-    */
-    finalURL += 'https://www.youtube-nocookie.com/embed/';
-    finalURL += id;
-    finalURL += '?controls=0&mode=opaque&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;wmode=transparent';
-    // ?mode=opaque
-    //&amp;
-    //rel=0
-    //&amp;autohide=1&amp;showinfo=0&amp;wmode=transparent
-    //?mode=opaque&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;wmode=transparent
-
-    return finalURL;
-}
-
-function removeSharingOptions() {
-    console.log('removendo');
-    try {
-        //const element = document.querySelector("#document");
-        //element.remove();
-        //var iframe_document = document.getElementById('lectureVideoIframe').contentWindow.document;
-    } catch (error) {
-        //console.log(error);
-    }
-}
-
 class LectureVideo extends React.Component {
     constructor(props) {
         super(props);
@@ -134,10 +100,6 @@ class LectureVideo extends React.Component {
             
         );
     }
-}
-
-function loadMyCourses(courseCode) {
-    
 }
 
 export default StudentCourses;

@@ -11,6 +11,13 @@
     position: absolute;
 }
 
+#StudentCoursesPage .LateralMenu {
+    width: 30vw;
+    height: 100vh;
+    background: linear-gradient(0deg, #23002f 0%, #610059 100%);
+    z-index: 1;
+}
+
 #StudentCoursesPage .Lecture {
     width: 100%;
     height: 100%;
@@ -20,7 +27,7 @@
 }
 
 #StudentCoursesPage .LectureBox {
-    width: 70%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
