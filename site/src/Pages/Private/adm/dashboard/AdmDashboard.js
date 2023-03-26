@@ -4,6 +4,7 @@ import profilePicture from '../../../../content/Logo.png';
 import './AdmDashboard.css';
 
 import AdmCourses from '../courses/AdmCourses.js';
+import StarsBackground from "../../../Common Components/StarsBackground/StarsBackground";
 
 const cookies = new Cookies();
 
@@ -14,14 +15,41 @@ class AdmDashboard extends React.Component {
             actualPage:'Courses'
         }
     }
+    
+    render(){
+        return (
+            <div className='Page' id='AdmDashboardPage'>
+            <div id='PageContent'>
+                <div className="Content">
+                    <LateralMenu/>
+                    {MainContent('')}
+                </div>
+            </div>
+            <div id='PageBackground'>
+                <StarsBackground/>
+            </div>
+        </div>
+        );
+    }
+}
+
+class LateralMenu extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            actualPage:'Courses'
+        }
+    }
 
     loadMyProfile = () => {
         console.log('Loading Profile');
+        cookies.set({actualPage: 'MyProfile'});
         this.setState({actualPage:'MyProfile'});
     }
 
     loadCourses = () => {
         console.log('Loading Courses');
+        cookies.set({actualPage: 'Courses'});
         this.setState({actualPage:'Courses'});
     }
 
@@ -40,24 +68,17 @@ class AdmDashboard extends React.Component {
         this.setState({actualPage:'Help'});
     }
     
-    render(){
+    render() {
         return (
-            <div className='Page'>
-                <div id="AdmLateralMenu">
-                    <Profile username='Victor Cruz' profilePicture={profilePicture} userType='adm'/>
-                    <div className="MenuOptions">
-                        <div id='MenuOptionsDiv'>
-                            <MenuOption action={this.loadMyProfile} name='Meu Perfil'/>
-                            <MenuOption action={this.loadCourses} name='Cursos'/>
-                            <MenuOption action={this.loadUsers} name='Usuários'/>
-                            <MenuOption action={this.loadPayments} name='Pagamentos'/>
-                            <MenuOption action={this.loadHelp} name='Ajuda'/>
-                            <MenuOption action={logout} name='Sair'/>
-                        </div>
-                    </div>
-                </div>
-                <div id="Content">
-                    {MainContent(this.state.actualPage)}
+            <div id="AdmLateralMenu">
+                <Profile username='Victor Cruz' profilePicture={profilePicture} userType='adm'/>
+                <div className="MenuOptions">
+                    <MenuOption action={this.loadMyProfile} name='Meu Perfil'/>
+                    <MenuOption action={this.loadCourses} name='Cursos'/>
+                    <MenuOption action={this.loadUsers} name='Usuários'/>
+                    <MenuOption action={this.loadPayments} name='Pagamentos'/>
+                    <MenuOption action={this.loadHelp} name='Ajuda'/>
+                    <MenuOption action={logout} name='Sair'/>
                 </div>
             </div>
         );
@@ -71,7 +92,7 @@ class AdmCoursesView extends React.Component {
     
     render() {
         return (
-            <div>
+            <div id='AdmCoursesView'>
                 <h1>Courses</h1>
                 <div id='coursesList'>
                     <CourseCard
@@ -82,7 +103,6 @@ class AdmCoursesView extends React.Component {
                     description="descricaoFodaa"
                     paymentFrequency = "100"
                     comercialName='fisica 1'/>
-                    
                 </div>
             </div>
         );
@@ -96,23 +116,22 @@ class CourseCard extends React.Component {
     
     render() {
         return (
-            <div id='courseCard'>
-                
-                    <img src={this.props.imgURL}></img>
-                        <div>
-                            <p id="course-item">Nome do Curso: {this.props.comercialName}</p>
-                            <p id="course-item">Código do Curso: {this.props.courseCode}</p>
-                        </div>
-                        <div>
-                            <p id="course-item">Descrição: {this.props.description}</p>
-                            <p id="course-item">Preço: {this.props.price}</p>
-                            <p id="course-item">Frequência de Pagamento: {this.props.paymentFrequency}</p>
-                        </div>
-                        <div>
-                            <button id="course-button" action={this.props.id}> DELETAR</button>
-                            <button id="course-button" action={this.props.id}> ATUALIZAR</button>
-                            <button id="course-button"action={this.props.id}> Adicionar Aula</button>
-                        </div>
+            <div id='CourseCard'>
+                <img src={this.props.imgURL}></img>
+                <div>
+                    <p id="course-item">Nome do Curso: {this.props.comercialName}</p>
+                    <p id="course-item">Código do Curso: {this.props.courseCode}</p>
+                </div>
+                <div>
+                    <p id="course-item">Descrição: {this.props.description}</p>
+                    <p id="course-item">Preço: {this.props.price}</p>
+                    <p id="course-item">Frequência de Pagamento: {this.props.paymentFrequency}</p>
+                </div>
+                <div>
+                    <button id="course-button" action={this.props.id}> DELETAR</button>
+                    <button id="course-button" action={this.props.id}> ATUALIZAR</button>
+                    <button id="course-button" action={this.props.id}> Adicionar Aula</button>
+                </div>
             </div>
         );
     }
@@ -166,10 +185,7 @@ class MenuOption extends React.Component {
     render(){
         return (
             <div className='MenuOption' onClick={this.props.action}>
-                <div>
-                    <p>{this.props.name}</p>
-                </div>
-                
+                <p>{this.props.name}</p>
             </div>
         );
     }
@@ -183,17 +199,21 @@ class Profile extends React.Component {
     render(){
         return (
             <div id='ProfileDiv'>
-                <div id='ProfileUsernameDiv'>{this.props.username}</div>
-                <div id ='ProfilePictureDiv'>
-                    <img id='ProfilePictureImg' src={this.props.profilePicture}></img>
+                <div>
+                    <div id='ProfileUsernameDiv'>
+                        <p>{this.props.username}</p>
+                    </div>
+                    <div id ='ProfilePictureDiv'>
+                        <img id='ProfilePictureImg' src={this.props.profilePicture}></img>
+                    </div>
+                    <div id='ProfileUserType'>
+                        <p>{this.props.userType}</p>
+                    </div>
                 </div>
-                <div id='ProfileUserType'>{this.props.userType}</div>
             </div>
         );
     }
 }
-
-
 
 function logout() {
     console.log('COOKIE DESTRUÍDO');

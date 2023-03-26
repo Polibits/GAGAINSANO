@@ -42,7 +42,7 @@ class StudentDashboard extends React.Component {
     
     render(){
         return (
-            <div className='Page'>
+            <div className='Page' id='StudentDashboardPage'>
                 <div className="Content">
                     <div id="LateralMenu">
                         <Profile profilePicture={profilePicture} username='Henrique Eduardo' userType='estudante'/>
@@ -193,11 +193,13 @@ class Profile extends React.Component {
     render(){
         return (
             <div id='ProfileDiv'>
-                <div id='ProfileUsernameDiv'>{this.props.username}</div>
-                <div id ='ProfilePictureDiv'>
-                    <img id='ProfilePictureImg' src={this.props.profilePicture}></img>
+                <div>
+                    <div id='ProfileUsernameDiv'>{this.props.username}</div>
+                    <div id ='ProfilePictureDiv'>
+                        <img id='ProfilePictureImg' src={this.props.profilePicture}></img>
+                    </div>
+                    <div id='ProfileUserType'>{this.props.userType}</div>
                 </div>
-                <div id='ProfileUserType'>{this.props.userType}</div>
             </div>
         );
     }
