@@ -5,7 +5,14 @@ import './StudentDashboard.css';
 import StarsBackground from "../../../Common Components/StarsBackground/StarsBackground";
 import profilePicture from '../../../../content/Logo.png';
 
+import StudentProfileView from "./Profile/MyProfileView";
+import StudentCoursesView from "./Courses/StudentCoursesView";
+import StudentPaymentsView from "./Payments/StudentPaymentsView";
+import StudentNotificationsView from "./Notifications/StudentNotificationsView";
+
 const cookies = new Cookies();
+
+const currentPage = 'MyCourses';
 
 class StudentDashboard extends React.Component {
     constructor(props) {
@@ -17,8 +24,8 @@ class StudentDashboard extends React.Component {
             <div className='Page' id='StudentDashboardPage'>
                 <div id='PageContent'>
                     <div className="Content">
-                        {MainContent('')}
                         <LateralMenu/>
+                        {MainContent(currentPage)}
                     </div>
                 </div>
                 <div id='PageBackground'>
@@ -27,6 +34,22 @@ class StudentDashboard extends React.Component {
             </div>
         );
     }
+}
+
+function MainContent(name) {
+    
+    const pages = {
+        'MyProfile':<StudentProfileView/>,
+        'MyCourses':<StudentCoursesView/>,
+        'Payments':<StudentPaymentsView/>,
+        'Notifications':<StudentNotificationsView/>,
+        'Help':<StudentCoursesView/>
+    }
+    return (
+        <div className="MainContentDiv">
+            {pages[name]}
+        </div>
+    );
 }
 
 class LateralMenu extends React.Component {
@@ -128,20 +151,6 @@ function loadCourses() {
     }).catch((error) => {
         console.log(error);
     });
-}
-
-function MainContent(name) {
-    /*
-    const pages = {
-        'MyProfile':<UserProfileView/>,
-        'MyCourses':<MyCoursesView/>,
-        'Payments':<Payments/>,
-        'Notifications':<UserProfileView/>,
-        'Help':<UserProfileView/>
-    }
-    return pages[name];
-    */
-   return <></>
 }
 
 function logout() {

@@ -12,6 +12,8 @@ import StarsBackground from "../../../Common Components/StarsBackground/StarsBac
 
 const cookies = new Cookies();
 
+const currentPage = 'Courses';
+
 class AdmDashboard extends React.Component {
     constructor(props) {
         super(props);
@@ -26,7 +28,7 @@ class AdmDashboard extends React.Component {
                 <div id='PageContent'>
                     <div className="Content">
                         <LateralMenu />
-                        <AdmCoursesView />
+                        {MainContent(currentPage)}
                     </div>
                 </div>
                 <div id='PageBackground'>
@@ -36,6 +38,17 @@ class AdmDashboard extends React.Component {
         );
     }
 }
+
+function MainContent(name) {
+    const pages = {
+        'MyProfile':<AdmProfileView/>,
+        'Courses':<AdmCoursesView/>,
+        'Users':<AdmUsersView/>,
+        'Payments':<AdmPaymentsView/>,
+        'Help':<AdmCoursesView/>
+    }
+    return pages[name];
+} 
 
 class LateralMenu extends React.Component {
     constructor(props) {
@@ -143,16 +156,5 @@ function logout() {
 function redirect() {
     window.location.href = '/';
 }
-
-function MainContent(name) {
-    const pages = {
-        'MyProfile':<AdmProfileView/>,
-        'Courses':<AdmCoursesView/>,
-        'Users':<AdmUsersView/>,
-        'Payments':<AdmPaymentsView/>,
-        'Help':<AdmCoursesView/>
-    }
-    return pages[name];
-} 
 
 export default AdmDashboard;
