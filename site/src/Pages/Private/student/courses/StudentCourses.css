@@ -19,7 +19,7 @@
     float: left;
     width: 30vw;
     height: 100vh;
-    background: linear-gradient(0deg, #14001a 0%, #4d0047 100%);
+    background: linear-gradient(0, #00041a 0%, #042148 100%);
     z-index: 1;
 }
 
@@ -140,5 +140,5 @@
 }
 
 #StudentCoursesPage .MenuOption:hover {
-    background-color: #5c0051;
+    background-color: #08005c;
 }
