@@ -11,6 +11,9 @@ class AdmCoursesView extends React.Component {
         return (
             <div id='AdmCoursesView'>
                 <h1>Cursos</h1>
+                <div id="edit-list">
+                    <a id="edit-button">Criar Curso</a>
+                </div>
                 <div id='coursesList'>
                     <CourseCard
                     imgURL={profilePicture}
@@ -19,6 +22,13 @@ class AdmCoursesView extends React.Component {
                     description="este curso é foda de mais, seloko cachorro. Vai estourar no ita. Nóis é pika confia"
                     paymentFrequency = "mensal"
                     comercialName='Física para Militares'/>
+                    <CourseCard
+                    imgURL={profilePicture}
+                    price="300" 
+                    courseCode="olimpiadas_fisica"
+                    description="este curso é foda de mais, seloko cachorro. Vai estourar no ita. Nóis é pika confia"
+                    paymentFrequency = "mensal"
+                    comercialName='Olimpíadas de Física'/>
                     <CourseCard
                     imgURL={profilePicture}
                     price="300" 
@@ -43,11 +53,9 @@ class CourseCard extends React.Component {
                 <div className="CourseImg">
                     <img src={this.props.imgURL}></img>
                 </div>
-                
                 <div className='IdentificationInfo'>
                     <h2>{this.props.comercialName}</h2>
                     <p>{this.props.description}</p>
-                    
                 </div>
                 <div className="SpecificInfo">
                     <div>
@@ -57,8 +65,9 @@ class CourseCard extends React.Component {
                     </div>
                 </div>
                 <div className="Actions">
-                    <button action={this.props.id}> adicionar aulas</button>
-                    <button action={this.props.id}> editar </button>
+                    <button id="action-course-btn" action={this.props.id}> Adicionar aulas</button>
+                    <button id="action-course-btn" action={this.props.id}> Editar </button>
+                    <button id="action-course-btn" action={this.props.id}> Deletar </button>
                 </div>
             </div>
         );

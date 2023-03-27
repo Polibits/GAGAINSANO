@@ -12,11 +12,14 @@ import StudentNotificationsView from "./Notifications/StudentNotificationsView";
 
 const cookies = new Cookies();
 
-const currentPage = 'MyCourses';
+var currentPage = 'MyCourses';
 
 class StudentDashboard extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            currentPage:'MyCourses'
+        }
     }
     
     render(){
@@ -37,7 +40,6 @@ class StudentDashboard extends React.Component {
 }
 
 function MainContent(name) {
-    
     const pages = {
         'MyProfile':<StudentProfileView/>,
         'MyCourses':<StudentCoursesView/>,
@@ -62,8 +64,8 @@ class LateralMenu extends React.Component {
 
     loadMyProfile = () => {
         console.log('Loading Profile');
+        console.log(currentPage)
         cookies.set({actualPage: 'MyProfile'});
-        this.setState({actualPage:'MyProfile'});
     }
 
     loadCourses = () => {
@@ -82,6 +84,11 @@ class LateralMenu extends React.Component {
         this.setState({actualPage:'Payments'});
     }
 
+    loadNotifications = () => {
+        console.log('Loading Notifications');
+        this.setState({actualPage:'Payments'});
+    }
+
     loadHelp = () => {
         console.log('Loading Help');
         this.setState({actualPage:'Help'});
@@ -92,12 +99,12 @@ class LateralMenu extends React.Component {
             <div id="LateralMenu">
                 <Profile username='Victor Cruz' profilePicture={profilePicture} userType='adm'/>
                 <div className="MenuOptions">
-                    <MenuOption name='Meu Perfil'/>
-                    <MenuOption name='Meus Cursos'/>
-                    <MenuOption name='Pagamentos'/>
-                    <MenuOption name='Pagamentos'/>
-                    <MenuOption name='Ajuda'/>
-                    <MenuOption name='Sair'/>
+                    <MenuOption action={this.loadMyProfile} name='Meu Perfil'/>
+                    <MenuOption action={this.loadCourses} name='Meus Cursos'/>
+                    <MenuOption action={this.loadPayments} name='Pagamentos'/>
+                    <MenuOption action={this.loadNotifications} name='Notificações'/>
+                    <MenuOption action={this.loadHelp} name='Ajuda'/>
+                    <MenuOption action={this.loadMyProfile} name='Sair'/>
                 </div>
             </div>
         );
