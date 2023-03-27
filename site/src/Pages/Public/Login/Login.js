@@ -5,6 +5,7 @@ import './Login.css';
 import StarsBackground from '../../Common Components/StarsBackground/StarsBackground';
 import { Link } from "react-router-dom";
 import Cookies from "universal-cookie";
+import InputValidator from "../../../Utility/InputValidator";
 
 const cookies = new Cookies();
 
@@ -18,7 +19,7 @@ class Login extends React.Component {
             <div className='Page' id='LoginPage'>
                 <div id='PageContent'>
                     <div id='BackToHome'>
-                        <p><Link to='/home'>voltar</Link></p>
+                        <p><Link to='/'>voltar</Link></p>
                     </div>
                         
                     <LoginForm/>
@@ -95,24 +96,46 @@ function login() {
         password:password
     }
 
-    try {
-        console.log('tentativa de login de usuário:\n', user);
-        axios({
-            method:'get',
-            url:'http://localhost:5050/user/authenticate',
-            params: user
-        }).then((response) => {
-            console.log(response.data.response);
-            if(response.data.response == 'sucess'){
-                console.log('usuário autenticado com sucesso');
-                loadUserInfo(email);
-                redirect();
-            } else {
-                console.log('falha na autenticação');
-            }
-        });
-    } catch (error) {
-        console.log(error);
+    if(InputValidator.SQLInjectionContent(email) || InputValidator.SQLInjectionContent(password)) {
+        const ip = 'XX.XXX.XX.XX'; // TODO coletar ip
+        const message = 'SQL Injection Detectado\n' + 
+        'ip de origem: ' + ip + '\n' +
+        'Um relatório da situação foi enviado para os administradores.\n' + 
+        'Se for confirmada intenção malicionsa, medidas legais podem ser tomadas.';
+        alert(message);
+        console.log('SQL Injection Detectado');
+    } else {
+        if(!InputValidator.validEmail(email)){
+            alert('email inválido');
+            console.log('email inválido');
+            valid = false;
+        } else if(!InputValidator.validInput(password)){
+            alert('senha inválida');
+            console.log('senha inválida');
+            valid = false;
+        }
+    }
+
+    if(valid){
+        try {
+            console.log('tentativa de login de usuário:\n', user);
+            axios({
+                method:'get',
+                url:'http://localhost:5050/user/authenticate',
+                params: user
+            }).then((response) => {
+                console.log(response.data.response);
+                if(response.data.response == 'sucess'){
+                    console.log('usuário autenticado com sucesso');
+                    loadUserInfo(email);
+                    redirect();
+                } else {
+                    console.log('falha na autenticação');
+                }
+            });
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
 
