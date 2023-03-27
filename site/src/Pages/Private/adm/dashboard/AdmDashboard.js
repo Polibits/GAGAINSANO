@@ -23,16 +23,16 @@ class AdmDashboard extends React.Component {
     render(){
         return (
             <div className='Page' id='AdmDashboardPage'>
-            <div id='PageContent'>
-                <div className="Content">
-                    <LateralMenu/>
-                    <AdmCoursesView/>
+                <div id='PageContent'>
+                    <div className="Content">
+                        <LateralMenu />
+                        <AdmCoursesView />
+                    </div>
+                </div>
+                <div id='PageBackground'>
+                    <StarsBackground />
                 </div>
             </div>
-            <div id='PageBackground'>
-                <StarsBackground/>
-            </div>
-        </div>
         );
     }
 }

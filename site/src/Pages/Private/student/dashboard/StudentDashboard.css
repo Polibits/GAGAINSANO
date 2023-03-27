@@ -1,127 +1,170 @@
-#StudentDashboardPage .Content {
-    display: flex;
+#StudentDashboardPage #PageContent {
+    position: absolute;
     width: 100vw;
-    height: 100vh;
+    z-index: 1;
+}
+
+#StudentDashboardPage #PageBackground {
+    left: 0;
+    width: 100vw;
+    z-index: 0;
+    position: absolute;
 }
 
 #StudentDashboardPage #LateralMenu {
-    float: left;
-    width: 300px;
+    background: linear-gradient(0, #00041a 0%, #042148 100%);
     height: 100vh;
-    
-    background: linear-gradient(0, #0b0013 0%, #380448 100%);
+    width: 25vw;
 }
 
-#StudentDashboardPage #MenuOptionsDiv {
-    margin-top: calc((100% - 250px)/2);
-    margin-bottom: calc((100% - 250px)/2);
+#StudentDashboardPage #ProfileDiv {
+    height: 40vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#StudentDashboardPage .MenuOptions {
+    height: 60vh;
+}
+
+#StudentDashboardPage #ProfileUsernameDiv p {
+    text-align: center;
+}
+
+#StudentDashboardPage #ProfilePictureDiv{
+    display: flex;
+    justify-content: center;
+}
+
+#StudentDashboardPage #ProfilePictureDiv img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10vw;
+    height: 10vw;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#StudentDashboardPage #ProfileUserType p{
+    text-align: center;
+    font-style: italic;
 }
 
 #StudentDashboardPage .MenuOption {
     display: flex;
     justify-content: center;
-    width: 300px;
-    height: 52px;
+    align-items: center;
+    height: calc(100%/6);
 }
 
 #StudentDashboardPage .MenuOption:hover {
-    background-color: rgb(78, 0, 92);
+    background-color: #08005c;
 }
 
-#StudentDashboardPage .MenuOption p {
-    margin-top: 15px;
+#StudentDashboardPage .Content {
+    display: flex;
 }
 
-#StudentDashboardPage .MenuOptionRender {
-    width: calc(100vw - 300px);
+#AdmLateralMenu .MenuOption:hover {
+    background-color: #5c0051;
 }
 
-#StudentDashboardPage .MenuOptionRender .Title {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-#StudentDashboardPage .MainContent{
-    padding: 20px;
-}
-
-#StudentDashboardPage #ProfileDiv {
-    display: block;
+#StudentDashboardPage #AdmCoursesView {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
     width: 100%;
-    height: 40vh;
 }
 
-#StudentDashboardPage #ProfilePictureDiv {
-    width: 200px;
-    height: 200px;
-    margin-left: auto;
-    margin-right: auto;
+#StudentDashboardPage #AdmCoursesView #coursesList {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
 }
 
-#StudentDashboardPage #ProfileUsernameDiv {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-#StudentDashboardPage #ProfilePictureImg {
-    
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-#StudentDashboardPage #ProfileUserType {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    font-style: italic;
-}
-
-#StudentDashboardPage #StudentDashboardCourseDiv {
-    display: flex;
+#StudentDashboardPage #CourseCard{
     width: 90%;
-    height: 100px;
+    height: 25vh;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(0deg, #000520 0%, #00274ec3 100%);
+    border: 0px solid white;
+    border-radius: 10px;
+    margin:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#StudentDashboardPage #CourseCard:hover{
+    background: linear-gradient(0deg, #000730 0%, #00366cc3 100%);
+}
+
+#StudentDashboardPage #CourseCard .CourseImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 30vh;
+}
+
+#StudentDashboardPage #CourseCard .CourseImg img{
+    height: 100%;
+}
+
+#StudentDashboardPage #CourseCard .IdentificationInfo {
+    width: 30%;
+}
+
+#StudentDashboardPage #CourseCard .IdentificationInfo h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-decoration: underline;
+    font-size: 16pt;
+}
+
+#StudentDashboardPage #CourseCard .IdentificationInfo p {
+    font-style: italic;
+    text-align: justify;
+    font-size: 12pt;
+}
+
+#StudentDashboardPage #CourseCard .SpecificInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+}
+
+#StudentDashboardPage #CourseCard .SpecificInfo div{
     margin-left: auto;
     margin-right: auto;
-    background-color: #21002c;
+    width: 80%;
+}
+
+#StudentDashboardPage #CourseCard .Actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+}
+
+#StudentDashboardPage #CourseCard button {
+    background-color: #00093e;
+    border: none;
     margin-top: 10px;
     margin-bottom: 10px;
+    height: 20%;
+    width: 100%;
 }
 
-#StudentDashboardPage #StudentDashboardCourseDiv .CourseImg {
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#StudentDashboardPage #StudentDashboardCourseDiv img {
-    height: 80px;
-    width: 80px;
-}
-
-#StudentDashboardPage #StudentDashboardCourseDiv .CourseDetails {
-    width: calc(60%);
-}
-
-#StudentDashboardPage #StudentDashboardCourseDiv .CourseDetails h2{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-#StudentDashboardPage #StudentDashboardCourseDiv .CourseDetails p{
-    text-align: justify;
-}
-
-#StudentDashboardPage #StudentDashboardCourseDiv .CourseAcess {
-    width: calc(40% - 150px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#StudentDashboardPage #CourseCard button:hover {
+    background-color: #000f62;
+    
 }

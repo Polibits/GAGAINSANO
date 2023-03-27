@@ -10,6 +10,11 @@ class AdmProfileView extends React.Component {
     render() {
         return (
             <div id='GenericPage'>
+                <h1> Perfil do Administrador </h1>
+                <div> 
+                    
+                    <button id="button-status">Atualizar Informações</button>
+                </div>
 
             </div>
         );
