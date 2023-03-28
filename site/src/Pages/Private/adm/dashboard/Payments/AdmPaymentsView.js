@@ -10,34 +10,52 @@ class AdmPaymentsView extends React.Component {
     render() {
         return (
             <div id='AdmPayments'>  
-                <div id="user-pay">
-                    <h1>Pagamentos dos Usuários</h1>
+                <div id="user.course-pay">
+                    <h2 id="title">Pagamentos dos Usuários</h2>
                     <div id="list">
                         <div id="card-item">
-                            <p>Item</p>
+                            <p id="item-card">Nome do Usuário:</p>
+                            <p id="item-card"> Gustavo </p>
+                            <p id="Item-status"> STATUS </p>
+                            <a id="item-details"> Detalhes </a>
                         </div>
 
                         <div id="card-item">
-                            <p>Item</p>
+                            <p id="item-card">Nome do Usuário:</p>
+                            <p id="item-card"> Gustavo </p>
+                            <p id="Item-status"> STATUS </p>
+                            <a id="item-details"> Detalhes </a>
                         </div>
 
                         <div id="card-item">
-                            <p>Item</p>
+                            <p id="item-card">Nome do Usuário:</p>
+                            <p id="item-card"> Gustavo </p>
+                            <p id="Item-status"> STATUS </p>
+                            <a id="item-details"> Detalhes </a>
                         </div>
                     </div>
 
                 </div>
-                <div id="course-pay">
-                    <h1>Pagamentos dos Cursos</h1>
+                <div id="user.course-pay">
+                    <h2 id="title">Pagamentos dos Cursos</h2>
                     <div id="list">
                     <div id="card-item">
-                            <p>Item</p>
+                            <p id="item-card">Nome do Curso:</p>
+                            <p id="item-card"> Gustavo </p>
+                            <p id="Item-status"> STATUS </p>
+                            <a id="item-details"> Detalhes </a>
                         </div>
                         <div id="card-item">
-                            <p>Item</p>
+                            <p id="item-card">Nome do Curso:</p>
+                            <p id="item-card"> Gustavo </p>
+                            <p id="Item-status"> STATUS </p>
+                            <a id="item-details"> Detalhes </a>
                         </div>
                         <div id="card-item">
-                            <p>Item</p>
+                            <p id="item-card">Nome do Curso:</p>
+                            <p id="item-card"> Gustavo </p>
+                            <p id="Item-status"> STATUS </p>
+                            <a id="item-details"> Detalhes </a>
                         </div>
                     </div>
 

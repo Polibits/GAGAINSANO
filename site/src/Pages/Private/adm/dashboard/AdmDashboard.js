@@ -12,7 +12,7 @@ import StarsBackground from "../../../Common Components/StarsBackground/StarsBac
 
 const cookies = new Cookies();
 
-const currentPage = 'Users';
+const currentPage = 'Payments';
 
 class AdmDashboard extends React.Component {
     constructor(props) {
