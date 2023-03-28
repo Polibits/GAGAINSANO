@@ -1,0 +1,71 @@
+.Page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.Page #title-page{
+    margin: 20px;
+}
+
+
+#form-p{
+    margin:10px;
+    font-size:1.5rem;
+}
+
+#form-input2{
+    font-size:1.5rem;
+    width:200px;
+    height: 1.5rem;
+}
+
+#label-title{
+    margin-top:20px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+#div-button{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+#button-form{
+    width:100%;
+    background-color:rgb(33,33,33,0.5);
+    margin:10px;
+    height: 2rem;
+    align-items: center;
+    text-align: center;
+    transition: 1s;
+    border-radius: 30px;
+}
+#button-form:hover{
+    background-color:rgb(33,33,33,1);
+    transform: scale(1.1);
+}
+
+
+#form{
+    border: 2px solid white;
+    border-radius:20px;
+    padding: 20px 20px;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    
+
+}
+
+#paymentFrequency{
+    margin:10px;
+}
+
+#freq-pay-title{
+    margin:30px
+}

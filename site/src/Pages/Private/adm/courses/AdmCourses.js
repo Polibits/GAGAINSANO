@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import './AdmCourses.css'
 
 class AdmCourses extends React.Component {
     constructor(props) {
@@ -21,25 +22,28 @@ class AdmCourses extends React.Component {
     render(){
         return (
             <div className='Page'>
-                <h1>AdmCoursesPage</h1>
+                <h1 id="title-page">Adicionar Novo Curso</h1>
                 <div className="Forms">
-                    <form>
+                    <form id="form">
                         {Field('Nome Comercial do Curso', 'comercialName', 'text')}
                         {Field('Código do curso', 'courseCode', 'text')}
                         {Field('Descrição breve', 'description', 'textarea')}
                         {Field('Preço', 'price', 'text')}
                         <div>
-                            <label>Frequência de Pagamento</label>
+                            <p id="label-title" >Frequência de Pagamento</p>
                         </div>
                         <select id="paymentFrequency">
-                            <option value="single">única</option>
-                            <option value="monthly">mensal</option>
-                            <option value="annually">anual</option>
+                            <option id="option" value="single">única</option>
+                            <option id="option" value="monthly">mensal</option>
+                            <option id="option" value="annually">anual</option>
                         </select>
+                        <div id="div-button">
+                            <a id="button-form" onClick={createCourse}>criar curso</a>
+                            <a id="button-form" onClick={this.getCoursesFrameworks}>carregar cursos</a>
+                        </div>
                     </form>
                 </div>
-                <button onClick={createCourse}>criar curso</button>
-                <button onClick={this.getCoursesFrameworks}>carregar cursos</button>
+                
                 <div>
                     {CoursesFrame(this.state.coursesFrameworks)}
                 </div>
@@ -77,11 +81,11 @@ function CoursesFrame(courses) {
             {courses.map((course) => {
                 return (
                     <div key={course.id}>
-                        <p>comercialName: {course.comercialName}</p>
-                        <p>courseCode: {course.courseCode}</p>
-                        <p>description: {course.description}</p>
-                        <p>price: {course.price}</p>
-                        <p>paymentFrequency: {course.paymentFrequency}</p>
+                        <p id="form-item">comercialName: {course.comercialName}</p>
+                        <p id="form-item">courseCode: {course.courseCode}</p>
+                        <p id="form-item">description: {course.description}</p>
+                        <p id="form-item">price: {course.price}</p>
+                        <p id="form-item">paymentFrequency: {course.paymentFrequency}</p>
                     </div>
                 );
             })}
@@ -92,9 +96,9 @@ function CoursesFrame(courses) {
 function Field(name, id, type) {
     return (
         <div className="Field">
-            <p>{name}</p>
+            <p id="form-p">{name}</p>
             <label>
-                <input id={id} type={type}></input>
+                <input id="form-input2" type={type}></input>
             </label>
         </div>
     );
