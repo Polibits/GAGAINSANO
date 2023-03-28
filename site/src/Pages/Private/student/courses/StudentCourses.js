@@ -12,6 +12,13 @@ import './StudentCourses.css';
 class StudentCourses extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            selectedMenuOption:'Lectures'
+        }
+    }
+
+    changeState = (state) => {
+        this.setState(state);
     }
     
     render(){
@@ -19,8 +26,8 @@ class StudentCourses extends React.Component {
             <div className='Page' id='StudentCoursesPage'>
                 <div id='PageContent'>
                     <div className="Content">
-                        <LateralMenu courseName='Física para Militares'/>
-                        {MainContent('Information')}
+                        <LateralMenu courseName='Física para Militares' changeState={this.changeState.bind(this)}/>
+                        <MainContent content={this.state.selectedMenuOption}/>
                     </div>
                 </div>
                 <div id='PageBackground'>
@@ -31,13 +38,19 @@ class StudentCourses extends React.Component {
     }
 }
 
-function MainContent(name) {
-    const pages = {
-        'Lectures': <Lectures/>,
-        'Information': <CourseInformation/>
-    };
+class MainContent extends React.Component {
+    constructor(props){
+        super(props);
+    }
 
-    return pages[name]
+    render() {
+        const pages = {
+            'Lectures': <Lectures/>,
+            'Information': <CourseInformation/>
+        };
+        const content= pages[this.content];
+        return content;
+    }
 }
 
 class LateralMenu extends React.Component {
@@ -51,12 +64,12 @@ class LateralMenu extends React.Component {
                 <Profile username='Carlos Eduardo' profilePicture={profilePicture} userType='estudante'/>
                 <div className="MenuOptions">
                     <div className="MenuOptions">
-                        <MenuOption name='Informação'/>
-                        <MenuOption name='Aulas'/>
-                        <MenuOption name='Simulados'/>
-                        <MenuOption name='Fórum'/>
-                        <MenuOption name='Materiais'/>
-                        <MenuOption name='Assinatura'/>
+                        <MenuOption changeState={this.props.changeState.bind(this)} page={'Information'} name='Informação'/>
+                        <MenuOption changeState={this.props.changeState.bind(this)} page={'loadPage'} name='Aulas'/>
+                        <MenuOption changeState={this.props.changeState.bind(this)} page={'loadPage'} name='Simulados'/>
+                        <MenuOption changeState={this.props.changeState.bind(this)} page={'loadPage'} name='Fórum'/>
+                        <MenuOption changeState={this.props.changeState.bind(this)} page={'loadPage'} name='Materiais'/>
+                        <MenuOption changeState={this.props.changeState.bind(this)} page={'loadPage'} name='Assinatura'/>
                     </div>
                 </div>
             </div>
@@ -68,10 +81,17 @@ class MenuOption extends React.Component {
     constructor(props) {
         super(props);
     }
+
+    loadContent = () => {
+        console.log('ação escolhida:\n', this.props.page);
+        this.props.changeState({
+            selectedMenuOption:this.props.page
+        })
+    }
     
     render(){
         return (
-            <div className='MenuOption' onClick={this.props.action}>
+            <div className='MenuOption' onClick={this.loadContent}>
                 <p>{this.props.name}</p>
             </div>
         );
