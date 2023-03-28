@@ -133,10 +133,16 @@ class LectureVideo extends React.Component {
     constructor(props) {
         super(props);
     }
+
+    noRightClick = (event) => {
+        console.log(event);
+        event.preventDefault();
+        return false;
+    }
     
     render() {
         return (
-            <div>
+            <div onContextMenu={this.noRightClick}>
                 <video src={this.props.src} id='lectureVideoIframe' controls controlsList="nodownload"/>
             </div>
             
