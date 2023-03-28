@@ -2,10 +2,56 @@
     border-bottom: 2px solid white;
     
 }
+#AdmProfileView{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin:2rem;
+
+}
+
+#AdmProfileView #button-status{
+    color:black;
+    font-size: 1.2rem;
+    padding:10px 20px;
+    margin: 10px;
+    border-radius: 30px;
+}
+
+#AdmProfileView #div-perfil{
+    border: 2px white solid;
+    padding: 20px 10px;
+    border-radius: 30px;
+    margin: 20px;
+    font-size: 1.5rem;
+
+}
+
+#AdmProfileView #div-perfil #item-adm{
+    font-size: 1.5rem;
+}
+
+#AdmProfileView #div-perfil #status-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
 
 
 
+#AdmProfileView #div-perfil #status-div #item-status{
+    background-color: rgb(12, 255, 12);
+    font-size: 1.6rem;
+    border: 3px solid green;
+    padding:10px 20px;
+    border-radius: 20px;
+    color:black;
+    margin: 20px;
 
+}
 
 
 
