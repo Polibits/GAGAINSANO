@@ -65,7 +65,6 @@ class CourseCard extends React.Component {
                     </div>
                 </div>
                 <div className="Actions">
-                    <button id="action-course-btn" action={this.props.id}> Adicionar aulas</button>
                     <button id="action-course-btn" action={this.props.id}> Editar </button>
                     <button id="action-course-btn" action={this.props.id}> Deletar </button>
                 </div>

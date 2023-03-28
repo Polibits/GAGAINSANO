@@ -1,0 +1,100 @@
+#StudentDashboardPage .CourseCard {
+    height: 25vh;
+    width: 90%;
+}
+
+#StudentDashboardPage .CourseCard{
+    width: 90%;
+    height: 20vh;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(0deg, #000520 0%, #00274ec3 100%);
+    border: 0px solid white;
+    border-radius: 10px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#StudentDashboardPage .CourseCard:hover{
+    background: linear-gradient(0deg, #000730 0%, #00366cc3 100%);
+}
+
+#StudentDashboardPage .CourseCard .CourseImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 30vh;
+}
+
+#StudentDashboardPage .CourseCard .CourseImg img{
+    height: 90%;
+}
+
+#StudentDashboardPage .CourseCard .IdentificationInfo {
+    width: 50%;
+}
+
+#StudentDashboardPage .CourseCard .IdentificationInfo h2 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-decoration: underline;
+    font-size: 16pt;
+}
+
+#StudentDashboardPage .CourseCard .IdentificationInfo p {
+    font-style: italic;
+    text-align: justify;
+    font-size: 12pt;
+}
+
+#StudentDashboardPage .CourseCard .IdentificationInfo .CourseCode {
+    font-style: normal;
+    text-align: right;
+    font-size: 10pt;
+}
+
+#StudentDashboardPage .CourseCard .SpecificInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+}
+
+#StudentDashboardPage .CourseCard .SpecificInfo div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+#StudentDashboardPage .CourseCard .Actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+}
+
+#StudentDashboardPage .CourseCard button {
+    background-color: #00093e;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30%;
+    width: 100%;
+}
+
+#StudentDashboardPage .CourseCard button:hover {
+    background-color: #000f62;
+    
+}
+
+#StudentDashboardPage .Actions button{
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
