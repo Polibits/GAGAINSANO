@@ -13,7 +13,7 @@ import StudentNotificationsView from "./Notifications/StudentNotificationsView";
 
 const cookies = new Cookies();
 
-var currentPage = 'MyCourses';
+var currentPage = 'Notifications';
 
 class StudentDashboard extends React.Component {
     constructor(props) {

@@ -1,0 +1,30 @@
+#List-notifications{
+    display: flex;
+    flex-direction: row;
+
+}
+
+#List-notifications #not-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:20px;
+    border-left: solid white 2px;
+    padding: 10px 20px;
+}
+
+#page-notification{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#List-notifications #not-list #card-notif{
+    border-left: 4px rgb(0, 0, 112) solid;
+    margin: 15px;
+    padding: 10px 20px;
+    background-color: rgb(33, 33, 33, 0.6);
+    
+}
