@@ -1,16 +1,12 @@
-#AdmProfileView #title-adm{
-    border-bottom: 2px solid white;
-    margin:15px;
-    padding-bottom: 20px;
-    
-}
 #AdmProfileView{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin:2rem;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
+#AdmProfileView #title-adm{
+    padding-bottom: 20px;
 }
 
 #AdmProfileView #button-status{
@@ -27,7 +23,6 @@
     border-radius: 30px;
     margin: 20px;
     font-size: 1.5rem;
-
 }
 
 #AdmProfileView #div-perfil #item-adm{
@@ -42,8 +37,6 @@
     align-items: center;
 }
 
-
-
 #AdmProfileView #div-perfil #status-div #item-status{
     background-color: rgb(12, 255, 12);
     font-size: 1.6rem;
@@ -52,17 +45,4 @@
     border-radius: 20px;
     color:black;
     margin: 20px;
-
 }
-
-
-
-
-
-
-
-
-
-
-
-

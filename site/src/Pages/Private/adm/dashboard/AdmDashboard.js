@@ -12,13 +12,11 @@ import StarsBackground from "../../../Common Components/StarsBackground/StarsBac
 
 const cookies = new Cookies();
 
-const currentPage = 'Users';
-
 class AdmDashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            actualPage:'Users'
+            actualPage:'Courses'
         }
     }
     
@@ -27,7 +25,17 @@ class AdmDashboard extends React.Component {
             <div className='Page' id='AdmDashboardPage'>
                 <div id='PageContent'>
                     <div className="Content">
-                        <LateralMenu />
+                        <div id="AdmLateralMenu">
+                            <Profile username='Victor Cruz' profilePicture={profilePicture} userType='adm' />
+                            <div className="MenuOptions">
+                                <MenuOption action={this.loadMyProfile} name='Meu Perfil' />
+                                <MenuOption action={this.loadCourses} name='Cursos' />
+                                <MenuOption action={this.loadUsers} name='Usuários' />
+                                <MenuOption action={this.loadPayments} name='Pagamentos' />
+                                <MenuOption action={this.loadHelp} name='Ajuda' />
+                                <MenuOption action={logout} name='Sair' />
+                            </div>
+                        </div>
                         {MainContent(this.state.actualPage)}
                     </div>
                 </div>
@@ -37,6 +45,12 @@ class AdmDashboard extends React.Component {
             </div>
         );
     }
+
+    loadMyProfile = () => {this.setState({actualPage:'MyProfile'});}
+    loadCourses = () => {this.setState({actualPage:'Courses'});}
+    loadUsers = () => {this.setState({actualPage:'Users'});}
+    loadPayments = () => {this.setState({actualPage:'Payments'});}
+    loadHelp = () => {this.setState({actualPage:'Help'});}
 }
 
 function MainContent(name) {
@@ -45,7 +59,8 @@ function MainContent(name) {
         'Courses':<AdmCoursesView/>,
         'Users':<AdmUsersView/>,
         'Payments':<AdmPaymentsView/>,
-        'Help':<AdmCoursesView/>
+        'Help':<AdmCoursesView/>,
+        undefined:<AdmCoursesView/>
     }
     return pages[name];
 } 
@@ -53,51 +68,11 @@ function MainContent(name) {
 class LateralMenu extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            actualPage:'Courses'
-        }
-    }
-
-    loadMyProfile = () => {
-        console.log('Loading Profile');
-        cookies.set({actualPage: 'MyProfile'});
-        this.setState({actualPage:'MyProfile'});
-    }
-
-    loadCourses = () => {
-        console.log('Loading Courses');
-        cookies.set({actualPage: 'Courses'});
-        this.setState({actualPage:'Courses'});
-    }
-
-    loadUsers = () => {
-        console.log('Loading Users');
-        this.setState({actualPage:'Users'});
-    }
-
-    loadPayments = () => {
-        console.log('Loading Payments');
-        this.setState({actualPage:'Payments'});
-    }
-
-    loadHelp = () => {
-        console.log('Loading Help');
-        this.setState({actualPage:'Help'});
     }
     
     render() {
         return (
-            <div id="AdmLateralMenu">
-                <Profile username='Victor Cruz' profilePicture={profilePicture} userType='adm'/>
-                <div className="MenuOptions">
-                    <MenuOption action={this.loadMyProfile} name='Meu Perfil'/>
-                    <MenuOption action={this.loadCourses} name='Cursos'/>
-                    <MenuOption action={this.loadUsers} name='Usuários'/>
-                    <MenuOption action={this.loadPayments} name='Pagamentos'/>
-                    <MenuOption action={this.loadHelp} name='Ajuda'/>
-                    <MenuOption action={logout} name='Sair'/>
-                </div>
-            </div>
+            <></>
         );
     }
 }
