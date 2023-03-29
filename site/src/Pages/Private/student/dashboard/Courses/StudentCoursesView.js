@@ -43,7 +43,7 @@ class StudentCoursesView extends React.Component {
     }
 
     CourseCards = () => {
-        const courses = cookies.get('userCourses');
+        const courses = this.state.userCourses;
         var cards = [];
 
         for(var course in courses){

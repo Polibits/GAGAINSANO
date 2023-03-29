@@ -65,18 +65,6 @@ function MainContent(name) {
     return pages[name];
 } 
 
-class LateralMenu extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    
-    render() {
-        return (
-            <></>
-        );
-    }
-}
-
 class MenuOption extends React.Component {
     constructor(props) {
         super(props);

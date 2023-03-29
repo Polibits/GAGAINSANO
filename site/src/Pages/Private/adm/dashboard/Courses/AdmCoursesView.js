@@ -1,13 +1,42 @@
 import React from "react";
+import Cookies from "universal-cookie";
+import axios from 'axios';
+
 import profilePicture from '../../../../../content/Logo.png';
 import './AdmCoursesView.css';
+
+const cookies = new Cookies();
 
 class AdmCoursesView extends React.Component {
     constructor(props){
         super(props);
+        this.state = {
+            loadedCourses:false,
+            userCourses:null
+        }
+    }
+
+    getCourses = () => {
+        console.log('getCourses:')
+        axios({
+            method:'get',
+            url:'http://localhost:5050/courses/read/all',
+            params: {}
+        }).then((response) => {
+            this.setState({
+                userCourses:response.data.coursesFrameworks,
+                loadedCourses:true
+            });
+            console.log('state: ', this.state);
+        }).catch((error) => {
+            console.log(error);
+        });
     }
 
     render() {
+        if(!this.state.loadedCourses)
+            this.getCourses();
+
         return (
             <div id='AdmCoursesView'>
                 <h1>Cursos</h1>
@@ -15,30 +44,35 @@ class AdmCoursesView extends React.Component {
                     <a id="edit-button">Criar Curso</a>
                 </div>
                 <div id='coursesList'>
-                    <CourseCard
-                    imgURL={profilePicture}
-                    price="300" 
-                    courseCode="militares_fisica"
-                    description="este curso é foda de mais, seloko cachorro. Vai estourar no ita. Nóis é pika confia"
-                    paymentFrequency = "mensal"
-                    comercialName='Física para Militares'/>
-                    <CourseCard
-                    imgURL={profilePicture}
-                    price="300" 
-                    courseCode="olimpiadas_fisica"
-                    description="este curso é foda de mais, seloko cachorro. Vai estourar no ita. Nóis é pika confia"
-                    paymentFrequency = "mensal"
-                    comercialName='Olimpíadas de Física'/>
-                    <CourseCard
-                    imgURL={profilePicture}
-                    price="300" 
-                    courseCode="olimpiadas_fisica"
-                    description="este curso é foda de mais, seloko cachorro. Vai estourar no ita. Nóis é pika confia"
-                    paymentFrequency = "mensal"
-                    comercialName='Olimpíadas de Física'/>
+                    {this.CourseCards()}
                 </div>
             </div>
         );
+    }
+
+    CourseCards = () => {
+        const courses = this.state.userCourses;
+        var cards = [];
+
+        console.log(courses);
+
+        for(var course in courses){
+            var card = (
+                <CourseCard
+                    key={courses[course].courseCode}
+                    imgURL={profilePicture}
+                    courseCode={courses[course].courseCode}
+                    description={courses[course].description}
+                    comercialName={courses[course].comercialName}
+                    price={courses[course].price}
+                    paymentFrequency={courses[course].paymentFrequency}
+                />
+            );
+    
+            cards.push(card);
+        }
+
+        return cards;
     }
 }
 
