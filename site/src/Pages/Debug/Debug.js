@@ -5,17 +5,63 @@ import axios from "axios";
 class Debug extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {video:null}
+        this.state = {
+            loadedCourses:false,
+            userCourses:null
+        }
     }
+
+    getCourses = () => {
+            axios({
+                method:'get',
+                url:'http://localhost:5050/courses/read/all',
+                params: {}
+            }).then((response) => {
+                console.log(response.data.coursesFrameworks);
+                this.setState({
+                    userCourses:response.data.coursesFrameworks,
+                    loadedCourses:true
+                });
+                console.log(this.state);
+            }).catch((error) => {
+                console.log(error);
+            });
+    }
+
     render() {
+        if(!this.state.loadedCourses){
+            this.getCourses();
+        }
+        
         return (
-            <div>
-                <p>{kkk()}</p>
-                
+            <div className="Page">
+                <h1>Seus Cursos</h1>
+                {this.CourseCards(this.state.userCourses)}
             </div>
         );
     }
+
+    CourseCards = (courses) => {
+        console.log('gerando cards para cursos:\n');
+        console.log(courses);
+        var cards = [];
+        for(var course in courses){
+            var card = (
+                <div>
+                    <p>{courses[course].comercialName}</p>
+                    <p>{courses[course].courseCode}</p>
+                    <p>{courses[course].description}</p>
+                    <p>{courses[course].price}</p>
+                    <p>{courses[course].paymentFrequency}</p>
+                </div>
+            );
+    
+            cards.push(card);
+        }
+        return cards;
+    }
 }
+
 
 /*
 class Debug extends React.Component {

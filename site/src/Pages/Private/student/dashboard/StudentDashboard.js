@@ -19,7 +19,7 @@ class StudentDashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentPage:'MyCourses'
+            actualPage:'MyCourses'
         }
     }
     
@@ -28,8 +28,18 @@ class StudentDashboard extends React.Component {
             <div className='Page' id='StudentDashboardPage'>
                 <div id='PageContent'>
                     <div className="Content">
-                        <LateralMenu/>
-                        {MainContent(currentPage)}
+                        <div id="LateralMenu">
+                            <Profile username='Victor Cruz' profilePicture={profilePicture} userType='adm' />
+                            <div className="MenuOptions">
+                                <MenuOption action={this.loadMyProfile} name='Meu Perfil' />
+                                <MenuOption action={this.loadCourses} name='Meus Cursos' />
+                                <MenuOption action={this.loadPayments} name='Pagamentos' />
+                                <MenuOption action={this.loadNotifications} name='Notificações' />
+                                <MenuOption action={this.loadHelp} name='Ajuda' />
+                                <MenuOption action={this.loadMyProfile} name='Sair' />
+                            </div>
+                        </div>
+                        {MainContent(this.state.actualPage)}
                     </div>
                 </div>
                 <div id='PageBackground'>
@@ -38,6 +48,12 @@ class StudentDashboard extends React.Component {
             </div>
         );
     }
+
+    loadMyProfile = () => {this.setState({actualPage:'MyProfile'});}
+    loadCourses = () => {this.setState({actualPage:'MyCourses'});}
+    loadPayments = () => {this.setState({actualPage:'Payments'});}
+    loadNotifications = () => {this.setState({actualPage:'Notifications'});}
+    loadHelp = () => {this.setState({actualPage:'Help'});}
 }
 
 function MainContent(name) {
@@ -53,63 +69,6 @@ function MainContent(name) {
             {pages[name]}
         </div>
     );
-}
-
-class LateralMenu extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            actualPage:'Courses'
-        }
-    }
-
-    loadMyProfile = () => {
-        console.log('Loading Profile');
-        console.log(currentPage)
-        cookies.set({actualPage: 'MyProfile'});
-    }
-
-    loadCourses = () => {
-        console.log('Loading Courses');
-        cookies.set({actualPage: 'Courses'});
-        this.setState({actualPage:'Courses'});
-    }
-
-    loadUsers = () => {
-        console.log('Loading Users');
-        this.setState({actualPage:'Users'});
-    }
-
-    loadPayments = () => {
-        console.log('Loading Payments');
-        this.setState({actualPage:'Payments'});
-    }
-
-    loadNotifications = () => {
-        console.log('Loading Notifications');
-        this.setState({actualPage:'Payments'});
-    }
-
-    loadHelp = () => {
-        console.log('Loading Help');
-        this.setState({actualPage:'Help'});
-    }
-    
-    render() {
-        return (
-            <div id="LateralMenu">
-                <Profile username='Victor Cruz' profilePicture={profilePicture} userType='adm'/>
-                <div className="MenuOptions">
-                    <MenuOption action={this.loadMyProfile} name='Meu Perfil'/>
-                    <MenuOption action={this.loadCourses} name='Meus Cursos'/>
-                    <MenuOption action={this.loadPayments} name='Pagamentos'/>
-                    <MenuOption action={this.loadNotifications} name='Notificações'/>
-                    <MenuOption action={this.loadHelp} name='Ajuda'/>
-                    <MenuOption action={this.loadMyProfile} name='Sair'/>
-                </div>
-            </div>
-        );
-    }
 }
 
 class MenuOption extends React.Component {
@@ -151,6 +110,7 @@ class Profile extends React.Component {
 }
 
 function loadCourses() {
+    console.log();
     axios({
         url:'http://localhost:5050/courses/read/all',
         method:'get'

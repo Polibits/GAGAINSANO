@@ -1,28 +1,66 @@
 import React from "react";
 import './StudentCoursesView.css';
 import profilePicture from '../../../../../content/Logo.png';
+import axios from "axios";
+import Cookies from "universal-cookie";
+
+const cookies = new Cookies();
 
 class StudentCoursesView extends React.Component {
     constructor(props){
         super(props);
+        this.state = {
+            loadedCourses:false,
+            userCourses:null
+        }
+    }
+
+    getCourses = () => {
+        axios({
+            method:'get',
+            url:'http://localhost:5050/courses/read/all',
+            params: {}
+        }).then((response) => {
+            this.setState({
+                userCourses:response.data.coursesFrameworks,
+                loadedCourses:true
+            });
+        }).catch((error) => {
+            console.log(error);
+        });
     }
 
     render() {
+        if(!this.state.loadedCourses)
+            this.getCourses();
+
         return (
             <div>
                 <h1>Cursos</h1>
-                <CourseCard
-                    imgURL={profilePicture}
-                    courseCode="militares_fisica"
-                    description="este curso é foda de mais, seloko cachorro. Vai estourar no ita. Nóis é pika confia"
-                    comercialName='Física para Militares'/>
-                <CourseCard
-                    imgURL={profilePicture}
-                    courseCode="olimpiadas_química"
-                    description="este curso é foda de mais, seloko cachorro. Vai estourar no ita. Nóis é pika confia"
-                    comercialName='Química para OBQ'/>
+                {this.CourseCards()}
             </div>
         );
+    }
+
+    CourseCards = () => {
+        const courses = cookies.get('userCourses');
+        var cards = [];
+
+        for(var course in courses){
+            var card = (
+                <CourseCard
+                    key={courses[course].courseCode}
+                    imgURL={profilePicture}
+                    courseCode={courses[course].courseCode}
+                    description={courses[course].description}
+                    comercialName={courses[course].comercialName}
+                />
+            );
+    
+            cards.push(card);
+        }
+
+        return cards;
     }
 }
 
