@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import StarsBackground from '../../Common Components/StarsBackground/StarsBackground';
 import './../../GlobalStyle.css';
 import './Register.css';
+import InputValidator from"../../../Utility/InputValidator";
 
 class Register extends React.Component {
     constructor(props) {
@@ -14,6 +15,9 @@ class Register extends React.Component {
         return (
             <div className='Page' id='RegisterPage'>
                 <div id='PageContent'>
+                    <div className="backToHome">
+                        <Link>voltar</Link>
+                    </div>
                     <RegisterForm/>
                 </div>
                 <div id='PageBackground'>
@@ -32,7 +36,7 @@ class RegisterForm extends React.Component {
 
     render() {
         return (
-            <div className="RegisterFormsBase">
+            <div className="RegisterForm">
                 <div className="Forms">
                     <h2>Crie sua conta!</h2>
                     <form>
@@ -61,13 +65,53 @@ function register() {
     const cpf = document.getElementById("cpf").value;
     const password = document.getElementById("password").value;
     const passwordConfirmation = document.getElementById("passwordConfirmation").value;
-
+    var SQLInjectionContent = false;
     const data = {
         email,
         password,
         fullName,
         username,
         cpf
+    }
+
+    if(InputValidator.SQLInjectionContent(fullName))
+        SQLInjectionContent = true;
+    else if(InputValidator.SQLInjectionContent(username))
+        SQLInjectionContent = true;
+    else if(InputValidator.SQLInjectionContent(email))
+        SQLInjectionContent = true;
+    else if(InputValidator.SQLInjectionContent(cpf))
+        SQLInjectionContent = true;
+
+    if(SQLInjectionContent){
+        const ip = 'XX.XXX.XX.XX'; // TODO coletar ip
+        const message = 'SQL Injection Detectado\n' + 
+        'ip de origem: ' + ip + '\n' +
+        'Um relatório da situação foi enviado para os administradores.\n' + 
+        'Se for confirmada intenção maliciosa, medidas legais podem ser tomadas e a conta do usuário ficará bloqueada.';
+        alert(message);
+        console.log('SQL Injection Detectado');
+        return;
+    }
+
+    if(InputValidator.emptyInput(fullName)){
+        alert('Nome completo não pode estar vazio');
+        return;
+    } else if(!InputValidator.validInput(username)){
+        alert('Nome de usuário inválido');
+        return;
+    } else if(!InputValidator.validEmail(email)){
+        alert('Email Inválido');
+        return;
+    } else if(!InputValidator.validInput(cpf)){
+        alert('CPF Inválido');
+        return;
+    } else if(!InputValidator.validPassword(password)) {
+        alert('Senha inválida');
+        return;
+    } else if(password != passwordConfirmation){
+        alert('Senhas diferentes');
+        return;
     }
     
     console.log('tentando criar usuário:\n', data);
@@ -91,7 +135,7 @@ function register() {
 function Field(name, id, type) {
     return (
         <div className="Field">
-            <p id="labelfield">{name}</p>
+            <p className="labelfield">{name}</p>
             <label>
                 <input id={id} type={type}></input>
             </label>
@@ -130,10 +174,6 @@ function warning() {
     }else{
         return <></>;
     }
-}
-
-function SQLInjectionCharacters(string) {
-    const re = new RegExp("ab+c");
 }
 
 export default Register;

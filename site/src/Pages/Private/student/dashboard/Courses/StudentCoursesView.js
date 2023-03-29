@@ -68,6 +68,11 @@ class CourseCard extends React.Component {
     constructor(props){
         super(props);
     }
+
+    loadCourse = () => {
+        console.log('carregando curso ', this.props.comercialName);
+        window.location.href = '/estudante/cursos';
+    }
     
     render() {
         return (
@@ -81,7 +86,7 @@ class CourseCard extends React.Component {
                     <p className="CourseCode">Código: {this.props.courseCode}</p>
                 </div>
                 <div className="Actions">
-                    <button action={this.props.id}> Ver Curso </button>
+                    <button onClick={this.loadCourse}> Ver Curso </button>
                 </div>
             </div>
         );

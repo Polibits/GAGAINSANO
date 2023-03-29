@@ -3,7 +3,6 @@
     width: 100vw;
     height: 100vh;
     z-index: 1;
-    align-items: center;
 }
 
 #PageBackground {
@@ -14,82 +13,87 @@
     position: absolute;
 }
 
+#RegisterPage .backToHome {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
 
-.RegisterFormsBase {
+.RegisterForm {
     display: flex;
+    justify-content: center;
     align-items: center;
     width:100vw;
     border-radius: 30px;
-    
 }
 
-#RegisterPage .Page h2 {
-    margin:30px;
+#RegisterPage h2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 3px white solid;
+    width: 30vw;
 }
 
-#RegisterPage .Page .Forms p {
-    margin:10px;
-}
-
-#RegisterPage .Page .Forms{
+#RegisterPage .Forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
-    width: 410px;
+    width: 30vw;
 }
 
-#RegisterPage .Page .Forms .Field{
+#RegisterPage .Forms p {
+    margin-bottom: 5px;
+}
+
+#RegisterPage .Forms .Field{
     margin-top: 0;
     margin-bottom: 15px;
 }
 
-#RegisterPage .Page .Forms #labelfield{
+#RegisterPage .Forms .Field .labelfield{
     color:white;
-    border-left: 3px solid white;
-    padding-left: 10px;
-    font-size: 18px;
+    font-size: 12pt;
 }
 
-#RegisterPage .Page .Forms .Field input{
+#RegisterPage .Forms .Field input{
     font-size: 14pt;
-    width: 360px;
+    width: calc(30vw - 40px);
     height: 25px;
     border-radius: 5px;
     padding-left: 20px;
     padding-right: 20px;
+    color: #000000;
 }
 
-#RegisterPage .Page .Forms .Button{
+#RegisterPage .Forms .Button{
     margin-left: auto;
     margin-right: auto;
-    width: 410px;
+    width: 30vw;
 }
 
-#RegisterPage .Page .Forms .Button button{
+#RegisterPage .Forms .Button button{
     margin-left: auto;
     margin-right: auto;
     font-size: large;
     height: 40px;
-    width:50%;
+    width: 30vw;
     border-radius: 10px;
-    background-color: #000008;
-    color:white;
-    transition: 1s;
+    margin-bottom: 5px;
+    background-color: #16001f;
+    color:#ffffff;
     align-items: center;
     text-align: center;
-
 }
 
-#RegisterPage .Page .Forms .Button button:hover{
-    background-color: #340042;
-    color: rgb(255, 255, 255);
-    transform: scale(1.1);
-}
-
-#RegisterPage .Page .Forms .Field p{
-    margin-bottom: 5px;
+#RegisterPage .Forms .Button button:hover{
+    background-color: #31003e;
+    color: #ffffff;
 }
 
 #RegisterPage #RegisterWarning p{

@@ -101,7 +101,7 @@ function login() {
         const message = 'SQL Injection Detectado\n' + 
         'ip de origem: ' + ip + '\n' +
         'Um relatório da situação foi enviado para os administradores.\n' + 
-        'Se for confirmada intenção malicionsa, medidas legais podem ser tomadas.';
+        'Se for confirmada intenção maliciosa, medidas legais podem ser tomadas e a conta do usuário ficará bloqueada.';
         alert(message);
         console.log('SQL Injection Detectado');
     } else {

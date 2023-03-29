@@ -76,5 +76,6 @@ module.exports = {
     SQLInjectionContent,
     validEmail,
     validPassword,
-    validInput
+    validInput,
+    emptyInput
 }
