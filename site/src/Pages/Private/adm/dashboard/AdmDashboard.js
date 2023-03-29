@@ -5,8 +5,8 @@ import './AdmDashboard.css';
 
 import AdmProfileView from "./Profile/AdmProfileView";
 import AdmCoursesView from "./Courses/AdmCoursesView";
-import AdmUsersView from "./Users/AdmUsersView";
 import AdmPaymentsView from "./Payments/AdmPaymentsView";
+import AdmUsersView from "./Users/AdmUsersView";
 
 import StarsBackground from "../../../Common Components/StarsBackground/StarsBackground";
 
@@ -18,7 +18,7 @@ class AdmDashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            actualPage:'Courses'
+            actualPage:'Users'
         }
     }
     
@@ -28,7 +28,7 @@ class AdmDashboard extends React.Component {
                 <div id='PageContent'>
                     <div className="Content">
                         <LateralMenu />
-                        {MainContent(currentPage)}
+                        {MainContent(this.state.actualPage)}
                     </div>
                 </div>
                 <div id='PageBackground'>

@@ -13,7 +13,6 @@ class AdmUsersView extends React.Component {
                 <h1>Lista de Usuários da Plataforma</h1>
                     <div id="list-users">
                         <div id="card-user">
-                            <img src="user_img">Imagem</img>
                                 <div id="description-user">
                                     <p>Nome</p>
                                     <p>Descrição</p>
