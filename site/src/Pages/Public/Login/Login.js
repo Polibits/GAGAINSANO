@@ -60,7 +60,7 @@ class LoginForm extends React.Component {
 function content() {
     // verifica se o usuário está logado (via cookies)
     if(cookies.get('loadedUser') == true){
-        redirect();
+        redirect('/');
         return (
             <div>
                 <p>você já está logado! Redirecionando para área privada.</p>
@@ -127,13 +127,21 @@ function login() {
                 console.log(response.data.response);
                 if(response.data.response == 'sucess'){
                     console.log('usuário autenticado com sucesso');
-                    loadUserInfo(email);
-                    redirect();
+                    verifyAccountActivation(email);
+                    
                 } else {
-                    console.log('falha na autenticação');
+                    if(response.data.response == 'email_not_found'){
+                        alert('Email não encontrado.\nPor favor, verifique se seu email foi digitado corretamente.');
+                    } else if(response.data.response == 'wrong_passsword'){
+                        alert('Senha incorreta. Por favor, verifique se sua senha foi digitada corretamente');
+                    }
                 }
+            }).catch((error) => {
+                alert('Falha ao se conectar com servidor.\nDetalhes: ');
+                console.log(error);
             });
         } catch (error) {
+            alert('Falha ao se conectar com servidor.\nDetalhes: ');
             console.log(error);
         }
     }
@@ -170,8 +178,42 @@ function loadUserInfo(email) {
     });
 }
 
-function redirect() {
-    window.location.href = '/estudante/dashboard';
+async function verifyAccountActivation(email) {
+    try {
+        const request = await axios({
+            method: 'get',
+            url: 'http://localhost:5050/user/account/activation/read',
+            params: {
+                email: email
+            }
+        }).then(function(response) {
+            if(response.data.activated == true){
+                //loadUserInfo(email);
+                //redirect('/estudante/dashboard');
+                
+                alert('conta ativada');
+            } else {
+                alert('conta não ativada');
+                cookies.set(
+                    'Purgatory', 
+                    email,
+                    {path: "/"}
+                );
+                redirect('/purgatorio');
+            }
+            console.log(response.data);
+            return response.data;
+        }).catch(function(error){
+            console.log(error);
+        });
+    } catch (error) {
+        
+    }
+    
+}
+
+function redirect(local) {
+    window.location.href = local;
 }
 
 function Field(name, id, type) {

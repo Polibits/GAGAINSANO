@@ -1,10 +1,13 @@
 import axios from "axios";
 import React from "react";
-import { Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import StarsBackground from '../../Common Components/StarsBackground/StarsBackground';
 import './../../GlobalStyle.css';
 import './Register.css';
 import InputValidator from"../../../Utility/InputValidator";
+import Cookies from "universal-cookie";
+
+const cookies = new Cookies();
 
 class Register extends React.Component {
     constructor(props) {
@@ -125,6 +128,12 @@ function register() {
             if(response.data.response == 'sucess'){
                 console.log('usuário criado com sucesso!');
                 alert('usuário criado com sucesso!');
+                cookies.set(
+                    'Purgatory', 
+                    email,
+                    {path: "/"}
+                );
+                redirect('purgatorio');
             }
             console.log(response);
         });
@@ -175,6 +184,10 @@ function warning() {
     }else{
         return <></>;
     }
+}
+
+function redirect(local) {
+    window.location.href = local;
 }
 
 export default Register;

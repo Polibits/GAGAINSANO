@@ -8,6 +8,7 @@ import GagaInsanoResolve from "./Pages/Public/GagaInsanoResolve/GagaInsanoResolv
 import FreeContent from './Pages/Public/FreeContent/FreeContent';
 import Login from "./Pages/Public/Login/Login";
 import Register from "./Pages/Public/Register/Register";
+import Purgatory from './Pages/Public/Purgatory/Purgatory';
 
 /* páginas privadas */
 import AdmCourses from './Pages/Private/adm/courses/AdmCourses';
@@ -41,6 +42,7 @@ function App() {
           <Route element = {< StudentDashboard />}  path="/estudante/dashboard"/>
           <Route element = {< ProfessorCourses />}  path="/professor/dashboard"/>
           <Route element = {< ProfessorDashboard />}  path="/professor/dashboard"/>
+          <Route element = {< Purgatory />} path="/purgatorio"/>
 
           <Route element = {< Debug />}  path="/debug"/>
         </Routes>
