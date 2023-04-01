@@ -89,7 +89,7 @@ function content() {
 function login() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    var valid = false;
+    var valid = true;
 
     const user = {
         email:email,

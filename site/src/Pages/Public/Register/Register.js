@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
 import StarsBackground from '../../Common Components/StarsBackground/StarsBackground';
 import './../../GlobalStyle.css';
 import './Register.css';
@@ -124,6 +124,7 @@ function register() {
         }).then((response) => {
             if(response.data.response == 'sucess'){
                 console.log('usuário criado com sucesso!');
+                alert('usuário criado com sucesso!');
             }
             console.log(response);
         });
