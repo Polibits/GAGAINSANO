@@ -13,10 +13,11 @@
     position: absolute;
 }
 
-#RegisterPage .backToHome {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-left: 20px;
+#RegisterPage #backToHome {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    margin-left: 30px;
 }
 
 .RegisterForm {

@@ -19,7 +19,7 @@ class Login extends React.Component {
             <div className='Page' id='LoginPage'>
                 <div id='PageContent'>
                     <div id='BackToHome'>
-                        <p><Link to='/'>voltar</Link></p>
+                        <p><Link to='/home'>voltar</Link></p>
                     </div>
                         
                     <LoginForm/>

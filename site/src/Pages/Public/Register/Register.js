@@ -18,8 +18,8 @@ class Register extends React.Component {
         return (
             <div className='Page' id='RegisterPage'>
                 <div id='PageContent'>
-                    <div className="backToHome">
-                        <Link>voltar</Link>
+                    <div id="backToHome">
+                        <Link to='/login'>voltar</Link>
                     </div>
                     <RegisterForm/>
                 </div>
